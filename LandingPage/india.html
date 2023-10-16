@@ -1,56 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        #map {
-            width: 100%;
-            height: 100vh;
-            background-color: #B0C4DE; /* Color de fondo verde */
-            position: relative;
-        }
-
-        .country {
-            fill: #fff; /* Color verde por defecto */
-            cursor: pointer;
-        }
-    </style>
-    <title>Mapa Mundial</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="india.css" />
+  <script src="india.js"></script>
 </head>
+
 <body>
-    <div id="map">
-        <!-- Aquí se generará el mapa -->
-    </div>
-    <script>
-        // Carga el mapa mundial SVG en el elemento con id "map"
-        fetch('img/world.svg')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('map').innerHTML = data;
-                initializeMap();
-            });
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img id="drag1" src="img/pez.jpg" draggable="true"
+    ondragstart="drag(event)" width="336" height="69" />
+  </div>
 
-        function initializeMap() {
-            const countries = document.querySelectorAll('.country');
+  <br />
 
-            // Agregar eventos de mouse para cambiar el color al pasar el mouse
-            countries.forEach(country => {
-                country.addEventListener('mouseover', () => {
-                    country.style.fill = '#FF5733'; // Cambiar a otro color al pasar el mouse
-                });
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-                country.addEventListener('mouseout', () => {
-                    country.style.fill = '#2ECC71'; // Volver al verde por defecto al salir del mouse
-                });
-            });
-        }
-    </script>
+  <button onclick="verifica()">Verifica</button>
 </body>
+
 </html>
