@@ -1,0 +1,60 @@
+body {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura al 100% del viewport height */
+    margin: 0;
+}
+.pipe {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+}
+
+.inicio {
+    top: 0;
+    left: 0;
+    transform: translate(705.5%, 125%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
+}
+
+.final {
+    bottom: 0;
+    right: 0;
+    transform: translate(-705.5%, -124%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
+}
+
+
+.borde-madera{
+    border: 5px solid #8B4513; /* Color marrón que simula la madera */
+    display: inline-block;
+    padding: 10px; /* Espacio entre los botones y el borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 5px 5px 5px #888; /* Sombra suave alrededor del borde */
+    background-color: #FFF; /* Color de fondo del borde */
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* Estilos para los botones */
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    transition: transform 0.3s;
+}
+
+.box.on {
+    background-color: #FFF88F;
+}
+
+.box.off {
+    background-color: #C2C2C2;
+}
