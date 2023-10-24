@@ -3,37 +3,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajusta la altura al 100% del viewport height */
+    height: 100vh;
     margin: 0;
+    overflow-y: hidden; /* Esto evita el desplazamiento vertical */
 }
+
 .pipe {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 490px;
+    height: 490px;
     z-index: 2;
 }
 
 .inicio {
-    top: 0;
-    left: 0;
-    transform: translate(705.5%, 125%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
+    top: -42%;
+    left: -130%;
+    transform: translate(102.5%, -58%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
 }
 
 .final {
-    bottom: 0;
-    right: 0;
-    transform: translate(-705.5%, -124%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
+    bottom: -42%;
+    right: -130%;
+    transform: translate(-102.5%, 58%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
 }
 
 
-.borde-madera{
-    border: 5px solid #8B4513; /* Color marrón que simula la madera */
+.borde-madera {
+    border: 5px solid #8B4513;
     display: inline-block;
-    padding: 10px; /* Espacio entre los botones y el borde */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 5px 5px 5px #888; /* Sombra suave alrededor del borde */
-    background-color: #FFF; /* Color de fondo del borde */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
+    background-color: #FFF;
+    position: relative;
 }
+
 .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
