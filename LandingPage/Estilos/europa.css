@@ -62,3 +62,7 @@ body {
 .box.off {
     background-color: #C2C2C2;
 }
+
+.comprobarBtn{
+    padding: 10px;
+}
