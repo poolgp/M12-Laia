@@ -1,14 +1,6 @@
-/* Estilos para el mapa */
-#mapa {
-    width: 800px; /* Ajusta el ancho según tus preferencias */
-    height: 400px; /* Ajusta la altura según tus preferencias */
-    background-image: url('mapa-del-mundo.jpg'); /* Reemplaza con tu imagen del mapa */
-    background-size: cover;
-    position: relative;
-}
-
-/* Estilos para resaltar los países */
-.country-highlight {
-    opacity: 0.7;
-    background-color: yellow; /* Cambia el color de resaltado según tus preferencias */
+div {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid black;
 }
