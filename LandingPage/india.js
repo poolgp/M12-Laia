@@ -1,3 +1,5 @@
+//Array cesta = [];
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -14,6 +16,7 @@ function drop(ev) {
 
 function verifica(ev) {
     var img = document.getElementById("drag1");
+    var img = document.getElementById("drag2");
 
     var div1 = document.getElementById("div1");
     var div2 = document.getElementById("div2");

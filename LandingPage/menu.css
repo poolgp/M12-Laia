@@ -1,0 +1,30 @@
+body {
+    background-color: #D5DBDB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    position: relative;
+}
+
+img {
+    width: 700px;
+}
+
+button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#receta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 40px;
+}
