@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: repeat(2, 200px);
+}
+
+#contenedorJuego{
+    text-align: center;
+}
+
+#bordeJuego{
+    width: 800px;
+    height: 600px;
+    border: 2px solid;
+    margin: 0 auto;
+}
+
+#timer{
+    margin-top: 15px;
+    margin-left: 800px;
+    margin-right: 800px;
+    font-family: consolas, monospace;
+    font-size: 80px;
+    color: #40c437;
+    border: 3px;
+    border-radius: 25px;
+    background-color: #222222;
+}
+
+#reintentarBtn{
+    font-family: "Permanent Market", cursive;
+    font-size: 18px;
+    margin-left: 880px;
+    margin-right: 880px;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}

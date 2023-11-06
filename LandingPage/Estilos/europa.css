@@ -1,11 +1,16 @@
 body {
-    background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     overflow-y: hidden; /* Esto evita el desplazamiento vertical */
+}
+
+.titulo-centrado{
+    text-align: center;
+    display: flex;
+    margin-top: 50px;
 }
 
 .pipe {
