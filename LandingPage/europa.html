@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasil</title>
+    <title>Puzzle tuberías</title>
     <link rel="stylesheet" href="Estilos/europa.css">
 </head>
-<body>
-    
+
+<body style="background-image: url('img/fondo-europa1.jpg');">
+
+
+    <h1 class="titulo-centrado">
+        Puzzle de Tuberías
+    </h1>
+
+    <div id="timer-container">
+        <span id="timer">1:00</span>
+    </div>
+
+    <div id="reintentar-container">
+        <button id="reintentarBtn" style="display: none;">Reintentar nivel</button>
+    </div>
+
+
+    <div class="borde-madera">
+        <div class="container col-md-4" id="container">
+            <!-- Imagenes de los pipes del inicio-->
+            <img src="img/pruebainicio.png" alt="Pipe Inicio" class="pipe inicio" id="pipe-inicio">
+
+            <!-- Imagemes de los pipes al final-->
+            <img src="img/pruebafinal.png" alt="Pipe Final" class="pipe final" id="pipe-final">
+
+        </div>
+    </div>
+
+    <!-- Botón para comprobar si el puzzle está bien-->
+    <button id="comprobarBtn">Comprobar</button>
+
+    <script src="europa.js"></script>
+
 </body>
+
 </html>

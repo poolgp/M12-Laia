@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow-y: hidden; /* Esto evita el desplazamiento vertical */
+}
+
+.titulo-centrado{
+    text-align: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.pipe {
+    position: absolute;
+    width: 490px;
+    height: 490px;
+    z-index: 2;
+}
+
+.inicio {
+    top: -42%;
+    left: -130%;
+    transform: translate(102.5%, -58%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
+}
+
+.final {
+    bottom: -42%;
+    right: -130%;
+    transform: translate(-102.5%, 58%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
+}
+
+
+.borde-madera {
+    border: 5px solid #8B4513;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
+    background-color: #FFF;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* Estilos para los botones */
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    transition: transform 0.3s;
+}
+
+.box.on {
+    background-color: #FFF88F;
+}
+
+.box.off {
+    background-color: #C2C2C2;
+}
+
+.comprobarBtn{
+    padding: 10px;
+}
