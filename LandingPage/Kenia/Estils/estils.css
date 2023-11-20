@@ -7,14 +7,27 @@
 }
 
 
+.bordeJoc{
+
+    width: 1000px;
+    height: 600px;
+    border: 2px solid;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+
 .contenidor{
 
     left: 0;
     right: 0;
     position: absolute;
     margin: auto;
+    margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 170px);
     justify-content: center;
     align-items: center;
 
@@ -23,8 +36,8 @@
 
 .colorFons{
 
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     border: 1px solid black;
    
 
@@ -37,7 +50,7 @@
     left: 0;
     right: 0;
     position: absolute;
-    top: 500px;
+    top: 470px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 100px);
