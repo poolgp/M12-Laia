@@ -1,2 +1,2 @@
-# M12-Laia
+# M12-CientifiksEnJoc
 Laia ens ilumina

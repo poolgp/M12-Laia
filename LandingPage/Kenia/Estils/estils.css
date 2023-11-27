@@ -1,0 +1,99 @@
+#contenidorPrincipal{
+
+    position: relative;
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+}
+
+
+.bordeJoc{
+
+    width: 1000px;
+    height: 600px;
+    border: 2px solid;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.titolPrincipal{
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.contenidor{
+
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.colorFons{
+
+    width: 170px;
+    height: 170px;
+    border: 1px solid black;
+   
+
+}
+
+
+.paletaColors{
+
+
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 470px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    
+}
+
+.paleta1{
+
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.paleta2{
+
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.paleta3{
+
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.paleta4{
+
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
