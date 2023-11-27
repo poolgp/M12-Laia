@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Europa</title>
+    <link rel="stylesheet" href="Estilos/draftEuropa.css">
+</head>
+
+<body style="background-image: url('img/europahd.jpg');">
+    <h1>Puzzle de las tuberías</h1>
+    <div class="timer">
+        1:00
+    </div>
+
+    <div id="juego" class="contenedor-principal">
+        <div id="bienvenida" class="bienvenida">
+            <h2 class="tituloBienvenida">Bienvenido al juego del puzzle de Europa.</h2>
+            <p class="descripcionBienvenida">Conecta las tuberías para que el agua llegue a la meta
+                antes de que se acabe el tiempo y así poder conseguir una pieza y poder desbloquear el siguiente nivel.
+            </p>
+            <p class="textoPresionarBoton">Presiona el botón para empezar.</p>
+            <img src="img/flecha2.gif" alt="Flecha animada" class="gifFlecha">
+        </div>
+
+        <div class="contenedor-puzzle"></div>
+    </div>
+
+    <button class="botonIniciarJuego" onclick="iniciarJuego()">Iniciar Juego</button>
+
+    <script src="draftEuropa.js"></script>
+</body>
+
+</html>
