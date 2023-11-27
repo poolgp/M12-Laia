@@ -1,14 +1,14 @@
 // Preguntas y respuestas
 let preguntas = [
     {
-        pregunta: "1- F. ¿Cuál es la capital de la India?",
+        pregunta: "1- ¿Cuál es la capital de la India?",
         respuestas: ["Nueva Delhi", "Bombay", "Calcuta", "Chennai"],
         respuestaCorrecta: "Nueva Delhi"
     },
     {
-        pregunta: "2- M. ¿En qué año se celebró la independencia de la India?",
+        pregunta: "2- ¿En qué año se celebró la independencia de la India?",
         respuestas: ["1942", "1947", "1950", "1962"],
-        respuestaCorrecta: "B. 1947"
+        respuestaCorrecta: "1947"
     },
     {
         pregunta: "3- ¿Qué río es considerado sagrado en la religión hindú?",
@@ -17,7 +17,7 @@ let preguntas = [
     },
     {
         pregunta: "4- ¿Cuál es la lengua más hablada en la India?",
-        respuestas: ["Hindi", "Bengalí", "elugu", "Maratí"],
+        respuestas: ["Hindi", "Bengalí", "Elugu", "Maratí"],
         respuestaCorrecta: "Hindi"
     },
     {
@@ -123,7 +123,8 @@ function mostrarPregunta(indice) {
     document.querySelector('.containerPregunta').textContent = pregunta;
 
     // Mostrar las respuestas como botones
-    let botonesRespuesta = document.querySelectorAll('.resposta');
+    let botonesRespuesta = document.querySelectorAll('.respuesta');
+
     for (let i = 0; i < botonesRespuesta.length; i++) {
         botonesRespuesta[i].textContent = respuestas[i];
 
@@ -134,6 +135,27 @@ function mostrarPregunta(indice) {
     }
 }
 
+// Función para mostrar una pregunta
+function mostrarPregunta(indice) {
+    // Obtener la pregunta y las respuestas
+    let pregunta = preguntas[indice].pregunta;
+    let respuestas = preguntas[indice].respuestas;
+
+    // Mostrar la pregunta
+    document.querySelector('.containerPregunta').textContent = pregunta;
+
+    // Mostrar las respuestas como botones
+    let botonesRespuesta = document.querySelectorAll('.respuesta');
+
+    for (let i = 0; i < botonesRespuesta.length; i++) {
+        botonesRespuesta[i].textContent = respuestas[i];
+
+        // Agregar un event listener de clic a cada botón de respuesta
+        botonesRespuesta[i].addEventListener('click', function () {
+            verificarRespuesta(this.textContent);
+        });
+    }
+}
 
 // Función para verificar la respuesta seleccionada
 function verificarRespuesta(respuestaSeleccionada) {
@@ -149,16 +171,8 @@ function verificarRespuesta(respuestaSeleccionada) {
         document.getElementById('scr').textContent = puntuacion + 1;
     }
 
-    // Mostrar la siguiente pregunta o finalizar el juego
-    if (indiceActual < preguntas.length - 1) {
-        mostrarPregunta(indiceActual + 1);
-    } else {
-        // Fin del juego
-        alert('Juego terminado. Tu puntuación final es ' + document.getElementById('scr').textContent);
-    }
-
     // Obtener todos los botones de respuesta
-    let botonesRespuesta = document.querySelectorAll('.resposta');
+    let botonesRespuesta = document.querySelectorAll('.respuesta');
 
     // Desactivar los clics en los botones después de seleccionar una respuesta
     botonesRespuesta.forEach(function (boton) {
@@ -191,7 +205,7 @@ function verificarRespuesta(respuestaSeleccionada) {
         });
     }
 
-    // Mostrar la siguiente pregunta o finalizar el juego después de un breve retraso
+    // Después de un retraso de 3 segundos, mostrar la siguiente pregunta o finalizar el juego
     setTimeout(function () {
         if (indiceActual < preguntas.length - 1) {
             // Restablecer los colores de los botones
@@ -204,5 +218,7 @@ function verificarRespuesta(respuestaSeleccionada) {
             // Fin del juego
             alert('Juego terminado. Tu puntuación final es ' + document.getElementById('scr').textContent);
         }
-    }, 1000); // Puedes ajustar el tiempo de espera según tus preferencias
+    }, 3000); // 3000 milisegundos (3 segundos)
 }
+
+// Resto del código sigue igual...

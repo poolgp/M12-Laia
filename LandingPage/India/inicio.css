@@ -24,6 +24,8 @@ h1, h2, p, #score, .container {
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1px);
 }
 
 #jugar {
