@@ -10,11 +10,12 @@ body {
 
 h1 {
     color: #333;
+    font-size: 35px;
 }
 
 p {
     color: #666;
-    font-size: 16px;
+    font-size: 22px;
     display: flex;
     align-items: center;
 }
@@ -31,13 +32,13 @@ li {
 }
 
 img {
-    max-width: 100px;
+    max-width: 150px;
     border-radius: 10%;
     margin-right: 20px;
 }
 
 img[alt="Imagen juego"] {
-    max-width: 100px;
+    max-width: 200px;
     border-radius: 50%;
     margin-left: 20px;
 }
