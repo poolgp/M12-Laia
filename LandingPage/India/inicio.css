@@ -1,0 +1,34 @@
+body {
+    background-image: url('img/FondoIndia.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p, #score, .container {
+    text-align: center;
+}
+#score {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.container {
+    position: relative;
+    height: 660px;
+    width: 1000px;
+    margin: 20px auto;
+    border: solid 2px black;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+#jugar {
+    display: block;
+    margin: 20px auto;
+    margin-top: 20px;
+    font-size: 25px;
+}
