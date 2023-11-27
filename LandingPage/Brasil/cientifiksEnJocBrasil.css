@@ -1,0 +1,111 @@
+body {
+  background-color:rgb(127, 255, 159);
+  background-image: url('img/backgrounds/brasilFondoFondo.jpg');
+  background-size: cover;
+  background-position: cover;
+  background-repeat: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.initial-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#instructions {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#window {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  margin: 150px auto;
+  border: 4px solid #37c762;
+  overflow: hidden;
+}
+
+#background {
+  position: fixed;
+  width: 1000px;
+  height: 600px;
+}
+
+#player {
+  position: absolute;
+  width: 90px;
+  height: 135px;
+}
+
+#fruit {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#score {
+  position:absolute;
+  top: 115px;
+  left: 1290px;
+  font-size: 20px;
+  color: #000;
+}
+
+#fruitsCollected {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#heart {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#title {
+  position: absolute;
+  top: 60px;
+  margin-left: 700px;
+  font-size: 30px;
+  color: #000;
+  font-family: Helvetica, sans-serif;
+}
+
+#backButton {
+  position: absolute;
+  top: 775px;
+  margin-left: 450px;
+  font-size: 25px;
+  color: #000;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#endMessage {
+  position: absolute;
+  top: 825px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: #000;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
