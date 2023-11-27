@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("container");
     const gridSize = 5;
     const juegoTablero = [
-        [0, 0, 1, 1, 0],
-        [0, 1, 0, 0, 1],
-        [1, 0, 1, 1, 0],
-        [0, 0, 1, 0, 1],
-        [1, 1, 0, 1, 0]
+        [1, 0, 0, 0, 0],
+        [1, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0],
+        [0, 1, 1, 1, 1],
+        [0, 0, 0, 0, 1]
     ];
 
     const botones = [];
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Asigna la imagen en función de la matriz juegoTablero
             const randomImage = imageNames[juegoTablero[i][j]];
-            
+
             const image = document.createElement("img");
             image.src = randomImage;
             image.style.width = "100px";
@@ -38,6 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
             container.appendChild(button);
             botones[i][j] = button;
         }
+    }
+
+    function mostrarMensajeFelicitaciones() {
+        alert("¡Felicidades! Has completado el nivel.");
+        // Puedes personalizar este mensaje o utilizar otra forma de mostrar la felicitación.
     }
 
     function verificarJuegoCompleto() {
@@ -68,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (completo) {
-            alert("¡Has ganado! El juego está completo.");
+            mostrarMensajeFelicitaciones();
         }
     }
 
