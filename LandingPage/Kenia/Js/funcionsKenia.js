@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", pintarMascara);
 
 let arrayColors = [];
+let colorSeleccionat = null;
 
 function pintarMascara() {
   let colorFons1 = document.getElementById("celda1");
@@ -36,17 +37,25 @@ function amagarMascara() {
   colorFons4.style.backgroundColor = "white";
 }
 
-function colorPinzell(color) {
-  // Cambia el color del pincel
-  console.log("Color seleccionado:", color);
+function colorPinzell(div) {
+  // Obtener el color del div clickeado
+  colorSeleccionat = window.getComputedStyle(div).getPropertyValue("background-color");
+  console.log("Color seleccionado:", colorSeleccionat);
+}
 
-  // Cambia el color de la celda seleccionada
-  if (celdaSeleccionada) {
-    celdaSeleccionada.style.backgroundColor = color;
+function pintarCuadrado(event) {
+  if (colorSeleccionat) {
+    // Pintar el cuadrado con el color seleccionado
+    event.target.style.backgroundColor = colorSeleccionat;
+  } else {
+    console.log("Selecciona un color primero");
   }
 }
 
-// Event listener para detectar qué celda está seleccionada
-document.addEventListener("click", function(event) {
-  celdaSeleccionada = event.target.closest('.colorFons');
-});
+function compararMascaras(){
+
+
+
+
+  
+}

@@ -17,7 +17,12 @@
 
 }
 
+.titolPrincipal{
 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
 
 .contenidor{
 
@@ -56,11 +61,10 @@
     grid-template-columns: repeat(4, 100px);
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     
 }
-
-
 
 .paleta1{
 
