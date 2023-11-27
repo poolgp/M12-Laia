@@ -11,15 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const botones = [];
 
+    const imageNames = ["img/pipe-recto.png", "img/pipe-triple.png", "img/pipe-direccional.png"];
+
     for (let i = 0; i < gridSize; i++) {
         botones[i] = [];
         for (let j = 0; j < gridSize; j++) {
             const button = document.createElement("button");
             button.classList.add("box");
 
-            const imageNames = ["img/pipe-recto.png", "img/pipe-triple.png", "img/pipe-direccional.png"];
-            const randomImage = imageNames[Math.floor(Math.random() * imageNames.length)];
-
+            // Asigna la imagen en función de la matriz juegoTablero
+            const randomImage = imageNames[juegoTablero[i][j]];
+            
             const image = document.createElement("img");
             image.src = randomImage;
             image.style.width = "100px";
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-/*    function verificarJuegoCompleto() {
+    function verificarJuegoCompleto() {
         let completo = true;
 
         for (let i = 0; i < gridSize; i++) {
@@ -68,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (completo) {
             alert("¡Has ganado! El juego está completo.");
         }
-    }*/
+    }
 
     function rotarBoton(boton, i, j) {
         const currentRotation = (parseFloat(boton.style.transform.replace("rotate(", "").replace("deg)", "")) || 0) + 90;
@@ -84,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const timerElement = document.getElementById("timer");
     const reintentarBtn = document.getElementById("reintentarBtn");
 
-   /* function actualizarTemporizador() {
+    function actualizarTemporizador() {
         if (tiempoRestante >= 0) {
             const minutos = Math.floor(tiempoRestante / 60);
             const segundos = tiempoRestante % 60;
@@ -97,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 reintentarBtn.style.display = "block";
             }
         }
-    }*/
+    }
 
     const intervaloTemporizador = setInterval(actualizarTemporizador, 1000);
 

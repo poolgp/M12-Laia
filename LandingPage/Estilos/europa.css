@@ -5,8 +5,19 @@ body {
     height: 100vh;
     margin: 0;
     overflow-y: hidden; /* Esto evita el desplazamiento vertical */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+#timer{
+    margin-top: 15px;
+    font-family: consolas, monospace;
+    font-size: 80px;
+    color: #40c437;
+    border: 3px;
+    border-radius: 25px;
+    background-color: #222222;
+}
 .titulo-centrado{
     text-align: center;
     display: flex;

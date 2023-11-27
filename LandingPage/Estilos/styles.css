@@ -1,84 +1,71 @@
-/* Estilos generales */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Estilos del header */
-header {
-    text-align: center;
-    font-size: large;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 30px;
-}
-
-h1 {
-    margin: 0;
-}
-
-/* Estilos del menú hamburguesa */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .menu {
-    display: none;
-    background-color: #333;
+  border-bottom: 1px solid #ccc;
 }
 
-.menu.show-menu {
-    display: block;
+.nav-link {
+  color: black;
 }
 
-.menu ul {
-    list-style-type: none;
-    padding: 0;
+.nav-link:hover {
+  color: gray;
 }
 
-.menu li {
-    margin: 10px;
-    text-align: center;
+.contenedores-juegos {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
+.col-6 {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: calc(50vh - 21px); /* Restamos la altura del nav bar (40px es un valor aproximado) */
+  border: 1px solid #000;
+  overflow: hidden; /* Evita el scroll dentro del contenedor */
+  position: relative; /* Añadido para posicionar el candado correctamente */
 }
 
-/* Estilos para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
+object {
+  width: 100%;
+  height: 100%;
+}
 
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.lock-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; /* Ajusta el tamaño según sea necesario */
+  height: 80px; /* Ajusta el tamaño según sea necesario */
+  z-index: 1; /* Asegura que el candado esté sobre el contenido */
+}
 
-    .menu.show-menu {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-    }
+.lock-image {
+  width: 100%;
+  height: 100%;
+}
 
-    .menu li {
-        margin: 10px 20px;
-    }
+.content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blurred-background {
+  filter: blur(5px); /* Ajusta el desenfoque según sea necesario */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Asegura que el fondo difuminado esté detrás del contenido y el candado */
 }

@@ -1,3 +1,14 @@
+
+
+body {
+    display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+}
+
 h1{
     text-align: center;
 }
@@ -14,10 +25,11 @@ h1{
 }
 
 #bordeJuego{
-    width: 800px;
+    width: 1000px;
     height: 600px;
     border: 2px solid;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 #timer{
@@ -44,4 +56,72 @@ h1{
     text-align: center;
     margin-top: 10px;
     display: none;
+}
+
+
+
+.titulo-centrado{
+    text-align: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.pipe {
+    position: absolute;
+    width: 490px;
+    height: 490px;
+    z-index: 2;
+}
+
+.inicio {
+    top: -42%;
+    left: -130%;
+    transform: translate(102.5%, -58%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
+}
+
+.final {
+    bottom: -42%;
+    right: -130%;
+    transform: translate(-102.5%, 58%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
+}
+
+
+.borde-madera {
+    border: 5px solid #8B4513;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
+    background-color: #FFF;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 100%; /* Para que el juego se ajuste al ancho del contenedor */
+}
+
+/* Estilos para los botones */
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    transition: transform 0.3s;
+}
+
+.box.on {
+    background-color: #FFF88F;
+}
+
+.box.off {
+    background-color: #C2C2C2;
+}
+
+.comprobarBtn{
+    padding: 10px;
 }
