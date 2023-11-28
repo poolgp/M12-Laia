@@ -1,3 +1,9 @@
+body{
+
+    text-align: center;
+}
+
+
 #contenidorPrincipal{
 
     position: relative;
@@ -5,6 +11,9 @@
     height: 800px;
     margin: auto;
 }
+
+
+
 
 
 .bordeJoc{
@@ -96,4 +105,14 @@
     width: 100px;
     height: 100px;
     border: 1px solid black;
+}
+
+
+
+
+.contenidorComprovar{
+
+    flex: auto;
+    justify-content: center;
+    align-items: center;
 }

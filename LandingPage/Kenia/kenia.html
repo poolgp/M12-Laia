@@ -19,6 +19,13 @@
 
         <div class="bordeJoc">
 
+
+<!---
+            <div  id="contenidorMascara">
+                <img class="recortar" src="img/mascaras.svg" alt="" id="mascara1">
+            </div>
+
+---> 
             <div class="contenidor">
 
                 <div id="celda1" class="colorFons" onclick="pintarCuadrado(event)">
@@ -37,8 +44,9 @@
 
                 </div>
 
-
             </div>
+
+
 
             <div class="paletaColors">
 
@@ -53,11 +61,12 @@
             </div>
         </div>
 
-        <div>
-            <div>
-                
+            <div class="contenidorComprovar">
+                <button id="btnComparar" onclick="compararMascaras()">Comparar Máscaras</button>
+  
+                <p id="resultadoComparacion"></p>
             </div>
-        </div>
+
     </div>
 
 </body>

@@ -52,10 +52,32 @@ function pintarCuadrado(event) {
   }
 }
 
-function compararMascaras(){
+function compararMascaras() {
+  let colorMascaraPredeterminada1 = window.getComputedStyle(document.getElementById("celda1")).getPropertyValue("background-color");
+  let colorMascaraPredeterminada2 = window.getComputedStyle(document.getElementById("celda2")).getPropertyValue("background-color");
+  let colorMascaraPredeterminada3 = window.getComputedStyle(document.getElementById("celda3")).getPropertyValue("background-color");
+  let colorMascaraPredeterminada4 = window.getComputedStyle(document.getElementById("celda4")).getPropertyValue("background-color");
 
+  let arrayColoresMascaraPredeterminada = [colorMascaraPredeterminada1, colorMascaraPredeterminada2, colorMascaraPredeterminada3, colorMascaraPredeterminada4];
 
+  let arrayColoresMascaraUsuario = [];
+  for (let i = 1; i <= 4; i++) {
+    let color = window.getComputedStyle(document.getElementById("celda" + i)).getPropertyValue("background-color");
+    arrayColoresMascaraUsuario.push(color);
+  }
 
+  let sonIguales = true;
+  for (let i = 0; i < arrayColoresMascaraPredeterminada.length; i++) {
+    if (arrayColoresMascaraPredeterminada[i] !== arrayColoresMascaraUsuario[i]) {
+      sonIguales = false;
+      break;
+    }
+  }
 
-  
+  let resultadoElemento = document.getElementById("resultadoComparacion");
+  if (sonIguales) {
+    resultadoElemento.textContent = "¡Máscaras iguales!";
+  } else {
+    resultadoElemento.textContent = "Las máscaras no son iguales.";
+  }
 }
