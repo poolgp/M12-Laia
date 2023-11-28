@@ -1,23 +1,19 @@
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-} */
+    text-align: center;
+}
+
+.menu {
+    width: 100%;
+    margin-bottom: 50px;
+}
 
 h1 {
     color: #333;
     font-size: 35px;
-}
-
-p {
-    color: #666;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
+    margin-bottom: 25px;
 }
 
 ul {
@@ -29,6 +25,7 @@ li {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 img {

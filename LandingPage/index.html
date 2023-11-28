@@ -19,7 +19,7 @@
     crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="styles.css">
-  
+
 </head>
 
 <body>
@@ -44,40 +44,54 @@
     </ul>
   </div>
 
-  <div class="contenedores-juegos">
+
+  <div class="row contenedores-juegos">
     <div class="col-6">
+      <!-- Contenido del primer juego -->
       <object type="image/svg+xml" data="img/europa.svg">
-        <!-- Fallback en caso de que el navegador no pueda mostrar SVG -->
         Tu navegador no soporta SVG.
       </object>
     </div>
-    <div class="col-6">
-      <object type="image/svg+xml" data="img/africa.svg">
-        <!-- Fallback en caso de que el navegador no pueda mostrar SVG -->
-        Tu navegador no soporta SVG.
-      </object>
+
+    <div class="col-6 locked" data-tooltip="Desbloquea el juego anterior">
+      <span id="tooltip">Completa el nivel anterior para poder jugar a este</span>
+      <!-- Contenido del segundo juego bloqueado -->
       <div class="lock-container">
-        <img src="img/candado.png" alt="Candado" class="lock-image">
+
+        <div class="lock-background"></div>
+        <div class="lock-image-container">
+          <img src="img/candado.png" alt="Candado" class="lock-image">
+        </div>
       </div>
     </div>
-    <div class="col-6">
-      <object type="image/svg+xml" data="img/brasil.svg">
-        <!-- Fallback en caso de que el navegador no pueda mostrar SVG -->
-        Tu navegador no soporta SVG.
-      </object>
+
+    <div class="col-6 locked" data-tooltip="Desbloquea el juego anterior">
+      <span id="tooltip">Completa los niveles anteriores para poder jugar a este</span>
+      <!-- Contenido del tercer juego bloqueado -->
       <div class="lock-container">
-        <img src="img/candado.png" alt="Candado" class="lock-image">
+        
+        <div class="lock-background"></div>
+        <div class="lock-image-container">
+          <img src="img/candado.png" alt="Candado" class="lock-image">
+        </div>
       </div>
     </div>
-    <div class="col-6">
-      <h1>Columna 4</h1>
-      <p>Esto es una prueba de bootstrap.</p>
+
+    <div class="col-6 locked" data-tooltip="Desbloquea el juego anterior">
+      <span id="tooltip">Completa los niveles anteriores para poder jugar a este</span>
+      <!-- Contenido del cuarto juego bloqueado -->
       <div class="lock-container">
-        <img src="img/candado.png" alt="Candado" class="lock-image">
+        <div class="lock-background"></div>
+        <div class="lock-image-container">
+          <img src="img/candado.png" alt="Candado" class="lock-image">
+        </div>
       </div>
     </div>
   </div>
-  
+
+
+  <script src="index.js"></script>
+
 
 
 </body>

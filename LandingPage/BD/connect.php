@@ -19,21 +19,4 @@ function closeBd()
 {
     return null;
 }
-
-function select()
-{
-  $conexion = openBD();
-
-  $sentenciaText = "select * from cadenas";
-
-  $sentencia = $conexion->prepare($sentenciaText);
-  $sentencia->execute();
-
-  $resultado = $sentencia->fetchAll();
-
-  $conexion = closeBD();
-
-  return $resultado;
-}
-
 ?>

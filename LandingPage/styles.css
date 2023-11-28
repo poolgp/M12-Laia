@@ -1,3 +1,7 @@
+html{
+  cursor: url("Europa/img/image_processing20200511-15721-14qd1vf.png"),
+  auto;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,16 +9,35 @@ body {
   overflow-x: hidden;
 }
 
+#tooltip{
+  position: fixed;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px 20px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, .1);
+}
+
+.col-6.locked:hover #tooltip{
+  opacity: 1;
+  visibility: visible;
+}
 .menu {
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
+  background-color: rgba(22, 22, 23, .8);
+
 }
 
 .nav-link {
-  color: black;
+  color: #E8E8ED;
 }
 
 .nav-link:hover {
-  color: gray;
+  color: #ffffff;
 }
 
 .contenedores-juegos {
