@@ -1,4 +1,4 @@
-.container {
+ .container {
     height: 300px;
     width: 960px;
     border: solid 2px black;
@@ -6,8 +6,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     font-size: 20px;
-    margin-top: auto; /* Add this property to align to the center vertically */
-    margin-bottom: auto; /* Add this property to align to the center vertically */
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .respuesta {
@@ -17,4 +17,4 @@
     border: 2px solid black;
     justify-content: center;
     align-items: center;
-}
+} 

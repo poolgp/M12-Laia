@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
+    <title>Registro</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -15,32 +15,59 @@
 
 <body>
 
-    <div class="card-header">
-        <h2>Formulario de Registro</h2>
-
-        <div class="card-body">
-            <form id="registroForm" action="tu_script_de_procesamiento.php" method="POST">
-
-                <div class="">
-                    <label for="nombre" class="form-label">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control" required>
-                </div>
-
-                <div class="">
-                    <label for="password" class="form-label">Contrasenya</label>
-                    <input type="password" id="password" name="password" class="form-control" required>
-                </div>
-
-
-                <div class="">
-                    <button type="submit" class="btn btn-primary">Registrar-se</button>
-                </div>
-                
-            </form>
-        </div>
-
+    <div class="menu">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../Creditos/creditos.html">Créditos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../Estadisticas/Estadisticas.html">Estadísticas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../Ajustes/Ajustes.html">Ajustes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../LogIn/login.html">Inicia Sesión</a>
+            </li>
+        </ul>
     </div>
 
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0">Registro</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="fullName">Nombre completo:</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Ingrese su nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">Contraseña:</label>
+                                <input type="password" class="form-control" id="newPassword" placeholder="Ingrese una contraseña">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirmar contraseña:</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirme la contraseña">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Registrarse</button>
+                            <p class="mt-3">¿Ya tienes una cuenta? <a href="../LogIn/login.html">Inicia Sesión</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
