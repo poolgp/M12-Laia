@@ -5,6 +5,12 @@ nav ul {
     display: flex;
 }
 
+nav img {
+    height: 65px;
+    width: auto;
+    margin-right: 10px;
+}
+
 nav li {
     margin-right: 15px;
 }
@@ -47,19 +53,19 @@ html {
 #presentacion {
     height: 800px;
     background-color: pink;
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 #juegos {
     height: 800px;
     background-color: yellow;
-    padding-top: 70px;
+    padding-top: 110px;
 }
 
 #creditos {
     height: 800px;
     background-color: #9e9e9e;
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 .juego {
