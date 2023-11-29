@@ -1,9 +1,6 @@
-html{
-  cursor: url("Europa/img/image_processing20200511-15721-14qd1vf.png"),
-  auto;
-}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Permanent Marker", cursive;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -29,6 +26,10 @@ body {
 .menu {
   /* border-bottom: 1px solid #ccc; */
   background-color: rgba(22, 22, 23, .8);
+  margin-bottom: 50px;
+}
+#bienvenida{
+  padding-top: 50px;
 }
 
 .nav-link {
