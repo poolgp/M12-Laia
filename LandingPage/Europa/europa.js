@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("container");
     const gridSize = 5;
     const juegoTablero = [
-        [1, 0, 0, 0, 0],
-        [1, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0],
         [1, 1, 0, 0, 0],
-        [0, 1, 1, 1, 1],
-        [0, 0, 0, 0, 1]
+        [0, 1, 0, 0, 0],
+        [0, 0, 1, 1, 1],
+        [2, 2, 0, 2, 0]
     ];
 
     const botones = [];
@@ -40,11 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Mensaje para felicitar al usuario
     function mostrarMensajeFelicitaciones() {
         alert("¡Felicidades! Has completado el nivel.");
-        // Puedes personalizar este mensaje o utilizar otra forma de mostrar la felicitación.
     }
 
+    // Verifica si el juego se ha completado automaticamente
     function verificarJuegoCompleto() {
         let completo = true;
 
@@ -65,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         break;
                     }
                 }
-                // Agregar más casos para otros tipos de tuberías según sea necesario
             }
             if (!completo) {
                 break;
