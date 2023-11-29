@@ -1,9 +1,30 @@
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
+
+.tooltip {
+    position: fixed;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 5px 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .1);
+  }
+  
+  .juego:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
 
 nav li {
     margin-right: 15px;
@@ -15,6 +36,9 @@ nav a {
     display: flex;
     align-items: center;
 }
+nav a:hover{
+    color: black;
+}
 
 .navbar-nav {
     display: flex;
@@ -23,6 +47,8 @@ nav a {
     width: 100%;
 }
 
+
+
 .navbar-nav li {
     text-align: center;
     list-style: none;
@@ -30,7 +56,7 @@ nav a {
 
 .navbar-nav a {
     text-decoration: none;
-    color: black;
+    color: rgb(70, 67, 67);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,5 +94,16 @@ html {
     background-color: lightblue;
     margin: 80px;
     display: inline-block;
-    
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
+.juego img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .juego:hover img {
+    transform: scale(1.05);
+  }
