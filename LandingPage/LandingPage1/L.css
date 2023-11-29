@@ -59,12 +59,12 @@ html {
 #creditos {
     height: 800px;
     background-color: #9e9e9e;
+    padding-top: 70px;
 }
 
 .juego {
     height: 300px;
     width: 300px;
-    border: solid 1px black;
     background-color: lightblue;
     margin: 80px;
     display: inline-block;
