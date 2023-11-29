@@ -45,18 +45,18 @@ html {
 }
 
 #presentacion {
-    height: 700px;
+    height: 800px;
     background-color: pink;
     padding-top: 70px;
 }
 
 #section3 {
-    height: 700px;
+    height: 800px;
     background-color: grey;
 }
 
 #section2 {
-    height: 700px;
+    height: 800px;
     background-color: yellow;
 }
 
