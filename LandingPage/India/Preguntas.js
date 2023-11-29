@@ -218,7 +218,7 @@ function verificarRespuesta(respuestaSeleccionada) {
             // Fin del juego
             alert('Juego terminado. Tu puntuación final es ' + document.getElementById('scr').textContent);
         }
-    }, 300); // 3000 milisegundos (3 segundos)
+    }, 1000); // 3000 milisegundos (3 segundos)
 }
 
 // Resto del código sigue igual...
