@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     0,
   ];
   const initialBackground = "./img/backgrounds/brasilFondo1.jpg";
-  const fruitSpeeds = [3, 5, 6];
+  const fruitSpeeds = [3, 4, 5];
   let playerPos = [...initialPlayerPos];
   let fruitPos = [...initialFruitPos];
   let score = 0;
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function endGame() {
     background.src = "./img/backgrounds/brasilFondoFinal.jpg";
     const endMessage = document.getElementById("endMessage");
-    endMessage.textContent = "Meninas da aldeia: Obrigado por colher as frutas, agora podemos distribuí-las às crianças pobres. Pelo grande favor que você nos fez, nós lhe daremos uma recompensa.";
+    // endMessage.textContent = "Meninas da aldeia: Obrigado por colher as frutas, agora podemos distribuí-las às crianças pobres. Pelo grande favor que você nos fez, nós lhe daremos uma recompensa.";
   }
 
   // Event Listener per les tecles de moviment.
