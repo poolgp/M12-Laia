@@ -1,6 +1,8 @@
 body{
 
     text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -12,12 +14,17 @@ body{
     margin: auto;
 }
 
-
+#mascaras {
+    fill: red;
+    transition: fill 0.5s;
+    cursor: pointer;
+}
 
 
 
 .bordeJoc{
 
+    background-color: white;
     width: 1000px;
     height: 600px;
     border: 2px solid;
@@ -64,7 +71,7 @@ body{
     left: 0;
     right: 0;
     position: absolute;
-    top: 470px;
+    top: 530px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 100px);
