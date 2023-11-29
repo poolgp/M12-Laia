@@ -45,12 +45,27 @@ html {
 }
 
 #presentacion {
-    height: 600px;
+    height: 700px;
     background-color: pink;
     padding-top: 70px;
 }
 
+#section3 {
+    height: 700px;
+    background-color: grey;
+}
+
 #section2 {
-    height: 600px;
+    height: 700px;
     background-color: yellow;
+}
+
+.juego {
+    height: 300px;
+    width: 300px;
+    border: solid 1px black;
+    background-color: lightblue;
+    margin: 80px;
+    display: inline-block;
+    
 }
