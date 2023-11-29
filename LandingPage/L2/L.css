@@ -50,14 +50,15 @@ html {
     padding-top: 70px;
 }
 
-#section3 {
-    height: 800px;
-    background-color: grey;
-}
-
-#section2 {
+#juegos {
     height: 800px;
     background-color: yellow;
+    padding-top: 70px;
+}
+
+#creditos {
+    height: 800px;
+    background-color: grey;
 }
 
 .juego {
