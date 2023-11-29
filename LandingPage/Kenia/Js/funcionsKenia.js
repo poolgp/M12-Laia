@@ -3,6 +3,35 @@ document.addEventListener("DOMContentLoaded", pintarMascara);
 let arrayColors = [];
 let colorSeleccionat = null;
 
+
+let mascara = getElementById("mascaras");
+
+
+
+
+
+mascara.addEventListener("click", function() {
+  // Cambiar el color al azul al hacer clic
+  miImagen.style.fill = "blue";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function pintarMascara() {
   let colorFons1 = document.getElementById("celda1");
   colorFons1.style.backgroundColor = "orange";
