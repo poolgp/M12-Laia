@@ -14,10 +14,10 @@ body{
     margin: auto;
 }
 
-#mascaras {
-    fill: red;
-    transition: fill 0.5s;
-    cursor: pointer;
+img{
+
+    width: 50%;
+    height: 40%;
 }
 
 
