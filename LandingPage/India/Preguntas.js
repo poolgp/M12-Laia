@@ -114,6 +114,7 @@ function start() {
     // Mostrar el contenedor y ocultar el botón de inicio
     document.getElementById("container1").style.display = "block";
     document.getElementById("start").style.display = "none";
+    document.getElementById("home").style.display = "block";
 }
 
 // Función para mostrar una pregunta
@@ -230,7 +231,6 @@ function FinJuego() {
     document.getElementById("finalScore").textContent = document.getElementById("scr").textContent;
     document.getElementById("container1").style.display = "none";
     document.getElementById("container2").style.display = "block";
-    document.getElementById("home").style.display = "block";
 }
 
 function home() {
