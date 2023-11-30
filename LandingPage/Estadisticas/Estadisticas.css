@@ -1,6 +1,7 @@
 body {
     padding-top: 70px;
 }
+
 nav img {
     height: 60px;
     width: auto;
@@ -95,7 +96,14 @@ html {
     border: 2px solid black;
     justify-content: center;
     align-items: center;
+    color: black;
 }
+
+.respuesta.europa { background-color:  rgb(95, 187, 95); }
+.respuesta.brasil { background-color: rgb(95, 187, 95); }
+.respuesta.kenia { background-color:  rgb(95, 187, 95); }
+.respuesta.india { background-color:  rgb(95, 187, 95); }
+
 nav ul {
     list-style: none;
     padding: 0;
