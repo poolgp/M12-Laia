@@ -4,47 +4,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow-y: hidden; /* Esto evita el desplazamiento vertical */
+    overflow-y: hidden;
+    background-image: url('img/europahd.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#timer{
-    margin-top: 15px;
-    font-family: consolas, monospace;
-    font-size: 80px;
-    color: #40c437;
-    border: 3px;
-    border-radius: 25px;
-    background-color: #222222;
-}
-.titulo-centrado{
-    text-align: center;
-    display: flex;
-    margin-top: 50px;
-}
-
-.pipe {
-    position: absolute;
-    width: 490px;
-    height: 490px;
-    z-index: 2;
-}
-
-.inicio {
-    top: -42%;
-    left: -130%;
-    transform: translate(102.5%, -58%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
-}
-
-.final {
-    bottom: -42%;
-    right: -130%;
-    transform: translate(-102.5%, 58%); /* Ajusta la posición para que el centro de la imagen esté en el margen */
-}
-
-
-.borde-madera {
+.game-container {
     border: 5px solid #8B4513;
     display: inline-block;
     padding: 10px;
@@ -59,7 +25,6 @@ body {
     grid-template-columns: repeat(5, 1fr);
 }
 
-/* Estilos para los botones */
 .box {
     width: 100px;
     height: 100px;
@@ -71,14 +36,34 @@ body {
     transition: transform 0.3s;
 }
 
-.box.on {
-    background-color: #FFF88F;
+.reintentar-container {
+    text-align: center;
+    margin-top: 10px;
 }
 
-.box.off {
-    background-color: #C2C2C2;
-}
-
-.comprobarBtn{
+#reintentarBtn {
     padding: 10px;
+    display: none;
 }
+
+
+/* 
+
+.pipe {
+    position: absolute;
+    width: 490px;
+    height: 490px;
+    z-index: 2;
+}
+
+.inicio {
+    top: -42%;
+    left: -130%;
+    transform: translate(102.5%, -58%);
+}
+
+.final {
+    bottom: -42%;
+    right: -130%;
+    transform: translate(-102.5%, 58%); 
+} */

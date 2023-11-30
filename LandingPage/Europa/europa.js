@@ -2,16 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("container");
     const gridSize = 5;
     const juegoTablero = [
-        [0, 1, 0, 0, 0],
-        [1, 1, 0, 0, 0],
-        [0, 1, 0, 0, 0],
-        [0, 0, 1, 1, 1],
-        [2, 2, 0, 2, 0]
+        [1, 1, 2, 0, 0],
+        [2, 1, 2, 2, 0],
+        [2, 0, 4, 0, 0],
+        [0, 1, 2, 0, 1],
+        [2, 2, 2, 2, 0]
     ];
 
     const botones = [];
 
-    const imageNames = ["img/pipe-recto.png", "img/pipe-triple.png", "img/pipe-direccional.png"];
+    const imageNames = ["img/cableRectoIncompleto.png", "img/cableTripleIncompleto.png", "img/cableDobleIncompleto.png", "img/bombilla-apagada.png", "img/centroCompleto.png"];
 
     for (let i = 0; i < gridSize; i++) {
         botones[i] = [];

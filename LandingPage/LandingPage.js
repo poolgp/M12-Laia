@@ -10,3 +10,28 @@ window.onmousemove = function (e) {
     tooltip.style.left = (x + 20) + 'px';
   });
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  let index = 0;
+  const imagenes = document.querySelectorAll(".imagen");
+  const totalImagenes = imagenes.length;
+
+  function mostrarImagen() {
+    imagenes[index].style.display = "block";
+    setTimeout(() => {
+      imagenes[index].style.opacity = "1";
+    }, 50);
+  }
+
+  function ocultarImagen() {
+    imagenes[index].style.opacity = "0";
+    setTimeout(() => {
+      imagenes[index].style.display = "none";
+      index = (index + 1) % totalImagenes;
+      mostrarImagen();
+    }, 1000);
+  }
+
+  mostrarImagen();
+  setInterval(ocultarImagen, 5000); // Cambia la imagen cada 5 segundos
+});
