@@ -94,6 +94,9 @@
 // } 
 
 
+
+
+
 // Variables globales para el temporizador y el tiempo restante
 let temporizador;
 let tiempoRestante;
@@ -101,7 +104,13 @@ let tiempoRestante;
 // Función para cambiar la imagen después de 30 segundos
 function cambiarImagen() {
   document.getElementById('miImagen').src = 'img/mascara.png';
+  mostrarBotones(); // Muestra los botones después de cambiar la imagen
   reiniciarTemporizador();
+}
+
+// Función para mostrar los botones
+function mostrarBotones() {
+  document.getElementById('botonesContainer').style.display = 'block';
 }
 
 // Función para iniciar el temporizador
@@ -131,13 +140,25 @@ function reiniciarTemporizador() {
   document.getElementById('tiempoRestante').textContent = ''; // Limpia el texto del temporizador
 }
 
+// Función para elegir la respuesta
+function elegirRespuesta(respuesta) {
+  alert(`Elegiste: ${respuesta}`);
+  // Aquí puedes realizar acciones adicionales basadas en la respuesta elegida
+}
 
 
 
 
 
 
-function seleccionarColors() { }
+function seleccionarColors() {
+
+
+
+
+
+
+}
 
 
 function compararResultats() { }
