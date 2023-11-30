@@ -94,56 +94,53 @@
 // } 
 
 
+// Variables globales para el temporizador y el tiempo restante
+let temporizador;
+let tiempoRestante;
 
+// Función para cambiar la imagen después de 30 segundos
+function cambiarImagen() {
+  document.getElementById('miImagen').src = 'img/mascara.png';
+  reiniciarTemporizador();
+}
 
+// Función para iniciar el temporizador
+function iniciarCambio() {
+  reiniciarTemporizador(); // Reinicia el temporizador actual, si existe
+  tiempoRestante = 30; // Tiempo en segundos
+  const tiempoRestanteElemento = document.getElementById('tiempoRestante');
 
-    // Variables globales para el temporizador y el tiempo restante
-    let temporizador;
-    let tiempoRestante;
+  // Muestra el tiempo restante y oculta el temporizador anterior
+  tiempoRestanteElemento.textContent = `Tiempo restante: ${tiempoRestante} segundos`;
 
-    // Función para cambiar la imagen después de 30 segundos
-    function cambiarImagen() {
-      document.getElementById('miImagen').src = 'img/mascara.png';
-      reiniciarTemporizador();
+  // Inicia el temporizador
+  temporizador = setInterval(function () {
+    tiempoRestante--;
+    tiempoRestanteElemento.textContent = `Tiempo restante: ${tiempoRestante} segundos`;
+
+    if (tiempoRestante === 0) {
+      clearInterval(temporizador);
+      cambiarImagen(); // Cambia la imagen cuando el temporizador llega a 0
     }
+  }, 1000); // Actualiza cada segundo
+}
 
-    // Función para iniciar el temporizador
-    function iniciarCambio() {
-      reiniciarTemporizador(); // Reinicia el temporizador actual, si existe
-      tiempoRestante = 30; // Tiempo en segundos
-      const tiempoRestanteElemento = document.getElementById('tiempoRestante');
-
-      // Muestra el tiempo restante y oculta el temporizador anterior
-      tiempoRestanteElemento.textContent = `Tiempo restante: ${tiempoRestante} segundos`;
-
-      // Inicia el temporizador
-      temporizador = setInterval(function() {
-        tiempoRestante--;
-        tiempoRestanteElemento.textContent = `Tiempo restante: ${tiempoRestante} segundos`;
-
-        if (tiempoRestante === 0) {
-          clearInterval(temporizador);
-          cambiarImagen(); // Cambia la imagen cuando el temporizador llega a 0
-        }
-      }, 1000); // Actualiza cada segundo
-    }
-
-    // Función para reiniciar el temporizador
-    function reiniciarTemporizador() {
-      clearInterval(temporizador); // Limpia el temporizador actual
-      document.getElementById('tiempoRestante').textContent = ''; // Limpia el texto del temporizador
-    }
+// Función para reiniciar el temporizador
+function reiniciarTemporizador() {
+  clearInterval(temporizador); // Limpia el temporizador actual
+  document.getElementById('tiempoRestante').textContent = ''; // Limpia el texto del temporizador
+}
 
 
 
-    
 
 
 
-function seleccionarColors(){}
+
+function seleccionarColors() { }
 
 
-function compararResultats(){}
+function compararResultats() { }
 
 
-function ensenyarResultats(){}
+function ensenyarResultats() { }
