@@ -52,8 +52,6 @@ nav a:hover {
     width: 100%;
 }
 
-
-
 .navbar-nav li {
     text-align: center;
     list-style: none;
@@ -108,12 +106,12 @@ html {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .juego:hover img {
+}
+
+.juego:hover img {
     transform: scale(1.03);
-  }
-    
+}
+
 
 .juego:hover img {
     transform: scale(1.05);
