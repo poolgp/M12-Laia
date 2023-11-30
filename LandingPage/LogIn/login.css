@@ -2,6 +2,12 @@ body {
     padding-top: 70px;
 }
 
+nav img {
+    height: 60px;
+    width: auto;
+    margin-right: 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;

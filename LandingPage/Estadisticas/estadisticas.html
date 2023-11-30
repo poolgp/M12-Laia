@@ -2,58 +2,104 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-  <!-- Link Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
-  <!-- Link fontawesome (iconos) -->
-  <script src="https://kit.fontawesome.com/c7334dda94.js" crossorigin="anonymous"></script>
+    <!-- Link fontawesome (iconos) -->
+    <script src="https://kit.fontawesome.com/c7334dda94.js" crossorigin="anonymous"></script>
 
-  <!-- Link css -->
-  <link rel="stylesheet" href="Estadisticas.css">
+    <!-- Link css -->
+    <link rel="stylesheet" href="Estadisticas.css">
 </head>
 
 <body>
-  <!-- <button type="button" class="btn btn-secondary text-white">
-        <a href="../index.html" class="text-white" style="text-decoration: none;">Home</a>
-    </button> -->
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <ul class="navbar-nav">
-            <li><a href="../LandingPage1/Land2.html"><i class="fas fa-house"></i><span>Home</span></a></li>
-            <li><a href="../LandingPage1/Land2.html#juegos"><i class="fa-solid fa-gamepad"></i><span>Juegos</span></a></li>
-            <li><a href="../LandingPage1/Land2.html#creditos"><i class="fa-solid fa-people-group"></i><span>Créditos</span></a>
-            </li>
-            <li><a href="../Estadisticas/Estadisticas.html"><i
-                  class="fas fa-chart-simple"></i><span>Estadísticas</span></a></li>
-            <li><a href="../Ajustes/Ajustes.html"><i class="fa-solid fa-gear"></i><span>Ajustes</span></a></li>
-            <li><a href="../Login/login.html"><i class="fas fa-right-to-bracket"></i><span>LogIn</span></a></li>
-          </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <ul class="navbar-nav">
+                        <li>
+                            <a href="../LandingPage.html#presentacion">
+                                <i class="fas fa-house"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../LandingPage.html#juegos">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>Juegos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../LandingPage.html#creditos">
+                                <i class="fa-solid fa-people-group"></i>
+                                <span>Créditos</span>
+                            </a>
+                        </li>
+                        <li class="logo">
+                            <a>
+                                <img src="../Logo.png" alt="Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../Estadisticas/Estadisticas.html">
+                                <i class="fas fa-chart-simple"></i>
+                                <span>Estadísticas</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-gear"></i><span>Idioma</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../catalan.png" alt="Español">CA
+                                    </a>
+                                </li>   
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../español.png" alt="Español">ES
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../ingles.png" alt="Español">EN
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../Login/login.html">
+                                <i class="fas fa-right-to-bracket"></i>
+                                <span>Iniciar sesión</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="container mt-5">
-    <a href="./EstadisticasEuropa.html" class="respuesta">Europa</a>
-    <a href="./EstadisticasBrasil.html" class="respuesta">Brasil</a>
-    <a href="./EstadisticasKenia.html" class="respuesta">Kenia</a>
-    <a href="./EstadisticasIndia.html" class="respuesta">India</a>
-  </div>
+    <div class="container mt-5">
+        <a href="./EstadisticasEuropa.html" class="respuesta">Europa</a>
+        <a href="./EstadisticasBrasil.html" class="respuesta">Brasil</a>
+        <a href="./EstadisticasKenia.html" class="respuesta">Kenia</a>
+        <a href="./EstadisticasIndia.html" class="respuesta">India</a>
+    </div>
 
 </body>
 
