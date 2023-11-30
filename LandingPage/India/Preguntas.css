@@ -7,18 +7,19 @@ body {
     padding: 0;
 }
 
-
-h1, #score, .container {
+h1 {
     text-align: center;
 }
 
 #score {
+    text-align: center;
     display: block;
     margin-top: 10px;
     font-size: 20px;
 }
 
-.container {
+.container1 {
+    text-align: center;
     position: relative;
     height: 660px;
     width: 1000px;
@@ -28,16 +29,24 @@ h1, #score, .container {
     background-position: center;
 }
 
-.containerPregunta, .containerResposta {
+.container2 {
+    text-align: center;
+    position: relative;
+    height: 340px;
+    width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.containerPregunta {
     position: relative;
     height: 300px;
     width: 960px;
     border: solid 2px black;
     margin: 20px 20px 10px 20px;
     overflow: hidden;
-}
-
-.containerPregunta {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +56,12 @@ h1, #score, .container {
 }
 
 .containerResposta {
+    position: relative;
+    height: 300px;
+    width: 960px;
+    border: solid 2px black;
+    margin: 20px 20px 10px 20px;
+    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -61,11 +76,31 @@ h1, #score, .container {
     backdrop-filter: blur(1px);
     justify-content: center;
     align-items: center;
-} 
+}
 
 #start {
     display: block;
     margin: 20px auto;
-    margin-top: 20px;
+    font-size: 25px;
+}
+
+.containerFinJuego {
+    position: relative;
+    height: 300px;
+    width: 960px;
+    border: solid 2px black;
+    margin: 20px 20px 10px 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1px);
+    font-size: 30px;
+}
+
+#home {
+    display: block;
+    margin: 20px auto;
     font-size: 25px;
 }
