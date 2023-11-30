@@ -45,7 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("¡Felicidades! Has completado el nivel.");
     }
 
-    // Verifica si el juego se ha completado automaticamente
+    // Función para determinar si la conexión al centro es correcta
+    function iluminarConexion(i, j) {
+        const arribaCorrecto = i > 0 && juegoTablero[i - 1][j] === 1;
+        const abajoCorrecto = i < gridSize - 1 && juegoTablero[i + 1][j] === 1;
+        const izquierdaCorrecto = j > 0 && juegoTablero[i][j - 1] === 1;
+        const derechaCorrecto = j < gridSize - 1 && juegoTablero[i][j + 1] === 1;
+
+        return arribaCorrecto || abajoCorrecto || izquierdaCorrecto || derechaCorrecto;
+    }
+
+    // Verifica si el juego se ha completado automáticamente
     function verificarJuegoCompleto() {
         let completo = true;
 
@@ -62,6 +72,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Tubería curva
                     const rotacion = parseFloat(botones[i][j].style.transform.replace("rotate(", "").replace("deg)", ""));
                     if (rotacion !== 90 && rotacion !== 270) {
+                        completo = false;
+                        break;
+                    }
+                } else if (juegoTablero[i][j] === 3) {
+                    // Centro
+                    if (iluminarConexion(i, j)) {
+                        // Ilumina los elementos conectados al centro
+                        botones[i][j].classList.add("iluminado");
+                        botones[i - 1][j].classList.add("iluminado"); // Arriba
+                        botones[i + 1][j].classList.add("iluminado"); // Abajo
+                        botones[i][j - 1].classList.add("iluminado"); // Izquierda
+                        botones[i][j + 1].classList.add("iluminado"); // Derecha
+                    } else {
                         completo = false;
                         break;
                     }
