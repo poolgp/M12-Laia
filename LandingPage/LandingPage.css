@@ -125,7 +125,6 @@ html {
     height: 300px;
     width: 300px;
     background-color: lightblue;
-    margin: 80px;
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -173,7 +172,6 @@ html {
 #TituloJuegos,
 #TituloCreditos {
     text-align: center;
-    margin-top: 50px;
     color: white;
 }
 
