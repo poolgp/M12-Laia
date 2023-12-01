@@ -161,7 +161,6 @@ html {
 .creditos-item img {
     width: 100%;
     max-width: 150px;
-    /* Adjust the max-width as needed */
     border-radius: 50%;
 }
 
@@ -175,9 +174,7 @@ html {
 #TituloCreditos {
     text-align: center;
     margin-top: 50px;
-    /* Adjust the margin-top as needed */
     color: white;
-    /* Set the desired text color */
 }
 
 #juegos,
