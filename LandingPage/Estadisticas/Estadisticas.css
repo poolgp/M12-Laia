@@ -79,30 +79,65 @@ html {
     margin: 80px;
     display: inline-block;
 
-}.container {
-    height: 300px;
-    width: 960px;
-    border: solid 2px black;
+}
+
+.container {
+    height: 175px;
+    width: 1200px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     font-size: 20px;
 }
 
+.barra-paises {
+    display: flex;
+    justify-content: space-between;
+}
+
 .respuesta {
     border: solid 2px black;
-    margin: 15px 10px;
-    display: flex;
-    border: 2px solid black;
-    justify-content: center;
-    align-items: center;
+    padding: 70px; /* Añade un espacio interno al botón */
     color: black;
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+}
+
+.respuesta:hover {
+    background-color: lightgray; /* Cambia el color de fondo al pasar el ratón sobre el botón */
 }
 
 .respuesta.europa { background-color:  rgb(95, 187, 95); }
 .respuesta.brasil { background-color: rgb(95, 187, 95); }
 .respuesta.kenia { background-color:  rgb(95, 187, 95); }
 .respuesta.india { background-color:  rgb(95, 187, 95); }
+
+.imagen-Laia {
+    width: 10%;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 380px;
+}
+
+.imagen-Cauan {
+    width: 9%;
+    height: auto;
+    margin-top: 55px;
+    margin-left: 150px;
+}
+
+.imagen-Malik {
+    width: 11%;
+    height: auto;
+    margin-top: 35px;
+    margin-left: 120px;
+}
+
+.imagen-Alisha {
+    width: 8%;
+    height: auto;
+    margin-top: 130px;
+    margin-left: 140px;
+}
 
 nav ul {
     list-style: none;
