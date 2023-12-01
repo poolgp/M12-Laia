@@ -1,4 +1,4 @@
-body{
+body {
 
     text-align: center;
     background-size: cover;
@@ -6,7 +6,7 @@ body{
 }
 
 
-#contenidorPrincipal{
+#contenidorPrincipal {
 
     position: relative;
     width: 1000px;
@@ -14,15 +14,24 @@ body{
     margin: auto;
 }
 
-img{
+img {
 
-    width: 50%;
-    height: 40%;
+    width: 500px;
+    height: 500px;
 }
 
 
+#nuevasMascarasContainer {
+    position: relative;
+  }
 
-.bordeJoc{
+
+
+
+
+
+
+.bordeJoc {
 
     background-color: white;
     width: 1000px;
@@ -33,14 +42,14 @@ img{
 
 }
 
-.titolPrincipal{
+.titolPrincipal {
 
     justify-content: center;
     text-align: center;
     align-items: center;
 }
 
-.contenidor{
+.contenidor {
 
     left: 0;
     right: 0;
@@ -55,17 +64,34 @@ img{
 }
 
 
-.colorFons{
+.colorFons {
 
     width: 170px;
     height: 170px;
     border: 1px solid black;
-   
+
 
 }
 
 
-.paletaColors{
+
+.contenidorComprovar {
+
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#botonesContainer {
+    display: none;
+}
+
+
+
+
+.paletaColors {
 
 
     left: 0;
@@ -79,10 +105,10 @@ img{
     align-items: center;
     cursor: pointer;
 
-    
+
 }
 
-.paleta1{
+.paleta1 {
 
     background-color: orange;
     width: 100px;
@@ -90,7 +116,7 @@ img{
     border: 1px solid black;
 }
 
-.paleta2{
+.paleta2 {
 
     background-color: green;
     width: 100px;
@@ -98,7 +124,7 @@ img{
     border: 1px solid black;
 }
 
-.paleta3{
+.paleta3 {
 
     background-color: blue;
     width: 100px;
@@ -106,26 +132,10 @@ img{
     border: 1px solid black;
 }
 
-.paleta4{
+.paleta4 {
 
     background-color: red;
     width: 100px;
     height: 100px;
     border: 1px solid black;
 }
-
-
-
-
-.contenidorComprovar{
-
-    flex: auto;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-#botonesContainer {
-    display: none;
-  }
