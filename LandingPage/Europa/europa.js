@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById("container");
     const gridSize = 5;
     const juegoTablero = [
         [3, 2, 0, 0, 3],
@@ -9,43 +8,66 @@ document.addEventListener("DOMContentLoaded", function () {
         [3, 3, 1, 3, 3]
     ];
 
+    const imageNames = [
+        "img/cableRectoIncompleto.png", "img/cableTripleIncompleto.png", "img/cableDobleIncompleto.png",
+        "img/bombilla-apagada.png", "img/centroCompleto.png"
+    ];
+
+    const container = document.getElementById("container");
+    const timerElement = document.getElementById("timer");
+    const reintentarBtn = document.getElementById("reintentarBtn");
+
     const botones = [];
 
-    const imageNames = ["img/cableRectoIncompleto.png", "img/cableTripleIncompleto.png", "img/cableDobleIncompleto.png", "img/bombilla-apagada.png", "img/centroCompleto.png"];
+    const constantes = {
+        tiempoInicial: 60,
+        tamanoBoton: 100,
+    };
 
-    for (let i = 0; i < gridSize; i++) {
-        botones[i] = [];
-        for (let j = 0; j < gridSize; j++) {
-            const button = document.createElement("button");
-            button.classList.add("box");
-
-            // Asigna la imagen en función de la matriz juegoTablero
-            const randomImage = imageNames[juegoTablero[i][j]];
-
-            const image = document.createElement("img");
-            image.src = randomImage;
-            image.style.width = "100px";
-            image.style.height = "100px";
-
-            const rotacionRandom = Math.floor(Math.random() * 4) * 90;
-            button.style.transform = `rotate(${rotacionRandom}deg)`;
-
-            button.appendChild(image);
-
-            button.onclick = function () {
-                rotarBoton(this, i, j);
-            };
-            container.appendChild(button);
-            botones[i][j] = button;
+    function inicializar() {
+        for (let i = 0; i < gridSize; i++) {
+            botones[i] = [];
+            for (let j = 0; j < gridSize; j++) {
+                crearBoton(i, j);
+            }
         }
     }
 
-    // Mensaje para felicitar al usuario
-    function mostrarMensajeFelicitaciones() {
-        alert("¡Felicidades! Has completado el nivel.");
+    function crearBoton(i, j) {
+        const button = document.createElement("button");
+        button.classList.add("box");
+
+        const randomImage = imageNames[juegoTablero[i][j]];
+
+        const image = document.createElement("img");
+        image.src = randomImage;
+        image.style.width = `${constantes.tamanoBoton}px`;
+        image.style.height = `${constantes.tamanoBoton}px`;
+
+        const rotacionRandom = Math.floor(Math.random() * 4) * 90;
+        button.style.transform = `rotate(${rotacionRandom}deg)`;
+
+        button.appendChild(image);
+
+        button.onclick = function () {
+            rotarBoton(this, i, j);
+        };
+
+        container.appendChild(button);
+        botones[i][j] = button;
     }
 
-    // Función para determinar si la conexión al centro es correcta
+    function rotarBoton(boton, i, j) {
+        const currentRotation = (parseFloat(boton.style.transform.replace("rotate(", "").replace("deg)", "")) || 0) + 90;
+        boton.style.transform = `rotate(${currentRotation}deg)`;
+        verificarJuegoCompleto();
+    }
+
+    function mostrarMensaje(mensaje) {
+        // Implementa lógica para mostrar mensajes en la interfaz del juego
+        console.log(mensaje);
+    }
+
     function iluminarConexion(i, j) {
         const arribaCorrecto = i > 0 && juegoTablero[i - 1][j] === 1;
         const abajoCorrecto = i < gridSize - 1 && juegoTablero[i + 1][j] === 1;
@@ -55,30 +77,25 @@ document.addEventListener("DOMContentLoaded", function () {
         return arribaCorrecto || abajoCorrecto || izquierdaCorrecto || derechaCorrecto;
     }
 
-    // Verifica si el juego se ha completado automáticamente
     function verificarJuegoCompleto() {
         let completo = true;
 
         for (let i = 0; i < gridSize; i++) {
             for (let j = 0; j < gridSize; j++) {
                 if (juegoTablero[i][j] === 0) {
-                    // Tubería recta
                     const rotacion = parseFloat(botones[i][j].style.transform.replace("rotate(", "").replace("deg)", ""));
                     if (rotacion !== 0 && rotacion !== 180) {
                         completo = false;
                         break;
                     }
                 } else if (juegoTablero[i][j] === 1) {
-                    // Tubería curva
                     const rotacion = parseFloat(botones[i][j].style.transform.replace("rotate(", "").replace("deg)", ""));
                     if (rotacion !== 90 && rotacion !== 270) {
                         completo = false;
                         break;
                     }
                 } else if (juegoTablero[i][j] === 3) {
-                    // Centro
                     if (iluminarConexion(i, j)) {
-                        // Ilumina los elementos conectados al centro
                         botones[i][j].classList.add("iluminado");
                         botones[i - 1][j].classList.add("iluminado"); // Arriba
                         botones[i + 1][j].classList.add("iluminado"); // Abajo
@@ -96,49 +113,40 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (completo) {
-            mostrarMensajeFelicitaciones();
+            mostrarMensaje("¡Felicidades! Has completado el nivel.");
         }
     }
 
-    function rotarBoton(boton, i, j) {
-        const currentRotation = (parseFloat(boton.style.transform.replace("rotate(", "").replace("deg)", "")) || 0) + 90;
-        boton.style.transform = `rotate(${currentRotation}deg)`;
-        verificarJuegoCompleto();
-    }
-
-    const comprobarBtn = document.getElementById("comprobarBtn");
-    comprobarBtn.addEventListener("click", verificarJuegoCompleto);
-
-    // Temporizador
-    let tiempoRestante = 60; // 60 segundos
-    const timerElement = document.getElementById("timer");
-    const reintentarBtn = document.getElementById("reintentarBtn");
-
     function actualizarTemporizador() {
-        if (tiempoRestante >= 0) {
-            const minutos = Math.floor(tiempoRestante / 60);
-            const segundos = tiempoRestante % 60;
+        if (constantes.tiempoRestante >= 0) {
+            const minutos = Math.floor(constantes.tiempoRestante / 60);
+            const segundos = constantes.tiempoRestante % 60;
             timerElement.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
-            tiempoRestante--;
+            constantes.tiempoRestante--;
 
-            if (tiempoRestante < 0) {
-                // Tiempo agotado, muestra el mensaje y el botón de reintentar
-                alert("¡Tiempo agotado! Has perdido.");
+            if (constantes.tiempoRestante < 0) {
+                mostrarMensaje("¡Tiempo agotado! Has perdido.");
                 reintentarBtn.style.display = "block";
             }
         }
     }
 
-    const intervaloTemporizador = setInterval(actualizarTemporizador, 1000);
+    function reiniciarJuego() {
+        clearInterval(constantes.intervaloTemporizador);
+        constantes.tiempoRestante = constantes.tiempoInicial;
+        timerElement.textContent = "1:00";
+        reintentarBtn.style.display = "none";
 
-    reintentarBtn.addEventListener("click", function () {
-        // Aquí puedes reiniciar el nivel o realizar la acción que desees al hacer clic en reintentar.
-        clearInterval(intervaloTemporizador); // Detén el temporizador actual
-        tiempoRestante = 60; // Reinicia el tiempo
-        timerElement.textContent = "1:00"; // Restablece el texto del temporizador
-        reintentarBtn.style.display = "none"; // Oculta el botón de reintentar
-        // Luego, puedes realizar las acciones necesarias para reiniciar el nivel.
+        constantes.intervaloTemporizador = setInterval(actualizarTemporizador, 1000);
+    }
 
-        intervaloTemporizador = setInterval(actualizarTemporizador, 1000);
-    });
+    // Inicialización
+    inicializar();
+
+    // Temporizador
+    constantes.tiempoRestante = constantes.tiempoInicial;
+    constantes.intervaloTemporizador = setInterval(actualizarTemporizador, 1000);
+
+    // Botón de reinicio
+    reintentarBtn.addEventListener("click", reiniciarJuego);
 });
