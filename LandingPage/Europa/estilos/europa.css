@@ -46,24 +46,6 @@ body {
     display: none;
 }
 
-
-/* 
-
-.pipe {
-    position: absolute;
-    width: 490px;
-    height: 490px;
-    z-index: 2;
+.iluminado {
+    background-color: #b3e6b3; /* Color de fondo para resaltar conexiones activadas */
 }
-
-.inicio {
-    top: -42%;
-    left: -130%;
-    transform: translate(102.5%, -58%);
-}
-
-.final {
-    bottom: -42%;
-    right: -130%;
-    transform: translate(-102.5%, 58%); 
-} */
