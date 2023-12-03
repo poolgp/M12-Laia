@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const imageNames = [
-        "img/cableRectoIncompleto.png", "img/cableTripleIncompleto.png", "img/cableDobleIncompleto.png",
+        "img/cableRectoApagado.png", "img/cableTripleApagado.png", "img/cableDobleApagado.png",
         "img/bombilla-apagada.png", "img/centroCompleto.png"
     ];
 
@@ -60,22 +60,69 @@ document.addEventListener("DOMContentLoaded", function () {
     function rotarBoton(boton, i, j) {
         const currentRotation = (parseFloat(boton.style.transform.replace("rotate(", "").replace("deg)", "")) || 0) + 90;
         boton.style.transform = `rotate(${currentRotation}deg)`;
+    
+        // Verificar si la parte del cable toca el centro
+        if (juegoTablero[i][j] !== 4) { // No es el centro
+            const centroIndex = 4;
+            const centroIlluminatedIndex = 5; // Supongamos que este es el índice para la versión iluminada del centro
+    
+            // Iterar sobre todas las filas
+            for (let rowIndex = 0; rowIndex < gridSize; rowIndex++) {
+                const centerButton = botones[rowIndex][juegoTablero[rowIndex].indexOf(centroIndex)]; // Encuentra el botón del centro en la fila actual
+    
+                if (centerButton) {
+                    const centerImage = centerButton.firstChild;
+                    const cableIndex = juegoTablero[i][j];
+    
+                    if (centerImage && centerImage.src.includes("centroCompleto.png")) {
+                        // Cambiar la imagen del cable a la versión encendida
+                        boton.firstChild.src = imageNames[cableIndex].replace("Apagado.png", "Encendido.png");
+    
+                        // Cambiar la imagen de todas las bombillas a la versión encendida en la fila actual
+                        const bombillaIndex = 3; // Índice correspondiente a la bombilla
+                        const bombillaIndices = juegoTablero[rowIndex].reduce((acc, val, idx) => val === bombillaIndex ? acc.concat(idx) : acc, []);
+    
+                        for (const bombillaIdx of bombillaIndices) {
+                            const bombillaButton = botones[rowIndex][bombillaIdx];
+    
+                            if (bombillaButton) {
+                                bombillaButton.firstChild.src = imageNames[bombillaIndex].replace("apagada.png", "encendida.png");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
         verificarJuegoCompleto();
     }
+    
+    
+    
+    
+    
 
     function mostrarMensaje(mensaje) {
         // Implementa lógica para mostrar mensajes en la interfaz del juego
         console.log(mensaje);
     }
 
-    function iluminarConexion(i, j) {
-        const arribaCorrecto = i > 0 && juegoTablero[i - 1][j] === 1;
-        const abajoCorrecto = i < gridSize - 1 && juegoTablero[i + 1][j] === 1;
-        const izquierdaCorrecto = j > 0 && juegoTablero[i][j - 1] === 1;
-        const derechaCorrecto = j < gridSize - 1 && juegoTablero[i][j + 1] === 1;
-
-        return arribaCorrecto || abajoCorrecto || izquierdaCorrecto || derechaCorrecto;
+    function cambiarImagenCable(boton, i, j) {
+        const centro = 4; // Índice de la imagen del centro en imageNames
+        if (juegoTablero[i][j] === centro) {
+            const centroApagado = "img/centroApagado.png";
+            const centroEncendido = "img/centroEncendido.png";
+            
+            const imagenActual = boton.firstChild.src;
+    
+            if (imagenActual.includes("Apagado")) {
+                boton.firstChild.src = centroEncendido;
+            } else {
+                boton.firstChild.src = centroApagado;
+            }
+        }
     }
+    
 
     function verificarJuegoCompleto() {
         let completo = true;
