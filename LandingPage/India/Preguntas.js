@@ -26,81 +26,81 @@ let preguntas = [
         respuestas: ["Diwali", "Holi", "Navaratri", "Durga Puja"],
         respuestaCorrecta: "Diwali",
     },
-    // {
-    //     pregunta: "6- ¿Cuál es la ciudad más poblada de la India?",
-    //     respuestas: ["Bombay", "Delhi", "Calcuta", "Chennai"],
-    //     respuestaCorrecta: "Delhi",
-    // },
-    // {
-    //     pregunta: "7- ¿Cuál es el nombre del sistema de castas en la sociedad india?",
-    //     respuestas: ["Varna", "Jati", "Kshatriya", "Brahmana"],
-    //     respuestaCorrecta: "Varna",
-    // },
-    // {
-    //     pregunta: "8- ¿Cuál es el nombre del monumento construido por Shah Jahan en memoria de su esposa Mumtaz Mahal?",
-    //     respuestas: ["Fuerte Rojo", "Templo Dorado", "Taj Mahal", "Mezquita Jama Masjid"],
-    //     respuestaCorrecta: "Taj Mahal",
-    // },
-    // {
-    //     pregunta: "9- ¿Qué figura histórica india lideró el movimiento de independencia a través de la no violencia?",
-    //     respuestas: ["Subhas Chandra Bose", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Patel"],
-    //     respuestaCorrecta: "Mahatma Gandhi",
-    // },
-    // {
-    //     pregunta: "10- ¿Cuál es la moneda oficial de la India?",
-    //     respuestas: ["Rupia india", "Dólar indio", "Rupia hindú", "Rupia asiática"],
-    //     respuestaCorrecta: "Rupia india",
-    // },
-    // {
-    //     pregunta: "11- ¿Cuál es la religión mayoritaria en la India?",
-    //     respuestas: ["Hinduismo", "Islam", "Sikhismo", "Cristianismo"],
-    //     respuestaCorrecta: "Hinduismo",
-    // },
-    // {
-    //     pregunta: "12- ¿Cuál es la montaña más alta de la India?",
-    //     respuestas: ["K2", "Nanda Devi", "Dhaulagiri", "Kanchenjunga"],
-    //     respuestaCorrecta: "Nanda Devi",
-    // },
-    // {
-    //     pregunta: "13- ¿En qué año se celebró la primera Copa Mundial de Críquet en la India?",
-    //     respuestas: ["1971", "1983", "1996", "2007"],
-    //     respuestaCorrecta: "1983",
-    // },
-    // {
-    //     pregunta: "14- ¿Cuál es la especia más asociada con la cocina india?",
-    //     respuestas: ["Comino", "Canela", "Cúrcuma", "Pimienta negra"],
-    //     respuestaCorrecta: "Cúrcuma",
-    // },
-    // {
-    //     pregunta: "15- ¿Cuál es el nombre del río que fluye a través de la ciudad de Benarés (Varanasi)?",
-    //     respuestas: ["Río Yamuna", "Río Brahmaputra", "Río Ganges", "Río Sabarmati"],
-    //     respuestaCorrecta: "Río Ganges",
-    // },
-    // {
-    //     pregunta: "16- ¿Cuál es el nombre del baile clásico indio que se originó en el estado de Tamil Nadu?",
-    //     respuestas: ["Kathakali", "Kathakali", "Bharatanatyam", "Río Kuchipudi"],
-    //     respuestaCorrecta: "Bharatanatyam",
-    // },
-    // {
-    //     pregunta: "17- ¿Cuál es la ciudad conocida como la 'Ciudad Rosa' debido al color de sus edificaciones?",
-    //     respuestas: ["Jaipur", "Jodhpur", "Udaipur", "Jaisalmer"],
-    //     respuestaCorrecta: "Jaipur",
-    // },
-    // {
-    //     pregunta: "18- ¿Cuál es el estado más grande de la India en términos de área geográfica?",
-    //     respuestas: ["Rajastán", "Madhya Pradesh", "Maharashtra", "Uttar Pradesh"],
-    //     respuestaCorrecta: "Rajastán",
-    // },
-    // {
-    //     pregunta: "19- ¿Cuál es el nombre del festival que celebra la llegada de la primavera en India con colores brillantes?",
-    //     respuestas: ["Diwali", "Holi", "Navaratri", "Pongal"],
-    //     respuestaCorrecta: "Holi",
-    // },
-    // {
-    //     pregunta: "20- ¿Cuál es el nombre de la película india que ganó el Premio de la Academia a la Mejor Película Extranjera en 2009?",
-    //     respuestas: ["Lagaan", "Slumdog Millionaire", "Taare Zameen Par", "Black"],
-    //     respuestaCorrecta: "Slumdog Millionaire",
-    // },
+    {
+        pregunta: "6- ¿Cuál es la ciudad más poblada de la India?",
+        respuestas: ["Bombay", "Delhi", "Calcuta", "Chennai"],
+        respuestaCorrecta: "Delhi",
+    },
+    {
+        pregunta: "7- ¿Cuál es el nombre del sistema de castas en la sociedad india?",
+        respuestas: ["Varna", "Jati", "Kshatriya", "Brahmana"],
+        respuestaCorrecta: "Varna",
+    },
+    {
+        pregunta: "8- ¿Cuál es el nombre del monumento construido por Shah Jahan en memoria de su esposa Mumtaz Mahal?",
+        respuestas: ["Fuerte Rojo", "Templo Dorado", "Taj Mahal", "Mezquita Jama Masjid"],
+        respuestaCorrecta: "Taj Mahal",
+    },
+    {
+        pregunta: "9- ¿Qué figura histórica india lideró el movimiento de independencia a través de la no violencia?",
+        respuestas: ["Subhas Chandra Bose", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Patel"],
+        respuestaCorrecta: "Mahatma Gandhi",
+    },
+    {
+        pregunta: "10- ¿Cuál es la moneda oficial de la India?",
+        respuestas: ["Rupia india", "Dólar indio", "Rupia hindú", "Rupia asiática"],
+        respuestaCorrecta: "Rupia india",
+    },
+    {
+        pregunta: "11- ¿Cuál es la religión mayoritaria en la India?",
+        respuestas: ["Hinduismo", "Islam", "Sikhismo", "Cristianismo"],
+        respuestaCorrecta: "Hinduismo",
+    },
+    {
+        pregunta: "12- ¿Cuál es la montaña más alta de la India?",
+        respuestas: ["K2", "Nanda Devi", "Dhaulagiri", "Kanchenjunga"],
+        respuestaCorrecta: "Nanda Devi",
+    },
+    {
+        pregunta: "13- ¿En qué año se celebró la primera Copa Mundial de Críquet en la India?",
+        respuestas: ["1971", "1983", "1996", "2007"],
+        respuestaCorrecta: "1983",
+    },
+    {
+        pregunta: "14- ¿Cuál es la especia más asociada con la cocina india?",
+        respuestas: ["Comino", "Canela", "Cúrcuma", "Pimienta negra"],
+        respuestaCorrecta: "Cúrcuma",
+    },
+    {
+        pregunta: "15- ¿Cuál es el nombre del río que fluye a través de la ciudad de Benarés (Varanasi)?",
+        respuestas: ["Río Yamuna", "Río Brahmaputra", "Río Ganges", "Río Sabarmati"],
+        respuestaCorrecta: "Río Ganges",
+    },
+    {
+        pregunta: "16- ¿Cuál es el nombre del baile clásico indio que se originó en el estado de Tamil Nadu?",
+        respuestas: ["Kathakali", "Kathakali", "Bharatanatyam", "Río Kuchipudi"],
+        respuestaCorrecta: "Bharatanatyam",
+    },
+    {
+        pregunta: "17- ¿Cuál es la ciudad conocida como la 'Ciudad Rosa' debido al color de sus edificaciones?",
+        respuestas: ["Jaipur", "Jodhpur", "Udaipur", "Jaisalmer"],
+        respuestaCorrecta: "Jaipur",
+    },
+    {
+        pregunta: "18- ¿Cuál es el estado más grande de la India en términos de área geográfica?",
+        respuestas: ["Rajastán", "Madhya Pradesh", "Maharashtra", "Uttar Pradesh"],
+        respuestaCorrecta: "Rajastán",
+    },
+    {
+        pregunta: "19- ¿Cuál es el nombre del festival que celebra la llegada de la primavera en India con colores brillantes?",
+        respuestas: ["Diwali", "Holi", "Navaratri", "Pongal"],
+        respuestaCorrecta: "Holi",
+    },
+    {
+        pregunta: "20- ¿Cuál es el nombre de la película india que ganó el Premio de la Academia a la Mejor Película Extranjera en 2009?",
+        respuestas: ["Lagaan", "Slumdog Millionaire", "Taare Zameen Par", "Black"],
+        respuestaCorrecta: "Slumdog Millionaire",
+    },
 ];
 
 document.getElementById("container2").style.display = "none";
@@ -233,7 +233,15 @@ function FinJuego() {
     document.getElementById("container2").style.display = "block";
 }
 
+// Esta función redirige a la página especificada
 function home() {
-  // Redirige a la página juegos
-  window.location.href = "../LandingPage1/Land2.html#juegos";
+    // Reemplaza 'url_destino' con la URL de la página a la que deseas redirigir
+    var url_destino = './LandingPage.html';
+    
+    // Redirige a la nueva página
+    window.location.href = url_destino;
 }
+
+// Puedes llamar a la función cuando se haga clic en un botón, por ejemplo
+var boton = document.getElementById('id_del_boton'); // Reemplaza 'id_del_boton' con el ID de tu botón
+boton.addEventListener('click', redirigirAPagina);
