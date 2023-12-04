@@ -11,20 +11,35 @@ window.onmousemove = function (e) {
   });
 };
 
+// Espera a que el DOM (Document Object Model) se cargue completamente antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", function () {
+  // Inicializa el índice de la imagen actual en 0
   let index = 0;
+  
+  // Selecciona todas las imágenes con la clase "imagen" y las almacena en la variable 'imagenes'
   const imagenes = document.querySelectorAll(".imagen");
+  
+  // Almacena la cantidad total de imágenes en la variable 'totalImagenes'
   const totalImagenes = imagenes.length;
 
+  // Función para mostrar la imagen actual
   function mostrarImagen() {
+    // Muestra la imagen actual estableciendo el estilo 'display' en "block"
     imagenes[index].style.display = "block";
+    
+    // Establece gradualmente la opacidad de la imagen a 1 después de un breve retraso
     setTimeout(() => {
       imagenes[index].style.opacity = "1";
     }, 50);
   }
 
+  // Función para ocultar la imagen actual y mostrar la siguiente imagen
   function ocultarImagen() {
+    // Establece gradualmente la opacidad de la imagen actual a 0
     imagenes[index].style.opacity = "0";
+    
+    // Después de un breve retraso, oculta la imagen actual y avanza al siguiente índice circularmente
+    // Luego, llama a la función mostrarImagen para mostrar la nueva imagen
     setTimeout(() => {
       imagenes[index].style.display = "none";
       index = (index + 1) % totalImagenes;
@@ -32,6 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   }
 
+  // Muestra la primera imagen cuando la página se carga
   mostrarImagen();
+  
+  // Establece un intervalo para llamar a la función ocultarImagen cada 5000 milisegundos (5 segundos)
   setInterval(ocultarImagen, 5000); // Cambia la imagen cada 5 segundos
 });
