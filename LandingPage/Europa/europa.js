@@ -63,39 +63,49 @@ document.addEventListener("DOMContentLoaded", function () {
     
         // Verificar si la parte del cable toca el centro
         if (juegoTablero[i][j] !== 4) { // No es el centro
-            const centroIndex = 4;
-            const centroIlluminatedIndex = 5; // Supongamos que este es el índice para la versión iluminada del centro
+            const bombillaIndex = 3; // Índice correspondiente a la bombilla
+            const cableIndex = juegoTablero[i][j];
     
-            // Iterar sobre todas las filas
-            for (let rowIndex = 0; rowIndex < gridSize; rowIndex++) {
-                const centerButton = botones[rowIndex][juegoTablero[rowIndex].indexOf(centroIndex)]; // Encuentra el botón del centro en la fila actual
+            if (cableIndex !== bombillaIndex) {
+                // Iluminar solo el cable clicado
+                boton.firstChild.src = imageNames[cableIndex].replace("Apagado.png", "Encendido.png");
     
-                if (centerButton) {
-                    const centerImage = centerButton.firstChild;
-                    const cableIndex = juegoTablero[i][j];
+                // Además, iluminar las bombillas conectadas
+                iluminarBombillasConectadas(i, j, cableIndex);
+            }
     
-                    if (centerImage && centerImage.src.includes("centroCompleto.png")) {
-                        // Cambiar la imagen del cable a la versión encendida
-                        boton.firstChild.src = imageNames[cableIndex].replace("Apagado.png", "Encendido.png");
+            verificarJuegoCompleto();
+        }
+    }
+    function iluminarBombillasConectadas(i, j, cableIndex) {
+        const bombillaIndex = 3; // Índice correspondiente a la bombilla
     
-                        // Cambiar la imagen de todas las bombillas a la versión encendida en la fila actual
-                        const bombillaIndex = 3; // Índice correspondiente a la bombilla
-                        const bombillaIndices = juegoTablero[rowIndex].reduce((acc, val, idx) => val === bombillaIndex ? acc.concat(idx) : acc, []);
-    
-                        for (const bombillaIdx of bombillaIndices) {
-                            const bombillaButton = botones[rowIndex][bombillaIdx];
-    
-                            if (bombillaButton) {
-                                bombillaButton.firstChild.src = imageNames[bombillaIndex].replace("apagada.png", "encendida.png");
-                            }
+        // Iterar sobre todas las filas y columnas
+        for (let rowIndex = 0; rowIndex < gridSize; rowIndex++) {
+            for (let colIndex = 0; colIndex < gridSize; colIndex++) {
+                if (juegoTablero[rowIndex][colIndex] === bombillaIndex) {
+                    const bombillaButton = botones[rowIndex][colIndex];
+                    if (bombillaButton) {
+                        // Verificar si la bombilla está conectada al cable clicado
+                        if (hayConexion(i, j, rowIndex, colIndex)) {
+                            bombillaButton.firstChild.src = imageNames[bombillaIndex].replace("apagada.png", "encendida.png");
                         }
                     }
                 }
             }
         }
-    
-        verificarJuegoCompleto();
     }
+    
+    
+    function hayConexion(i1, j1, i2, j2) {
+        // Lógica para verificar si hay conexión entre las casillas (i1, j1) e (i2, j2)
+        // Implementa la lógica específica para tu juego aquí
+        // Devuelve true si hay conexión, false en caso contrario
+        // Puedes basarte en la lógica de tu juego actual para determinar la conexión
+        // Aquí proporciono una implementación de ejemplo, pero deberías ajustarla según tus reglas de juego
+        return juegoTablero[i1][j1] === juegoTablero[i2][j2];
+    }
+    
     
     
     
