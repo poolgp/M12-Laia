@@ -1,4 +1,4 @@
-const niveles = [nivelFacil, nivelMedio, nivelDificil];
+const niveles = [nivelFacil, nivelMedio, nivelDificil]; 
 
 const nivelFacil = [
     [3, 3, 0, 2],
