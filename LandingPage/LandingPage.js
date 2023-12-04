@@ -23,15 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 50);
   }
 
-  function ocultarImagen() {
-    imagenes[index].style.opacity = "0";
-    setTimeout(() => {
-      imagenes[index].style.display = "none";
-      index = (index + 1) % totalImagenes;
-      mostrarImagen();
-    }, 1000);
-  }
 
   mostrarImagen();
-  setInterval(ocultarImagen, 5000); // Cambia la imagen cada 5 segundos
+  setInterval(ocultarImagen, 5000);
 });
