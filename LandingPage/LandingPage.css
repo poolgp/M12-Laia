@@ -3,6 +3,26 @@ body {
     font-family: Arial, sans-serif;
 }
 
+#carouselExampleCaptions {
+    position: relative;
+}
+
+.carousel-inner::before,
+.carousel-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc((100% - 50%) / 2);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+    z-index: 1;
+}
+
+.carousel-inner::after {
+    right: 0;
+    left: auto;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+}
 
 .imagen {
     display: none;
@@ -158,6 +178,10 @@ html {
     width: 100%;
     max-width: 150px;
     border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+.creditos-item img:hover {
+    transform: scale(1.05); /* Aplica un aumento de escala del 10% al hacer hover */
 }
 
 .creditos-item p {
