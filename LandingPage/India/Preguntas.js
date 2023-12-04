@@ -236,7 +236,7 @@ function FinJuego() {
 // Esta función redirige a la página especificada
 function home() {
     // Reemplaza 'url_destino' con la URL de la página a la que deseas redirigir
-    var url_destino = './LandingPage.html';
+    var url_destino = '../../LandingPage/LandingPage.html#juegos';
     
     // Redirige a la nueva página
     window.location.href = url_destino;
