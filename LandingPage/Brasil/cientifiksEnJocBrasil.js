@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     0,
   ];
   const initialBackground = "./img/backgrounds/brasilFondo1.jpg";
-  const fruitSpeeds = [3, 4, 5];
+  const fruitSpeeds = [2, 2.5, 3];
   let playerPos = [...initialPlayerPos];
   let fruitPos = [...initialFruitPos];
   let score = 0;
