@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const imageNames = [
-        "img/cableRectoIncompleto.png", "img/cableTripleIncompleto.png", "img/cableDobleIncompleto.png",
+        "img/cableRectoApagado.png", "img/cableTripleApagado.png", "img/cableDobleApagado.png",
         "img/bombilla-apagada.png", "img/centroCompleto.png"
     ];
 
@@ -60,22 +60,79 @@ document.addEventListener("DOMContentLoaded", function () {
     function rotarBoton(boton, i, j) {
         const currentRotation = (parseFloat(boton.style.transform.replace("rotate(", "").replace("deg)", "")) || 0) + 90;
         boton.style.transform = `rotate(${currentRotation}deg)`;
-        verificarJuegoCompleto();
+    
+        // Verificar si la parte del cable toca el centro
+        if (juegoTablero[i][j] !== 4) { // No es el centro
+            const bombillaIndex = 3; // Índice correspondiente a la bombilla
+            const cableIndex = juegoTablero[i][j];
+    
+            if (cableIndex !== bombillaIndex) {
+                // Iluminar solo el cable clicado
+                boton.firstChild.src = imageNames[cableIndex].replace("Apagado.png", "Encendido.png");
+    
+                // Además, iluminar las bombillas conectadas
+                iluminarBombillasConectadas(i, j, cableIndex);
+            }
+    
+            verificarJuegoCompleto();
+        }
     }
+    function iluminarBombillasConectadas(i, j, cableIndex) {
+        const bombillaIndex = 3; // Índice correspondiente a la bombilla
+    
+        // Iterar sobre todas las filas y columnas
+        for (let rowIndex = 0; rowIndex < gridSize; rowIndex++) {
+            for (let colIndex = 0; colIndex < gridSize; colIndex++) {
+                if (juegoTablero[rowIndex][colIndex] === bombillaIndex) {
+                    const bombillaButton = botones[rowIndex][colIndex];
+                    if (bombillaButton) {
+                        // Verificar si la bombilla está conectada al cable clicado
+                        if (hayConexion(i, j, rowIndex, colIndex)) {
+                            bombillaButton.firstChild.src = imageNames[bombillaIndex].replace("apagada.png", "encendida.png");
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    function hayConexion(i1, j1, i2, j2) {
+        // Lógica para verificar si hay conexión entre las casillas (i1, j1) e (i2, j2)
+        // Implementa la lógica específica para tu juego aquí
+        // Devuelve true si hay conexión, false en caso contrario
+        // Puedes basarte en la lógica de tu juego actual para determinar la conexión
+        // Aquí proporciono una implementación de ejemplo, pero deberías ajustarla según tus reglas de juego
+        return juegoTablero[i1][j1] === juegoTablero[i2][j2];
+    }
+    
+    
+    
+    
+    
+    
 
     function mostrarMensaje(mensaje) {
         // Implementa lógica para mostrar mensajes en la interfaz del juego
         console.log(mensaje);
     }
 
-    function iluminarConexion(i, j) {
-        const arribaCorrecto = i > 0 && juegoTablero[i - 1][j] === 1;
-        const abajoCorrecto = i < gridSize - 1 && juegoTablero[i + 1][j] === 1;
-        const izquierdaCorrecto = j > 0 && juegoTablero[i][j - 1] === 1;
-        const derechaCorrecto = j < gridSize - 1 && juegoTablero[i][j + 1] === 1;
-
-        return arribaCorrecto || abajoCorrecto || izquierdaCorrecto || derechaCorrecto;
+    function cambiarImagenCable(boton, i, j) {
+        const centro = 4; // Índice de la imagen del centro en imageNames
+        if (juegoTablero[i][j] === centro) {
+            const centroApagado = "img/centroApagado.png";
+            const centroEncendido = "img/centroEncendido.png";
+            
+            const imagenActual = boton.firstChild.src;
+    
+            if (imagenActual.includes("Apagado")) {
+                boton.firstChild.src = centroEncendido;
+            } else {
+                boton.firstChild.src = centroApagado;
+            }
+        }
     }
+    
 
     function verificarJuegoCompleto() {
         let completo = true;
