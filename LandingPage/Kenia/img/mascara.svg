@@ -1,0 +1,26 @@
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink = "http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="744.09448"
+   height="1052.3622"
+   id="svg2">
+  <defs id="defs4" />
+  <g
+     id="layer1">
+  <clipPath id="clip-path">
+     <path d="M 0 0 H 500 V 500 H -500 Z" />
+   </clipPath>
+<!-- xlink:href for modern browsers, src for IE8- -->
+
+    <image id="fondo" clip-path="url(#clip-path)" xlink:href="mascara.png"  src="mascara.png" alt="Image" height="500" width="500" />
+
+    <polygon id="front" points="230,55 272,55 272,97 290,95 300,93 340,85 354,100 365,120 320,134 270,140 270,198 260,210 260,185 238,185 238,210 225,195 225,140 200,137 180,132 150,126 135,120 143,100 156,85 190,90 230,95"
+    onclick="javascript:window.parent.document.form1.area.value='front';" />
+
+     <ellipse id="ulls1" cx="197" cy="260" rx="24" ry="27" onclick="javascript:window.parent.document.form1.area.value='ulls1';" />
+     <ellipse id="ulls2" cx="300" cy="260" rx="24" ry="27" onclick="javascript:window.parent.document.form1.area.value='ulls2';" />
+
+  </g>
+</svg>

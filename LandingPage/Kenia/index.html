@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Estils/estils.css">
+  <title>Joc Kenya</title>
+  <script src="Js/funcionsKenia.js"></script>
+</head>
+
+
+<script>
+
+  function CambiarColor(obj, color) {
+
+    //window.alert(obj + " " + color);
+
+    var frente = document.getElementById("mascara").getSVGDocument().getElementById(obj);
+    frente.style.setProperty("fill", color, "");
+
+    //    var ulls1 = document.getElementById("mascara").getSVGDocument().getElementById("ulls1");
+    //  ulls1.style.setProperty("fill","red", "");
+
+    //    var ulls2 = document.getElementById("mascara").getSVGDocument().getElementById("ulls2");
+    //    ulls2.style.setProperty("fill","red", "");
+  }
+
+</script>
+</head>
+
+
+
+
+
+
+<body style="background-image: url(img/kenya.jpg);">
+
+  <div class="contenidorPrincipal">
+    <div>
+      <h1 class="titolPrincipal">Màscares de Kenia</h1>
+    </div>
+
+    <div class="bordeJoc">
+
+      <form name="form1">
+        <input type="hidden" id="area" name="area" value="0">
+        <button class="rojo" type="button" onclick="javascript:CambiarColor(this.form.area.value, 'red')">cambiar color
+          con js varaible</button>
+        <button class="azul" type="button" onclick="javascript:CambiarColor(this.form.area.value, 'blue')">azul</button>
+        <button class="amarillo" type="button"
+          onclick="javascript:CambiarColor(this.form.area.value, 'yellow')">amarillo</button>
+        <button class="verde" type="button"
+          onclick="javascript:CambiarColor(this.form.area.value, 'green')">verde</button>
+      </form>
+
+      <embed id="mascara" src="img/mascara.svg" width="745" height="1053" />
+    </div>
+
+  </div>
+</body>
+
+</html>

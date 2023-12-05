@@ -6,6 +6,43 @@ body {
 }
 
 
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.azul {
+    background-color: #007bff;
+}
+
+.amarillo {
+    background-color: #fff033;
+}
+
+.rojo {
+    background-color: #04AA6D;
+}
+
+.verde {
+    background-color: #04AA6D;
+}
+
+.danger {
+    background-color: #f44336;
+}
+
+
+
+svg {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 #contenidorPrincipal {
 
     position: relative;
@@ -23,11 +60,7 @@ img {
 
 #nuevasMascarasContainer {
     position: relative;
-  }
-
-
-
-
+}
 
 
 
