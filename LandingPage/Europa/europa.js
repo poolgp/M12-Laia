@@ -61,16 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentRotation = (parseFloat(boton.style.transform.replace("rotate(", "").replace("deg)", "")) || 0) + 90;
         boton.style.transform = `rotate(${currentRotation}deg)`;
     
-        // Verificar si la parte del cable toca el centro
+        // Debería de verificar si la imagen que toca es el centro. arreglarlo...
         if (juegoTablero[i][j] !== 4) { // No es el centro
-            const bombillaIndex = 3; // Índice correspondiente a la bombilla
+            const bombillaIndex = 3;
             const cableIndex = juegoTablero[i][j];
     
             if (cableIndex !== bombillaIndex) {
-                // Iluminar solo el cable clicado
+                // iluminar caable clicado
                 boton.firstChild.src = imageNames[cableIndex].replace("Apagado.png", "Encendido.png");
     
-                // Además, iluminar las bombillas conectadas
+                // iluminar las bombillas conectadas
                 iluminarBombillasConectadas(i, j, cableIndex);
             }
     
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     function iluminarBombillasConectadas(i, j, cableIndex) {
-        const bombillaIndex = 3; // Índice correspondiente a la bombilla
+        const bombillaIndex = 3; 
     
         // Iterar sobre todas las filas y columnas
         for (let rowIndex = 0; rowIndex < gridSize; rowIndex++) {

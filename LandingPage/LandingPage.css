@@ -3,9 +3,24 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#carouselExampleCaptions {
-    position: relative;
+#carouselExampleCaptions .carousel-inner img {
+    filter: brightness(70%);
+    max-height: 600px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
+
+#carouselExampleCaptions .carousel-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#carouselExampleCaptions .carousel-item.active img {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
 
 .carousel-inner::before,
 .carousel-inner::after {
