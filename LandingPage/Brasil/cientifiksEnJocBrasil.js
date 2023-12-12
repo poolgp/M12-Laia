@@ -159,11 +159,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Event Listener per al botó "Sortir".
+  // Event Listener per al botó "Home".
   const backButton = document.getElementById("backButton");
   backButton.addEventListener("click", function () {
     // Redirigeix l'usuari cap a la pàgina d'inici (modifica la URL segons sigui necessari).
-    window.location.href = "ruta-de-la-landing-page.html";
+    window.location.href = "../../LandingPage/LandingPage.html#juegos";
   });
 
   // Inicialitza el joc.
