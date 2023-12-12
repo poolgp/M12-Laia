@@ -1,3 +1,16 @@
+
+function openPopup() {
+    console.log("Opening popup");
+    document.getElementById('infoPopup').style.display = 'block';
+}
+
+function closePopup() {
+    console.log("Closing popup");
+    document.getElementById('infoPopup').style.display = 'none';
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const gridSize = 5;
     const juegoTablero = [
@@ -188,6 +201,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    
+    
+
     function reiniciarJuego() {
         clearInterval(constantes.intervaloTemporizador);
         constantes.tiempoRestante = constantes.tiempoInicial;
@@ -206,4 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Botón de reinicio
     reintentarBtn.addEventListener("click", reiniciarJuego);
-});
+
+
+
+    });
