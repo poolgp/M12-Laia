@@ -1,0 +1,11 @@
+.container-fluid{
+    display: flex;
+    justify-content: center;
+}
+.navbar-nav {
+    height: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
