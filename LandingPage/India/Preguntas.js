@@ -245,3 +245,13 @@ function home() {
 // Puedes llamar a la función cuando se haga clic en un botón, por ejemplo
 var boton = document.getElementById('id_del_boton'); // Reemplaza 'id_del_boton' con el ID de tu botón
 boton.addEventListener('click', redirigirAPagina);
+
+function openPopup() {
+  console.log("Opening popup");
+  document.getElementById("infoPopup").style.display = "block";
+}
+
+function closePopup() {
+  console.log("Closing popup");
+  document.getElementById("infoPopup").style.display = "none";
+}

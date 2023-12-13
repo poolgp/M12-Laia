@@ -30,46 +30,42 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <ul class="navbar-nav">
+                        <li class="logo">
+                            <a href="../LandingPage.html#home">
+                                <img src="./Logo.png" alt="Logo">
+                            </a>
+                        </li>
                         <li>
-                            <a href="../LandingPage.html#presentacion">
-                                <i class="fas fa-house"></i>
+                            <a href="../LandingPage.html#home">
                                 <span>Home</span>
                             </a>
                         </li>
                         <li>
                             <a href="../LandingPage.html#juegos">
-                                <i class="fa-solid fa-gamepad"></i>
                                 <span>Juegos</span>
                             </a>
                         </li>
                         <li>
                             <a href="../LandingPage.html#creditos">
-                                <i class="fa-solid fa-people-group"></i>
                                 <span>Créditos</span>
                             </a>
                         </li>
-                        <li class="logo">
-                            <a>
-                                <img src="../Logo.png" alt="Logo">
-                            </a>
-                        </li>
                         <li>
-                            <a href="../Estadisticas/Estadisticas.html">
-                                <i class="fas fa-chart-simple"></i>
+                            <a href="../Estadisticas/estadisticas.html">
                                 <span>Estadísticas</span>
                             </a>
                         </li>
                         <li class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa-solid fa-gear"></i><span>Idioma</span>
+                                <span>Idioma</span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <img src="../catalan.png" alt="Español">CA
                                     </a>
-                                </li>   
+                                </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <img src="../español.png" alt="Español">ES
@@ -83,8 +79,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../Login/login.html">
-                                <i class="fas fa-right-to-bracket"></i>
+                            <a href="../LogIn/login.html">
                                 <span>Iniciar sesión</span>
                             </a>
                         </li>
@@ -93,6 +88,7 @@
             </div>
         </div>
     </nav>
+
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -104,11 +100,13 @@
                         <form>
                             <div class="form-group">
                                 <label for="username">Usuario:</label>
-                                <input type="text" class="form-control" id="username" placeholder="Ingrese su usuario" required>
+                                <input type="text" class="form-control" id="username" placeholder="Ingrese su usuario"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Contraseña:</label>
-                                <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Ingrese su contraseña" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
                             <p class="mt-3">¿No tienes cuenta? <a href="./registro.html">Regístrate</a></p>
