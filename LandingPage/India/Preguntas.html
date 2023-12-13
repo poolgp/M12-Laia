@@ -3,54 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joc de preguntes </title>
+    <title>India</title>
+
     <link rel="stylesheet" href="Preguntas.css">
 </head>
 
 <body>
-    <h1>Cientifiks en joc: India</h1>
 
-    <span id="score">SCORE: <span id="scr">0</span></span>
+    <h1>LA INDIA</h1>
 
-    <div class="container1" id="container1">
-        <div class="containerPregunta">
-            <h2>Bienvenido al Preguntados de la India</h2>
-            <p>¡Contesta las preguntas de cultura general sobre la India y gana puntos!</p>
-        </div>
-
-        <div class="containerResposta">
-            <div class="respuesta">A.</div>
-            <div class="respuesta">B.</div>
-            <div class="respuesta">C.</div>
-            <div class="respuesta">D.</div>
+    <div class="container">
+        <div class="containerPregunta"></div>
+        <div class="containerRespuesta">
+            <div class="respuesta"></div>
+            <div class="respuesta"></div>
+            <div class="respuesta"></div>
+            <div class="respuesta"></div>
         </div>
     </div>
-
-    <button id="start" type="button" onclick="start()">START</button>
-
-    <div class="container2" id="container2">
-        <div class="containerFinJuego">
-            <h2>Fin del juego</h2>
-            <span id="FinJuego">Tu puntuación final es: <span id="finalScore">0</span></span>
-        </div>
-    </div>
-
-    <button id="home" type="button" onclick="home()">Home</button>
 
     <!-- POP UP -->
     <div class="popup" id="infoPopup">
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>
             <div class="popup-text">
-                <h2>Cables de Barcelona</h2>
-                <h3>Ayuda a Laia a conectar los cables</h3>
+                <h2>Preguntados de la India</h2>
+                <h3>Ayuda a Laia a responder las preguntas.</h3>
                 <p>Hola amigos de YouTube, conecta los siguientes cables para hacer que Barcelona tenga luz de nuevo y
                     puedas ver cositas que pasan en la oscuridad...</p>
             </div>
             <div class="popup-image">
-                <img src="/LandingPage/Personajes/Laia.png" alt="Imagen de Laia" style="width: 100px; height: auto;">
+                <img src="./img/Malik.png" alt="Imagen de Laia" style="width: 100px; height: auto;">
             </div>
         </div>
     </div>
@@ -70,11 +54,12 @@
         </div>
         <div class="col right buttons">
             <!-- Botón de home -->
-            <a class="button" id="home" href="#">Home</a>
+            <a class="button" id="home" href="../LandingPage.html#juegos">Home</a>
         </div>
     </div>
-    
+
     <script src="Preguntas.js"></script>
+
 </body>
 
 </html>
