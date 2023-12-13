@@ -67,7 +67,7 @@ h1 {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #2B313F;
+    background-color: #FCF600;
     /* Ajusta el color de fondo según tus preferencias */
 }
 
@@ -112,7 +112,6 @@ h1 {
     /* Color más claro al pasar el mouse */
 }
 
-
 .score span.title {
     font-size: 18px;
     display: block;
@@ -121,13 +120,13 @@ h1 {
 }
 
 .score span {
-    color: white;
+    color: #393E4C;
 }
 
 .score span#score {
     font-size: 40px;
     display: inline-block;
-    color: white;
+    color: #393E4C;
     padding-bottom: 25px;
     margin-bottom: -7px;
     text-align: right;
@@ -137,7 +136,7 @@ h1 {
 .score span.total {
     font-size: 40px;
     display: inline-block;
-    color: white;
+    color: #393E4C;
 }
 
 .score span#score:after {
