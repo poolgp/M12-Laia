@@ -1,45 +1,45 @@
 // Preguntas y respuestas
 let preguntas = [
   {
-    pregunta: "¿Cuál es la capital de la India?",
+    pregunta: "1- ¿Cuál es la capital de la India?",
     respuestas: ["Nueva Delhi", "Bombay", "Calcuta", "Chennai"],
     respuestaCorrecta: "Nueva Delhi",
   },
   {
-    pregunta: "¿En qué año se celebró la independencia de la India?",
+    pregunta: "2- ¿En qué año se celebró la independencia de la India?",
     respuestas: ["1942", "1947", "1950", "1962"],
     respuestaCorrecta: "1947",
   },
   {
-    pregunta: "¿Qué río es considerado sagrado en la religión hindú?",
+    pregunta: "3- ¿Qué río es considerado sagrado en la religión hindú?",
     respuestas: ["Río Ganges", "Río Yamuna", "Río Brahmaputra", "Río Indo"],
     respuestaCorrecta: "Río Ganges",
   },
   {
-    pregunta: "¿Cuál es la lengua más hablada en la India?",
+    pregunta: "4- ¿Cuál es la lengua más hablada en la India?",
     respuestas: ["Hindi", "Bengalí", "Elugu", "Maratí"],
     respuestaCorrecta: "Hindi",
   },
   {
     pregunta:
-      "¿Cuál es el nombre del festival hindú que celebra la victoria del bien sobre el mal?",
+      "5- ¿Cuál es el nombre del festival hindú que celebra la victoria del bien sobre el mal?",
     respuestas: ["Diwali", "Holi", "Navaratri", "Durga Puja"],
     respuestaCorrecta: "Diwali",
   },
   {
-    pregunta: "¿Cuál es la ciudad más poblada de la India?",
+    pregunta: "6- ¿Cuál es la ciudad más poblada de la India?",
     respuestas: ["Bombay", "Delhi", "Calcuta", "Chennai"],
     respuestaCorrecta: "Delhi",
   },
   {
     pregunta:
-      "¿Cuál es el nombre del sistema de castas en la sociedad india?",
+      "7- ¿Cuál es el nombre del sistema de castas en la sociedad india?",
     respuestas: ["Varna", "Jati", "Kshatriya", "Brahmana"],
     respuestaCorrecta: "Varna",
   },
   {
     pregunta:
-      "¿Cuál es el nombre del monumento construido por Shah Jahan en memoria de su esposa Mumtaz Mahal?",
+      "8- ¿Cuál es el nombre del monumento construido por Shah Jahan en memoria de su esposa Mumtaz Mahal?",
     respuestas: [
       "Fuerte Rojo",
       "Templo Dorado",
@@ -50,7 +50,7 @@ let preguntas = [
   },
   {
     pregunta:
-      "¿Qué figura histórica india lideró el movimiento de independencia a través de la no violencia?",
+      "9- ¿Qué figura histórica india lideró el movimiento de independencia a través de la no violencia?",
     respuestas: [
       "Subhas Chandra Bose",
       "Jawaharlal Nehru",
@@ -60,34 +60,34 @@ let preguntas = [
     respuestaCorrecta: "Mahatma Gandhi",
   },
   {
-    pregunta: "¿Cuál es la moneda oficial de la India?",
+    pregunta: "10- ¿Cuál es la moneda oficial de la India?",
     respuestas: ["Rupia india", "Dólar indio", "Rupia hindú", "Rupia asiática"],
     respuestaCorrecta: "Rupia india",
   },
   {
-    pregunta: "¿Cuál es la religión mayoritaria en la India?",
+    pregunta: "11- ¿Cuál es la religión mayoritaria en la India?",
     respuestas: ["Hinduismo", "Islam", "Sikhismo", "Cristianismo"],
     respuestaCorrecta: "Hinduismo",
   },
   {
-    pregunta: "¿Cuál es la montaña más alta de la India?",
+    pregunta: "12- ¿Cuál es la montaña más alta de la India?",
     respuestas: ["K2", "Nanda Devi", "Dhaulagiri", "Kanchenjunga"],
     respuestaCorrecta: "Nanda Devi",
   },
   {
     pregunta:
-      "¿En qué año se celebró la primera Copa Mundial de Críquet en la India?",
+      "13- ¿En qué año se celebró la primera Copa Mundial de Críquet en la India?",
     respuestas: ["1971", "1983", "1996", "2007"],
     respuestaCorrecta: "1983",
   },
   {
-    pregunta: "¿Cuál es la especia más asociada con la cocina india?",
+    pregunta: "14- ¿Cuál es la especia más asociada con la cocina india?",
     respuestas: ["Comino", "Canela", "Cúrcuma", "Pimienta negra"],
     respuestaCorrecta: "Cúrcuma",
   },
   {
     pregunta:
-      "¿Cuál es el nombre del río que fluye a través de la ciudad de Benarés (Varanasi)?",
+      "15- ¿Cuál es el nombre del río que fluye a través de la ciudad de Benarés (Varanasi)?",
     respuestas: [
       "Río Yamuna",
       "Río Brahmaputra",
@@ -98,38 +98,35 @@ let preguntas = [
   },
   {
     pregunta:
-      "¿Cuál es el nombre del baile clásico indio que se originó en el estado de Tamil Nadu?",
+      "16- ¿Cuál es el nombre del baile clásico indio que se originó en el estado de Tamil Nadu?",
     respuestas: ["Kathak", "Kuchipudi", "Bharatanatyam", "Odissi"],
     respuestaCorrecta: "Bharatanatyam",
   },
   {
     pregunta:
-      "¿Cuál es la ciudad conocida como la 'Ciudad Rosa' debido al color de sus edificaciones?",
+      "17- ¿Cuál es la ciudad conocida como la 'Ciudad Rosa' debido al color de sus edificaciones?",
     respuestas: ["Jaipur", "Jodhpur", "Udaipur", "Jaisalmer"],
     respuestaCorrecta: "Jaipur",
   },
   {
     pregunta:
-      "¿Cuál es el estado más grande de la India en términos de área geográfica?",
+      "18- ¿Cuál es el estado más grande de la India en términos de área geográfica?",
     respuestas: ["Rajastán", "Madhya Pradesh", "Maharashtra", "Uttar Pradesh"],
     respuestaCorrecta: "Rajastán",
   },
   {
     pregunta:
-      "¿Cuál es el nombre del festival que celebra la llegada de la primavera en India con colores brillantes?",
+      "19- ¿Cuál es el nombre del festival que celebra la llegada de la primavera en India con colores brillantes?",
     respuestas: ["Diwali", "Holi", "Navaratri", "Pongal"],
     respuestaCorrecta: "Holi",
   },
   {
     pregunta:
-      "¿Cuál es el nombre de la película india que ganó el Premio de la Academia a la Mejor Película Extranjera en 2009?",
+      "20- ¿Cuál es el nombre de la película india que ganó el Premio de la Academia a la Mejor Película Extranjera en 2009?",
     respuestas: ["Lagaan", "Slumdog Millionaire", "Taare Zameen Par", "Black"],
     respuestaCorrecta: "Slumdog Millionaire",
   },
 ];
-
-// Variable para almacenar los índices de las preguntas ya mostradas
-let preguntasMostradas = [];
 
 // Llama a la función al cargar la página
 document.addEventListener("DOMContentLoaded", function () {
@@ -138,22 +135,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Función para iniciar el juego
 function iniciarJuego() {
-    // Reinicia el array de preguntas mostradas para un nuevo juego
-    preguntasMostradas = [];
-    // Llama a mostrarPregunta con un índice aleatorio
-    mostrarPregunta(obtenerIndiceAleatorio());
-}
-
-// Función para obtener un índice aleatorio no utilizado
-function obtenerIndiceAleatorio() {
-    let indiceAleatorio = Math.floor(Math.random() * preguntas.length);
-    // Verifica si el índice ya ha sido utilizado y encuentra uno no utilizado
-    while (preguntasMostradas.includes(indiceAleatorio)) {
-        indiceAleatorio = Math.floor(Math.random() * preguntas.length);
-    }
-    // Agrega el índice a la lista de preguntas mostradas
-    preguntasMostradas.push(indiceAleatorio);
-    return indiceAleatorio;
+  // Llama a mostrarPregunta con el índice 0 para mostrar la primera pregunta
+  mostrarPregunta(0);
 }
 
 // Función para mostrar una pregunta
@@ -161,9 +144,6 @@ function mostrarPregunta(indice) {
   // Obtener la pregunta y las respuestas
   let pregunta = preguntas[indice].pregunta;
   let respuestas = preguntas[indice].respuestas;
-
-  // Mezclar las respuestas de forma aleatoria
-  respuestas = shuffleArray(respuestas);
 
   // Mostrar la pregunta
   document.querySelector(".containerPregunta").textContent = pregunta;
@@ -177,15 +157,6 @@ function mostrarPregunta(indice) {
     // Agregar un event listener de clic a cada botón de respuesta
     botonesRespuesta[i].addEventListener("click", clickBoto);
   }
-}
-
-// Función para mezclar un array de forma aleatoria
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
 }
 
 let clickBoto = function () {
