@@ -9,58 +9,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Estils/estils.css">
   <title>Joc Kenya</title>
-  <!-- <script src="Js/funcionsKenia.js"></script> -->
+  <script src="Js/funcionsKenia.js"></script> 
 </head>
-
-
-<script>
-
-  function CambiarColor(obj, color) {
-
-    //window.alert(obj + " " + color);
-
-    var frente = document.getElementById("mascara").getSVGDocument().getElementById(obj);
-    frente.style.setProperty("fill", color, "");
-
-    //    var ulls1 = document.getElementById("mascara").getSVGDocument().getElementById("ulls1");
-    //  ulls1.style.setProperty("fill","red", "");
-
-    //    var ulls2 = document.getElementById("mascara").getSVGDocument().getElementById("ulls2");
-    //    ulls2.style.setProperty("fill","red", "");
-  }
-
-  function openPopup() {
-    console.log("Opening popup");
-    document.getElementById('infoPopup').style.display = 'block';
-  }
-
-  function closePopup() {
-    console.log("Closing popup");
-    document.getElementById('infoPopup').style.display = 'none';
-  }
-
-
-</script>
-</head>
-
-
 
 <body style="background-image: url(img/kenya.jpg);">
 
   <div class="contenidorPrincipal">
     
-      <h1 class="titolPrincipal">Mascaras de Kenia</h1>
+      <h1 class="titolPrincipal">Cientifiks en joc: Mascaras de Kenia</h1>
 
 
     <div class="bordeJoc">
       <form name="form1">
         <input type="hidden" id="area" name="area" value="0">
-        <button class="rojo" type="button" onclick="javascript:CambiarColor(this.form.area.value, 'red')">rojo</button>
-        <button class="azul" type="button" onclick="javascript:CambiarColor(this.form.area.value, 'blue')">azul</button>
-        <button class="amarillo" type="button"
-          onclick="javascript:CambiarColor(this.form.area.value, 'yellow')">amarillo</button>
-        <button class="verde" type="button"
-          onclick="javascript:CambiarColor(this.form.area.value, 'green')">verde</button>
+        <button class="rojo" type="button" onclick="CambiarColor(this.form.area.value, 'red')">rojo</button>
+        <button class="azul" type="button" onclick="CambiarColor(this.form.area.value, 'blue')">azul</button>
+        <button class="amarillo" type="button"  onclick="CambiarColor(this.form.area.value, 'yellow')">amarillo</button>
+        <button class="verde" type="button"  onclick="CambiarColor(this.form.area.value, 'green')">verde</button>
       </form>
 
       <embed id="mascara" src="img/mascara.svg" width="745" height="1053" />
