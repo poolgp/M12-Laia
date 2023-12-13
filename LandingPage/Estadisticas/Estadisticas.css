@@ -1,5 +1,7 @@
 body {
     padding-top: 70px;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 nav {
