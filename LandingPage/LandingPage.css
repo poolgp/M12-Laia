@@ -120,7 +120,7 @@ html {
 
 #juegos {
     height: 800px;
-    background-color: yellow;
+    background-color: #FCF600;
     padding-top: 100px;
 }
 
@@ -157,7 +157,7 @@ html {
 
 #creditos {
     height: 800px;
-    background-color: #9e9e9e;
+    background-color: #C1C1C1;
     padding-top: 100px;
 }
 
