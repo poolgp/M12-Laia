@@ -206,7 +206,6 @@ h1 {
 .title {
     font-weight: bold;
     margin-right: 5px;
-    /* Ajusta el margen según tus preferencias */
 }
 
 .total {
@@ -233,7 +232,6 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.5);
-    /* Opacidad del contenido del popup */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -244,14 +242,11 @@ h1 {
 
 .popup-text {
     flex: 1;
-    /* Hace que este div ocupe todo el espacio disponible */
     padding-right: 20px;
-    /* Ajusta el espacio entre el texto y la imagen según tus preferencias */
 }
 
 .popup-image {
     flex-shrink: 0;
-    /* Evita que la imagen se reduzca para ajustarse al espacio disponible */
 }
 
 .close {

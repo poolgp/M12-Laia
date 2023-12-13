@@ -103,8 +103,8 @@ let preguntas = [
     },
 ];
 
-document.getElementById("container2").style.display = "none";
-document.getElementById("home").style.display = "none";
+// document.getElementById("container2").style.display = "none";
+// document.getElementById("home").style.display = "none";
 
 // Función para iniciar el juego
 function start() {
