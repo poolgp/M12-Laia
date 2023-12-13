@@ -10,6 +10,86 @@ body {
     background-repeat: no-repeat;
 }
 
+
+/* FOOTER */
+
+.stage-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #D95ED0; /* Nuevo color de fondo del footer con backdrop filter */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px); /* Añadido un backdrop filter */
+}
+
+.col {
+    display: flex;
+    align-items: center;
+}
+
+.col.left {
+    justify-content: flex-start;
+}
+
+.col.center {
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button{
+    padding: 10px;
+    text-decoration: none;
+    color: #fff; /* Color del texto del botón */
+    border-radius: 5px;
+}
+
+.button {
+    background-color: #007bff; /* Color del botón Info y Home */
+    margin-right: 10px; /* Espaciado entre botones */
+}
+
+.try-again {
+    background-color: transparent; /* Fondo transparente para el botón Try Again */
+    border: none;
+    cursor: pointer;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.score #score {
+    margin-right: 5px; /* Ajusta el margen según tus preferencias */
+}
+
+.score .title {
+    font-weight: bold;
+}
+
+.score a {
+    color: #fff; /* Color del enlace "Try Again" */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.score a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
 .game-container {
     border: 5px solid #8B4513;
     display: inline-block;
