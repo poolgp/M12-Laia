@@ -162,6 +162,9 @@ function mostrarPregunta(indice) {
   let pregunta = preguntas[indice].pregunta;
   let respuestas = preguntas[indice].respuestas;
 
+  // Mezclar las respuestas de forma aleatoria
+  respuestas = shuffleArray(respuestas);
+
   // Mostrar la pregunta
   document.querySelector(".containerPregunta").textContent = pregunta;
 
@@ -174,6 +177,15 @@ function mostrarPregunta(indice) {
     // Agregar un event listener de clic a cada botón de respuesta
     botonesRespuesta[i].addEventListener("click", clickBoto);
   }
+}
+
+// Función para mezclar un array de forma aleatoria
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 let clickBoto = function () {
