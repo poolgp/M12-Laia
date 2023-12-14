@@ -238,7 +238,15 @@ function goHome() {
 
 function openPopup() {
   console.log("Opening popup");
-  document.getElementById("infoPopup").style.display = "block";
+  let infoPopup = document.getElementById("infoPopup");
+  infoPopup.style.display = "block";
+  // document.getElementById("infoPopup").style.display = "block";
+
+  let closeButton = infoPopup.querySelector(".close");
+  if (closeButton) {
+    closeButton.style.fontSize = "30px";
+    closeButton.style.color = "red";
+  }
 }
 
 function closePopup() {
