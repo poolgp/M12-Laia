@@ -132,6 +132,7 @@ html {
 .juego {
     height: 300px;
     width: 300px;
+    margin: 50px;
     background-color: lightblue;
     display: inline-block;
     position: relative;
