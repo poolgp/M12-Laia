@@ -227,29 +227,32 @@ function verificarRespuesta(respuestaSeleccionada) {
 
 function FinJuego() {
   // Crear un nuevo elemento de mensaje
-  var mensajeFinal = document.createElement("div");
+  let mensajeFinal = document.createElement("div");
   mensajeFinal.className = "popup";
-  mensajeFinal.idName = "mensajeFinal";
+  mensajeFinal.id = "MensajeFinal";
 
   let divPopUp = document.createElement("div");
   divPopUp.className = "popup-content";
-
-  let spanTancaPopUp = document.createElement("span");
-  spanTancaPopUp.className = "close";
-  spanTancaPopUp.addEventListener("click", closeFinalMess);
-  spanTancaPopUp.innerHTML = "&times;";
-  divPopUp.appendChild(spanTancaPopUp);
 
   let divPopUpText = document.createElement("div");
   divPopUpText.className = "popup-text";
 
   let h2GameOver = document.createElement("h2");
-  h2GameOver.innerHTML = "¡Juego terminado!";
+  h2GameOver.textContent = `¡Juego terminado!`;
   divPopUpText.appendChild(h2GameOver);
 
-  divPopUpText.innerHTML = ` <p>Tu puntuación final es ${document.getElementById("score").textContent}.</p>`;
+  // divPopUpText.innerHTML = `¡Juego terminado!`;
+  let pGameOver = document.createElement("p");
+  pGameOver.textContent = `Tu puntuación final es ${document.getElementById("score").textContent}`;
+  divPopUpText.appendChild(pGameOver);
 
   divPopUp.appendChild(divPopUpText);
+
+  let btnHome = document.createElement("button");
+  btnHome.className = "btnHome";
+  btnHome.textContent = "Volver al Home";
+  btnHome.addEventListener("click", goHome);
+  divPopUpText.appendChild(btnHome);
 
   mensajeFinal.appendChild(divPopUp);
 
@@ -260,9 +263,9 @@ function FinJuego() {
   mensajeFinal.style.display = "block";
 }
 
-function closeFinalMess() {
-  console.log("Closing popup");
-  document.getElementById("mensajeFinal").style.display = "none";
+
+function goHome() {
+  window.location.href = "../LandingPage.html";
 }
 
 function openPopup() {
