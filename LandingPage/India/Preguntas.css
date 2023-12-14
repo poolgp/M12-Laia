@@ -1,38 +1,16 @@
 body {
-    background-image: url('img/FondoIndia.jpg');
+    background-image: url("./img/FondoIndia.jpg");
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     margin: 0;
-    padding: 0;
 }
 
 h1 {
     text-align: center;
 }
 
-#score {
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-    font-size: 20px;
-}
-
-.container1 {
-    text-align: center;
-    position: relative;
+.container {
     height: 660px;
-    width: 1000px;
-    margin: 20px auto;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-}
-
-.container2 {
-    text-align: center;
-    position: relative;
-    height: 340px;
     width: 1000px;
     margin: 20px auto;
     overflow: hidden;
@@ -44,7 +22,7 @@ h1 {
     position: relative;
     height: 300px;
     width: 960px;
-    border: solid 2px black;
+    border: solid 2px #5A84CA;
     margin: 20px 20px 10px 20px;
     overflow: hidden;
     display: flex;
@@ -55,11 +33,10 @@ h1 {
     font-size: 30px;
 }
 
-.containerResposta {
+.containerRespuesta {
     position: relative;
     height: 300px;
     width: 960px;
-    border: solid 2px black;
     margin: 20px 20px 10px 20px;
     overflow: hidden;
     display: grid;
@@ -71,38 +48,11 @@ h1 {
 .respuesta {
     margin: 15px 10px;
     display: flex;
-    border: 2px solid black;
+    border: 2px solid #5A84CA;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(1px);
     justify-content: center;
     align-items: center;
-}
-
-#start {
-    display: block;
-    margin: 20px auto;
-    font-size: 25px;
-}
-
-.containerFinJuego {
-    position: relative;
-    height: 300px;
-    width: 960px;
-    border: solid 2px black;
-    margin: 20px 20px 10px 20px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(1px);
-    font-size: 30px;
-}
-
-#home {
-    display: block;
-    margin: 20px auto;
-    font-size: 25px;
 }
 
 /* FOOTER */
@@ -116,7 +66,7 @@ h1 {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #2B313F;
+    background-color: #5A84CA;
     /* Ajusta el color de fondo según tus preferencias */
 }
 
@@ -126,7 +76,6 @@ h1 {
 
 .col.left {
     text-align: left;
-    margin-right: 10px;
     /* Ajusta el margen según tus preferencias */
 }
 
@@ -136,7 +85,6 @@ h1 {
 
 .col.right {
     text-align: right;
-    margin-left: 10px;
     /* Ajusta el margen según tus preferencias */
 }
 
@@ -149,7 +97,7 @@ h1 {
     /* Ajusta el margen según tus preferencias */
     padding: 10 38px;
     border-radius: 4px;
-    color: white;
+    color: #FFFF;
     /* Ajusta el color del texto según tus preferencias */
     background-color: #393E4C;
     /* Ajusta el color de fondo según tus preferencias */
@@ -163,7 +111,6 @@ h1 {
     /* Color más claro al pasar el mouse */
 }
 
-
 .score span.title {
     font-size: 18px;
     display: block;
@@ -172,13 +119,13 @@ h1 {
 }
 
 .score span {
-    color: white;
+    color: #FFFF;
 }
 
 .score span#score {
     font-size: 40px;
     display: inline-block;
-    color: white;
+    color: #FFFF;
     padding-bottom: 25px;
     margin-bottom: -7px;
     text-align: right;
@@ -188,7 +135,7 @@ h1 {
 .score span.total {
     font-size: 40px;
     display: inline-block;
-    color: white;
+    color: #FFFF;
 }
 
 .score span#score:after {
