@@ -11,14 +11,12 @@ function closePopup() {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const gridSize = 5;
+    const gridSize = 4;
     const juegoTablero = [
-        [3, 2, 0, 0, 3],
-        [2, 1, 3, 2, 3],
-        [3, 1, 4, 1, 1],
-        [1, 2, 1, 3, 0],
-        [3, 3, 1, 3, 3]
+        [3, 2, 2, 3],
+        [3, 0, 0, 3],
+        [2, 1, 4, 1],
+        [3, 0, 0, 2],
     ];
 
     const imageNames = [
@@ -119,6 +117,27 @@ document.addEventListener("DOMContentLoaded", function () {
         return juegoTablero[i1][j1] === juegoTablero[i2][j2];
     }
     
+    
+
+    function crearCelda(i, j, tipo, estado) {
+        const celda = document.createElement("div");
+        celda.tabIndex = 1;
+        celda.classList.add("cell", "selectable", `pipe${tipo}`, `cell-${estado}`);
+        celda.style.position = "absolute";
+        celda.style.top = `${i * 25}px`;
+        celda.style.left = `${j * 25}px`;
+        celda.style.width = "25px";
+        celda.style.height = "25px";
+    
+        const contenido = document.createElement("div");
+        const span1 = document.createElement("span");
+        const span2 = document.createElement("span");
+        contenido.appendChild(span1);
+        contenido.appendChild(span2);
+        celda.appendChild(contenido);
+    
+        document.getElementById("container").appendChild(celda);
+    }
     
     
     
@@ -222,7 +241,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Botón de reinicio
     reintentarBtn.addEventListener("click", reiniciarJuego);
-
-
-
-    });
