@@ -61,7 +61,9 @@ function closePopup() {
         button.appendChild(image);
 
         button.onclick = function () {
-            rotarBoton(this, i, j);
+            contadores[i][j] = (contadores[i][j] + 1) % imageNames[numeroArray].imagenes.length;
+      const nuevoIndice = contadores[i][j];
+      const nuevaImagen = imageNames[numeroArray].imagenes[nuevoIndice];
         };
 
         container.appendChild(button);
