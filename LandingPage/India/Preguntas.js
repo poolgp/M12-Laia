@@ -21,8 +21,7 @@ let preguntas = [
     respuestaCorrecta: "Hindi",
   },
   {
-    pregunta:
-      "5- ¿Cuál es el nombre del festival hindú que celebra la victoria del bien sobre el mal?",
+    pregunta: "5- ¿Cuál es el nombre del festival hindú que celebra la victoria del bien sobre el mal?",
     respuestas: ["Diwali", "Holi", "Navaratri", "Durga Puja"],
     respuestaCorrecta: "Diwali",
   },
@@ -32,31 +31,18 @@ let preguntas = [
     respuestaCorrecta: "Delhi",
   },
   {
-    pregunta:
-      "7- ¿Cuál es el nombre del sistema de castas en la sociedad india?",
+    pregunta: "7- ¿Cuál es el nombre del sistema de castas en la sociedad india?",
     respuestas: ["Varna", "Jati", "Kshatriya", "Brahmana"],
     respuestaCorrecta: "Varna",
   },
   {
-    pregunta:
-      "8- ¿Cuál es el nombre del monumento construido por Shah Jahan en memoria de su esposa Mumtaz Mahal?",
-    respuestas: [
-      "Fuerte Rojo",
-      "Templo Dorado",
-      "Taj Mahal",
-      "Mezquita Jama Masjid",
-    ],
+    pregunta: "8- ¿Cuál es el nombre del monumento construido por Shah Jahan en memoria de su esposa Mumtaz Mahal?",
+    respuestas: ["Fuerte Rojo", "Templo Dorado", "Taj Mahal", "Mezquita Jama Masjid"],
     respuestaCorrecta: "Taj Mahal",
   },
   {
-    pregunta:
-      "9- ¿Qué figura histórica india lideró el movimiento de independencia a través de la no violencia?",
-    respuestas: [
-      "Subhas Chandra Bose",
-      "Jawaharlal Nehru",
-      "Mahatma Gandhi",
-      "Sardar Patel",
-    ],
+    pregunta: "9- ¿Qué figura histórica india lideró el movimiento de independencia a través de la no violencia?",
+    respuestas: ["Subhas Chandra Bose", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Patel"],
     respuestaCorrecta: "Mahatma Gandhi",
   },
   {
@@ -75,8 +61,7 @@ let preguntas = [
     respuestaCorrecta: "Nanda Devi",
   },
   {
-    pregunta:
-      "13- ¿En qué año se celebró la primera Copa Mundial de Críquet en la India?",
+    pregunta: "13- ¿En qué año se celebró la primera Copa Mundial de Críquet en la India?",
     respuestas: ["1971", "1983", "1996", "2007"],
     respuestaCorrecta: "1983",
   },
@@ -86,43 +71,32 @@ let preguntas = [
     respuestaCorrecta: "Cúrcuma",
   },
   {
-    pregunta:
-      "15- ¿Cuál es el nombre del río que fluye a través de la ciudad de Benarés (Varanasi)?",
-    respuestas: [
-      "Río Yamuna",
-      "Río Brahmaputra",
-      "Río Ganges",
-      "Río Sabarmati",
-    ],
+    pregunta: "15- ¿Cuál es el nombre del río que fluye a través de la ciudad de Benarés (Varanasi)?",
+    respuestas: ["Río Yamuna", "Río Brahmaputra", "Río Ganges", "Río Sabarmati"],
     respuestaCorrecta: "Río Ganges",
   },
   {
-    pregunta:
-      "16- ¿Cuál es el nombre del baile clásico indio que se originó en el estado de Tamil Nadu?",
+    pregunta: "16- ¿Cuál es el nombre del baile clásico indio que se originó en el estado de Tamil Nadu?",
     respuestas: ["Kathak", "Kuchipudi", "Bharatanatyam", "Odissi"],
     respuestaCorrecta: "Bharatanatyam",
   },
   {
-    pregunta:
-      "17- ¿Cuál es la ciudad conocida como la 'Ciudad Rosa' debido al color de sus edificaciones?",
+    pregunta: "17- ¿Cuál es la ciudad conocida como la 'Ciudad Rosa' debido al color de sus edificaciones?",
     respuestas: ["Jaipur", "Jodhpur", "Udaipur", "Jaisalmer"],
     respuestaCorrecta: "Jaipur",
   },
   {
-    pregunta:
-      "18- ¿Cuál es el estado más grande de la India en términos de área geográfica?",
+    pregunta: "18- ¿Cuál es el estado más grande de la India en términos de área geográfica?",
     respuestas: ["Rajastán", "Madhya Pradesh", "Maharashtra", "Uttar Pradesh"],
     respuestaCorrecta: "Rajastán",
   },
   {
-    pregunta:
-      "19- ¿Cuál es el nombre del festival que celebra la llegada de la primavera en India con colores brillantes?",
+    pregunta: "19- ¿Cuál es el nombre del festival que celebra la llegada de la primavera en India con colores brillantes?",
     respuestas: ["Diwali", "Holi", "Navaratri", "Pongal"],
     respuestaCorrecta: "Holi",
   },
   {
-    pregunta:
-      "20- ¿Cuál es el nombre de la película india que ganó el Premio de la Academia a la Mejor Película Extranjera en 2009?",
+    pregunta: "20- ¿Cuál es el nombre de la película india que ganó el Premio de la Academia a la Mejor Película Extranjera en 2009?",
     respuestas: ["Lagaan", "Slumdog Millionaire", "Taare Zameen Par", "Black"],
     respuestaCorrecta: "Slumdog Millionaire",
   },
@@ -215,26 +189,71 @@ function verificarRespuesta(respuestaSeleccionada) {
       // Mostrar la siguiente pregunta
       mostrarPregunta(indiceActual + 1);
     } else {
-      // Fin del juego
-      // alert(
-      //     "Juego terminado. Tu puntuación final es " +
-      //     document.getElementById("scr").textContent
-      // );
       FinJuego();
     }
   }, 1000); // 3000 milisegundos (3 segundos)
 }
 
-// function FinJuego() {
-//     document.getElementById("finalScore").textContent =
-//         document.getElementById("scr").textContent;
-//     document.getElementById("container1").style.display = "none";
-//     document.getElementById("container2").style.display = "block";
-// }
+function FinJuego() {
+  // Crear un nuevo elemento de mensaje
+  let mensajeFinal = document.createElement("div");
+  mensajeFinal.className = "popup";
+  mensajeFinal.id = "MensajeFinal";
+
+  let divPopUp = document.createElement("div");
+  divPopUp.className = "popup-content";
+
+  let divPopUpText = document.createElement("div");
+  divPopUpText.className = "popup-text";
+
+  let h2GameOver = document.createElement("h2");
+  h2GameOver.textContent = `¡Juego terminado!`;
+  divPopUpText.appendChild(h2GameOver);
+
+  // divPopUpText.innerHTML = `¡Juego terminado!`;
+  let pGameOver = document.createElement("p");
+  pGameOver.textContent = `Tu puntuación final es ${document.getElementById("score").textContent}`;
+  divPopUpText.appendChild(pGameOver);
+
+  divPopUp.appendChild(divPopUpText);
+
+  let btnHome = document.createElement("button");
+  btnHome.className = "btn";
+  btnHome.textContent = "Volver al Home";
+
+  // Establecer el color de fondo del botón con tu color personalizado
+  btnHome.style.backgroundColor = "#5A84CA";
+
+  // Establecer el color del texto del botón
+  btnHome.style.color = "#FFFF";
+
+  btnHome.addEventListener("click", goHome);
+  divPopUpText.appendChild(btnHome);
+
+  mensajeFinal.appendChild(divPopUp);
+
+  // Agregar el mensaje al cuerpo del documento
+  document.body.appendChild(mensajeFinal);
+
+  // Mostrar el mensaje
+  mensajeFinal.style.display = "block";
+}
+
+function goHome() {
+  window.location.href = "../LandingPage.html";
+}
 
 function openPopup() {
   console.log("Opening popup");
-  document.getElementById("infoPopup").style.display = "block";
+  let infoPopup = document.getElementById("infoPopup");
+  infoPopup.style.display = "block";
+  // document.getElementById("infoPopup").style.display = "block";
+
+  let closeButton = infoPopup.querySelector(".close");
+  if (closeButton) {
+    closeButton.style.fontSize = "30px";
+    closeButton.style.color = "red";
+  }
 }
 
 function closePopup() {
