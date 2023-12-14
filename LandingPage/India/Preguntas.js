@@ -212,16 +212,22 @@ function FinJuego() {
 
   // divPopUpText.innerHTML = `¡Juego terminado!`;
   let pGameOver = document.createElement("p");
-  pGameOver.textContent = `Tu puntuación final es ${
-    document.getElementById("score").textContent
-  }`;
+  pGameOver.textContent = `Tu puntuación final es ${document.getElementById("score").textContent
+    }`;
   divPopUpText.appendChild(pGameOver);
 
   divPopUp.appendChild(divPopUpText);
 
   let btnHome = document.createElement("button");
-  btnHome.className = "btnHome";
+  btnHome.className = "btn";
   btnHome.textContent = "Volver al Home";
+
+  // Establecer el color de fondo del botón con tu color personalizado
+  btnHome.style.backgroundColor = "#5A84CA";
+
+  // Establecer el color del texto del botón
+  btnHome.style.color = "#FFFF";
+
   btnHome.addEventListener("click", goHome);
   divPopUpText.appendChild(btnHome);
 
