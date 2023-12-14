@@ -225,12 +225,27 @@ function verificarRespuesta(respuestaSeleccionada) {
   }, 1000); // 3000 milisegundos (3 segundos)
 }
 
-// function FinJuego() {
-//     document.getElementById("finalScore").textContent =
-//         document.getElementById("scr").textContent;
-//     document.getElementById("container1").style.display = "none";
-//     document.getElementById("container2").style.display = "block";
-// }
+function FinJuego() {
+  // Crear un nuevo elemento de mensaje
+  var mensajeFinal = document.createElement("div");
+  mensajeFinal.className = "popup";
+  mensajeFinal.innerHTML = `
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <div class="popup-text">
+        <h2>¡Juego terminado!</h2>
+        <p>Tu puntuación final es ${document.getElementById("score").textContent
+    }.</p>
+      </div>
+    </div>
+  `;
+
+  // Agregar el mensaje al cuerpo del documento
+  document.body.appendChild(mensajeFinal);
+
+  // Mostrar el mensaje
+  mensajeFinal.style.display = "block";
+}
 
 function openPopup() {
   console.log("Opening popup");
