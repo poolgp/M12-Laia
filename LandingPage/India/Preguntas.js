@@ -229,17 +229,29 @@ function FinJuego() {
   // Crear un nuevo elemento de mensaje
   var mensajeFinal = document.createElement("div");
   mensajeFinal.className = "popup";
-  mensajeFinal.innerHTML = `
-  <div class="popup" id="FinJuegoPopup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <div class="popup-text">
-        <h2>¡Juego terminado!</h2>
-        <p>Tu puntuación final es ${document.getElementById("score").textContent}.</p>
-      </div>
-    </div>
-  </div>
-  `;
+  mensajeFinal.idName = "mensajeFinal";
+
+  let divPopUp = document.createElement("div");
+  divPopUp.className = "popup-content";
+
+  let spanTancaPopUp = document.createElement("span");
+  spanTancaPopUp.className = "close";
+  spanTancaPopUp.addEventListener("click", closeFinalMess);
+  spanTancaPopUp.innerHTML = "&times;";
+  divPopUp.appendChild(spanTancaPopUp);
+
+  let divPopUpText = document.createElement("div");
+  divPopUpText.className = "popup-text";
+
+  let h2GameOver = document.createElement("h2");
+  h2GameOver.innerHTML = "¡Juego terminado!";
+  divPopUpText.appendChild(h2GameOver);
+
+  divPopUpText.innerHTML = ` <p>Tu puntuación final es ${document.getElementById("score").textContent}.</p>`;
+
+  divPopUp.appendChild(divPopUpText);
+
+  mensajeFinal.appendChild(divPopUp);
 
   // Agregar el mensaje al cuerpo del documento
   document.body.appendChild(mensajeFinal);
@@ -248,9 +260,9 @@ function FinJuego() {
   mensajeFinal.style.display = "block";
 }
 
-function closePopup() {
+function closeFinalMess() {
   console.log("Closing popup");
-  document.getElementById("FinJuegoPopup").style.display = "none";
+  document.getElementById("mensajeFinal").style.display = "none";
 }
 
 function openPopup() {
