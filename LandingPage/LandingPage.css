@@ -37,7 +37,7 @@ nav a:hover {
 
 #carouselExampleCaptions .carousel-inner img {
     filter: brightness(70%);
-    max-height: 600px;
+    max-height: 670px;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -118,7 +118,7 @@ html {
 }
 
 #juegos {
-    height: 800px;
+    height: 700px;
     background-color: #B5D8A0;
     padding-top: 100px;
 }
@@ -132,6 +132,7 @@ html {
 .juego {
     height: 300px;
     width: 300px;
+    margin: 50px;
     background-color: lightblue;
     display: inline-block;
     position: relative;
@@ -155,7 +156,7 @@ html {
 }
 
 #creditos {
-    height: 800px;
+    height: 700px;
     background-color: rgb(46, 40, 40);
     padding-top: 100px;
 }

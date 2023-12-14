@@ -1,0 +1,33 @@
+body {
+    background-image: url('../img_carrusel/brasil.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+h1 {
+    color: white;
+}
+
+.card-header {
+    background-color: #B5D8A0;
+    color: white;
+}
+
+.btn {
+    background-color: #B5D8A0;
+    color: white;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #B5D8A0; /* Mantiene el color del fondo al pasar el ratón por encima */
+    color: white;
+}
