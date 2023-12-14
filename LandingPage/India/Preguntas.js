@@ -212,8 +212,7 @@ function FinJuego() {
 
   // divPopUpText.innerHTML = `¡Juego terminado!`;
   let pGameOver = document.createElement("p");
-  pGameOver.textContent = `Tu puntuación final es ${document.getElementById("score").textContent
-    }`;
+  pGameOver.textContent = `Tu puntuación final es ${document.getElementById("score").textContent}`;
   divPopUpText.appendChild(pGameOver);
 
   divPopUp.appendChild(divPopUpText);
