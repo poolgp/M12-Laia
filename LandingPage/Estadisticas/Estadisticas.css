@@ -1,8 +1,16 @@
 body {
     padding-top: 70px;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Helvetica;
+    background-image: url('../img/mapa.jpg');
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
 }
+
 
 nav {
     height: 40px;
@@ -83,19 +91,41 @@ html {
 
 .respuesta {
     border: solid 2px black;
-    padding: 70px; /* Añade un espacio interno al botón */
+    padding: 70px;
+    /* Añade un espacio interno al botón */
     color: black;
-    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado predeterminado de los enlaces */
 }
 
 .respuesta:hover {
-    background-color: lightgray; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    background-color: lightgray;
+    /* Cambia el color de fondo al pasar el ratón sobre el botón */
 }
 
-.respuesta.europa { background-color:  rgb(95, 187, 95); }
-.respuesta.brasil { background-color: rgb(95, 187, 95); }
-.respuesta.kenia { background-color:  rgb(95, 187, 95); }
-.respuesta.india { background-color:  rgb(95, 187, 95); }
+.respuesta.europa {
+    background-color: #D89DBB;
+    font-family: Garamond;
+    font-size: 25px;
+}
+
+.respuesta.brasil {
+    background-color: #B5D8A0;
+    font-family: Garamond;
+    font-size: 25px;
+}
+
+.respuesta.kenia {
+    background-color: #FCF600;
+    font-family: Garamond;
+    font-size: 25px;
+}
+
+.respuesta.india {
+    background-color: #5A84CA;
+    font-family: Garamond;
+    font-size: 25px;
+}
 
 .imagen-Laia {
     width: 10%;
