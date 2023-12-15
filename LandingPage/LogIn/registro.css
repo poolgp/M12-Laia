@@ -2,7 +2,9 @@ body {
     padding-top: 70px;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #BFFCC1;
 }
+
 nav {
     height: 40px;
     font-size: 15px;
@@ -35,33 +37,23 @@ nav a:hover {
     align-items: center;
 }
 
-html {
-    scroll-behavior: smooth;
+.card {
+    margin-top: 150px;
 }
 
-#presentacion {
-    height: 800px;
-    background-color: pink;
-    padding-top: 70px;
+.card-header {
+    background-color: #7DF48A;
 }
 
-#juegos {
-    height: 800px;
-    background-color: yellow;
-    padding-top: 70px;
+h4 {
+    color: black;
 }
 
-#creditos {
-    height: 800px;
-    background-color: #9e9e9e;
-    padding-top: 70px;
+.card-body {
+    background-color: #B7F9C9;
 }
 
-.juego {
-    height: 300px;
-    width: 300px;
-    background-color: lightblue;
-    margin: 80px;
-    display: inline-block;
-
+.btn-custom {
+    color: black;
+    background-color: #7DF48A;
 }
