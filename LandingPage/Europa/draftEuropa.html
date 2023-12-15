@@ -4,41 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Europa</title>
-    <link rel="stylesheet" href="/LandingPage/Europa/estilos/draftEuropa.css">
+    <title>Puzzle tuberías</title>
+    <link rel="stylesheet" href="./estilos/draftEuropa.css">
 </head>
 
-<body style="background-image: url('img/europahd.jpg');">
-    <h1>Puzzle de las tuberías</h1>
-    <!-- <div class="timer">
-        1:00
+<body style="background-image: url('img/europarosa.jpg');">
+
+    <!-- <div id="reintentar-container">
+        <button id="reintentarBtn" style="display: none;">Reintentar nivel</button>
     </div> -->
 
-    <div id="juego" class="contenedor-principal">
-        <div id="bienvenida" class="bienvenida">
-            <h2 class="tituloBienvenida">Bienvenido al juego del puzzle de Europa.</h2>
-            <p class="descripcionBienvenida">Conecta las tuberías para que el agua llegue a la meta
-                antes de que se acabe el tiempo y así poder conseguir una pieza y poder desbloquear el siguiente nivel.
-            </p>
-            <p class="textoPresionarBoton">Presiona el botón para empezar.</p>
-            <img src="/LandingPage/Europa/img/flecha2.gif" alt="Flecha animada" class="gifFlecha">
-        </div>
-        <div id="juegoContainer" class="contenedor-juego" style="display: none;">
-            <div class="borde-madera">
-                <div class="container col-md-4" id="container">
-                    <!-- Imagenes de los pipes del inicio-->
-                    <img src="img/pruebainicio.png" alt="Pipe Inicio" class="pipe inicio" id="pipe-inicio">
-    
-                    <!-- Imagemes de los pipes al final-->
-                    <img src="img/pruebafinal.png" alt="Pipe Final" class="pipe final" id="pipe-final">
-                </div>
-            </div>
+    <h1>Light up Barcelona</h1>
+
+    <div class="borde-madera">
+        <div class="game-container">
+            <div class="container" id="container"></div>
         </div>
     </div>
 
-    <button class="botonIniciarJuego" onclick="iniciarJuego()">Iniciar Juego</button>
+    <!-- POP UP -->
+    <div class="popup" id="infoPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div class="popup-text">
+                <h2>Cables de Barcelona</h2>
+                <h3>Ayuda a Laia a conectar los cables</h3>
+                <p>Hola amigos de YouTube, conecta los siguientes cables para hacer que Barcelona tenga luz de nuevo y
+                    puedas ver cositas que pasan en la oscuridad...</p>
+            </div>
+            <div class="popup-image">
+                <img src="../Personajes/Laia.png" alt="Imagen de Laia" style="width: 100px; height: auto;">
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="stage-footer">
+        <div class="col left">
+            <!-- Botón de info -->
+            <a class="button" href="#" onclick="openPopup()">Info</a>
+        </div>
+        <div class="col center">
+            <!-- Texto de puntuación -->
+            <div class="score">
+                <span class="title">Your score</span>
+                <span id="score">0</span>
+                <span class="total">100</span>
+            </div>
+        </div>
+        <div class="col right buttons">
+            <!-- Botón de home -->
+            <a class="button" id="home" href="../LandingPage.html#juegos">Home</a>
+        </div>
+    </div>
 
-    <script src="draftEuropa.js"></script>
+    <!-- POP UP SOLUCION -->
+
+    <div id="pupsolucion" class="popup-solucion">
+        <div class="popup-content-solucion">
+            <p>Felicidades, has completado el nivel.</p>
+            <button onclick="volverAJugar()">Volver a jugar </button>
+            <button onclick="siguienteNivel()">Siguiente nivel</button>
+        </div>
+    </div>
+
+
+<script src="./draftEuropa.js"></script>
+
 </body>
 
 </html>
+
+    

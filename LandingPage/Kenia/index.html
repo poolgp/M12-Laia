@@ -29,8 +29,12 @@
       </form>
 
       <embed id="mascara" src="img/mascara.svg" width="745" height="1053" />
-    </div>
 
+
+    </div>
+      <div>
+          <button class="botonComparar" type="button" onclick= "compararResultados()">Comparar</button>
+      </div>
   </div>
 
 <!-- POP UP al cargar la página -->
@@ -60,11 +64,23 @@
           <p>Para colorear la máscara, primero selecciona una de las partes a colorear, luego escoge el color que creas que va ahí y coloréalo.</p>
       </div>
       <div class="popup-image">
-          <img src="/Personajes/Malik.png" alt="Imagen de Malik" style="width: 100px; height: auto;">
+          <img src="/LandingPage/Personajes/Malik.png" alt="Imagen de Malik" style="width: 100px; height: auto;">
       </div>
   </div>
 </div>
 
+
+<div class="popup" id="compararPopup">
+  <div class="popup-content">
+      <div class="popup-text">
+          <h2>Mascaras de Kenia</h2>
+          <p>Bien hecho! Ya sabes las costumbres de Malik, ahora podeis seguir avanzando</p>
+      </div>
+      <div class="popup-image">
+        <img src="/LandingPage/Personajes/Malik.png" alt="Imagen de Malik" style="width: 100px; height: auto;">
+    </div>
+  </div>
+</div>
 
   <!-- FOOTER -->
   <div class="stage-footer">
@@ -87,6 +103,13 @@
       <a class="button" id="home" href="/LandingPage/LandingPage.html">Home</a>
     </div>
   </div>
+
+  <form action="../BD/contoller.php" method="POST" id="formR">
+    <input type="text" name="id_User">
+    <input type="hidden" name="puntuacio">
+    <input type="hidden" name="id_Pais">
+</form>
+
 </body>
 
 </html>
