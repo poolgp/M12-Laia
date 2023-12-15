@@ -153,6 +153,12 @@ h1 {
     left: 4px;
 }
 
+.contadorPreguntas {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
 .scoreContador {
     display: inline-block;
 }
@@ -161,6 +167,13 @@ h1 {
     font-weight: bold;
     margin-right: 5px;
     /* Ajusta el margen según tus preferencias */
+}
+
+.titleContador, #questionCounter, .totalContador {
+    font-size: 40px;
+    color: #FFFF;
+    margin-right: 230px;
+    margin-left: -220px;
 }
 
 .totalContador {
