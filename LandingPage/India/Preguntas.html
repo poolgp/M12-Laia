@@ -57,8 +57,7 @@
             <div class="scores">
                 <div class="contadorPreguntas">
                     <span class="titleContador">Pregunta Nº</span>
-                    <span id="scoreContador">0</span>
-                    <span class="totalContador">20</span>
+                    <span id="questionCounter">0</span>
                 </div>
 
                 <div class="score">
@@ -73,6 +72,12 @@
             <a class="button" id="home" href="../LandingPage.html#juegos">Home</a>
         </div>
     </div>
+
+    <form action="../BD/contoller.php" method="POST" id="formR">
+        <input type="text" name="id_User">
+        <input type="hidden" name="puntuacio">
+        <input type="hidden" name="id_Pais">
+    </form>
 
     <script src="Preguntas.js"></script>
 
