@@ -151,6 +151,11 @@ function mostrarPregunta(indice) {
     // Agregar un event listener de clic a cada botón de respuesta
     botonesRespuesta[i].addEventListener("click", clickBoto);
   }
+
+  // Actualizar el contador de preguntas
+  let numeroPreguntaActual = indice + 1;
+  let totalPreguntas = preguntas.length;
+  document.getElementById("questionCounter").textContent = `Pregunta Nº ${numeroPreguntaActual}/${totalPreguntas}`;
 }
 
 let clickBoto = function () {
