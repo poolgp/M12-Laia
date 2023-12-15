@@ -10,6 +10,15 @@ body {
     background-repeat: no-repeat;
 }
 
+h1 {
+    color: #000;
+    margin-top: 100px;
+    position: absolute;
+    top: -5px; /* Ajusta la posición vertical según tus necesidades */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4; /* Asegura que el h1 esté sobre el borde de madera */
+}
 
 /* FOOTER */
 
@@ -21,7 +30,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #2B313F; /* Ajusta el color de fondo según tus preferencias */
+    background-color: #D89DBB; /* Ajusta el color de fondo según tus preferencias */
 }
 
 .col {
@@ -50,13 +59,13 @@ body {
     padding: 10 38px;
     border-radius: 4px;
     color: white; /* Ajusta el color del texto según tus preferencias */
-    background-color: #393E4C; /* Ajusta el color de fondo según tus preferencias */
+    background-color: #d989b2; /* Ajusta el color de fondo según tus preferencias */
     display: inline-block;
     transition: background-color 0.3s ease; /* Añade una transición suave */
 }
 
 .button:hover {
-    background-color: #474C59; /* Color más claro al pasar el mouse */
+    background-color: #d973a8; /* Color más claro al pasar el mouse */
 }
 
 
@@ -150,15 +159,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
 .game-container {
     border: 5px solid #8B4513;
     display: inline-block;
@@ -171,7 +171,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .box {
@@ -183,18 +183,4 @@ body {
     align-items: center;
     margin: 1px;
     transition: transform 0.3s;
-}
-
-.reintentar-container {
-    text-align: center;
-    margin-top: 10px;
-}
-
-#reintentarBtn {
-    padding: 10px;
-    display: none;
-}
-
-.iluminado {
-    background-color: #b3e6b3; /* Color de fondo para resaltar conexiones activadas */
 }
