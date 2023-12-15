@@ -14,7 +14,8 @@
         <button id="reintentarBtn" style="display: none;">Reintentar nivel</button>
     </div> -->
 
-    <h1>Cables de Barcelona</h1>
+    <h1>Light up Barcelona</h1>
+
     <div class="borde-madera">
         <div class="game-container">
             <div class="container" id="container"></div>
@@ -55,7 +56,22 @@
             <a class="button" id="home" href="../LandingPage.html#juegos">Home</a>
         </div>
     </div>
+
+    <!-- POP UP SOLUCION -->
+
+    <div id="pupsolucion" class="popup-solucion">
+        <div class="popup-content-solucion">
+            <span class="close" onclick="cerrarPopup()">&times;</span> <!-- Agregar la cruz para cerrar el popup -->
+            <p>Felicidades, has completado el nivel.</p>
+            <button onclick="volverAJugar()">Volver a jugar</button>
+            <button onclick="paginaPrincipal()">Página principal</button>
+        </div>
+    </div>
+    
+
+
 <script src="./europa.js"></script>
+<script src="./draftEuropa.js"></script>
 
 </body>
 

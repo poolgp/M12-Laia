@@ -148,10 +148,15 @@ function actualizarImagen(i, j) {
 function mostrarSolucion() {
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
-            // Cambia las imágenes a las imágenes iluminadas
+            // Cambio las img para poner las que están iluminadas
             botones[i][j].querySelector('img').src = imagenesSolucion[i][j];
         }
     }
+
+   document.getElementById('score').innerHTML = 100;
+    setTimeout(function () {
+        mostrarPopupSolucion(); 
+    }, 800);
 }
 
 
@@ -166,4 +171,21 @@ function openPopup() {
 function closePopup() {
     console.log("Closing popup");
     document.getElementById('infoPopup').style.display = 'none';
+}
+
+function mostrarPopupSolucion() {
+    document.getElementById('pupsolucion').style.display = 'block';
+}
+function cerrarPopup(){
+    document.getElementById('pupsolucion').style.display = 'none';
+}
+
+function paginaPrincipal() {
+    window.location.href = '../LandingPage.html';
+}
+
+function volverAJugar() {
+    
+    cerrarPopup();
+    location.reload();
 }
