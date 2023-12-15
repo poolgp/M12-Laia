@@ -113,6 +113,63 @@ h1 {
     /* Color más claro al pasar el mouse */
 }
 
+.scores{
+    display: flex;
+}
+
+.contadorPreguntas span.titleContador {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.contadorPreguntas span {
+    color: #FFFF;
+}
+
+.contadorPreguntas span#scoreContador {
+    font-size: 40px;
+    display: inline-block;
+    color: #FFFF;
+    padding-bottom: 25px;
+    margin-bottom: -7px;
+    text-align: right;
+    position: relative;
+}
+
+.contadorPreguntas span.totalContador {
+    font-size: 40px;
+    display: inline-block;
+    color: #FFFF;
+}
+
+.contadorPreguntas span#scoreContador:after {
+    content: '/';
+    color: var(--z6);
+    display: inline-block;
+    position: relative;
+    left: 4px;
+}
+
+.scoreContador {
+    display: inline-block;
+}
+
+.titleContador {
+    font-weight: bold;
+    margin-right: 5px;
+    /* Ajusta el margen según tus preferencias */
+}
+
+.totalContador {
+    font-weight: normal;
+}
+
+.score{
+    margin-left: 100px;
+}
+
 .score span.title {
     font-size: 18px;
     display: block;
@@ -150,7 +207,7 @@ h1 {
 
 .score {
     display: inline-block;
-} 
+}
 
 .title {
     font-weight: bold;
@@ -161,7 +218,6 @@ h1 {
 .total {
     font-weight: normal;
 }
-
 
 /* POP UP */
 
