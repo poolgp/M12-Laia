@@ -1,4 +1,160 @@
+const gridSize = 4;
 
+const imageNames = [
+  // CABLES RECTOS
+  { valor: 0, imagenes: ["img/recto1.png", "img/recto2.png"] },
+
+  // BOMBILLAS
+  { valor: 1, imagenes: ["img/bombilla1.png", "img/bombilla2.png", "img/bombilla3.png", "img/bombilla4.png"] },
+
+  // CABLES DOBLES
+  { valor: 2, imagenes: ["img/doble1.png", "img/doble2.png", "img/doble3.png", "img/doble4.png"] },
+
+  // CABLES TRIPLES
+  { valor: 3, imagenes: ["img/triple1.png", "img/triple2.png", "img/triple3.png", "img/triple4.png"] },
+
+  // CENTRO
+  { valor: 4, imagenes: ["img/centro1.png", "img/centro2.png", "img/centro3.png", "img/centro4.png"] }
+];
+
+const juegoTablero = [
+  [1, 2, 2, 1],
+  [1, 0, 0, 1],
+  [2, 3, 4, 3],
+  [1, 0, 0, 2],
+];
+
+const solucionReal = [
+  [3, 1, 0, 1],
+  [0, 1, 1, 0],
+  [3, 2, 2, 1],
+  [3, 0, 0, 2],
+];
+
+const constantes = {
+  tamanoBoton: 100,
+};
+const solucion = [
+    ["img/bombilla4.png", "img/cableDoble2.png", "img/cableDoble1.png", "img/bombilla2.png"],
+    ["img/bombilla1.png", "img/cableRecto2.png", "img/cableRecto2.png", "img/bombilla1.png"],
+    ["img/cableDoble4.png", "img/cableTriple3.png", "img/centro3.png", "img/cableTriple2.png"],
+    ["img/bombilla4.png", "img/cableRecto1.png", "img/cableRecto1.png", "img/cableDoble3.png"]
+]
+
+const contadores = Array.from({ length: gridSize }, () => Array(gridSize).fill(0));
+const botones = Array.from({ length: gridSize }, () => Array(gridSize).fill(null)); // Inicializa la matriz de botones
+
+
+// Inicialización
+inicializar();
+
+function inicializar() {
+    for (let i = 0; i < gridSize; i++) {
+        botones[i] = [];
+        for (let j = 0; j < gridSize; j++) {
+            // Cambia la inicialización de contadores con números aleatorios
+            contadores[i][j] = Math.floor(Math.random() * imageNames[juegoTablero[i][j]].imagenes.length);
+            crearBoton(i, j);
+        }
+    }
+
+    let a;
+    // Asignar valores al array de solución basado en el tablero
+    for (let i = 0; i < gridSize; i++) {
+        solucion[i] = [];
+        for (let j = 0; j < gridSize; j++) {
+            const numeroArray = juegoTablero[i][j];
+            const imagenIndex = contadores[i][j]; // Usa el índice actual de contadores
+            solucion[i][j] = imageNames[numeroArray].imagenes[imagenIndex];
+        }
+    }
+}
+
+// Creo los botones y los añado a la clase box
+
+function crearBoton(i, j) {
+    const button = document.createElement("button");
+    button.classList.add("box");
+
+    const image = document.createElement("img");
+    const numeroArray = juegoTablero[i][j];
+    
+    // // Cambia la lógica para elegir imágenes aleatorias
+    // const imagenIndex = Math.floor(Math.random() * imageNames[numeroArray].imagenes.length);
+    
+
+    const imagenIndex = contadores[i][j];
+    const imagen = imageNames[numeroArray].imagenes[imagenIndex];
+
+    image.src = imagen;
+    image.style.width = `${constantes.tamanoBoton}px`;
+    image.style.height = `${constantes.tamanoBoton}px`;
+
+    button.appendChild(image);
+
+    button.onclick = function () {
+        contadores[i][j] = (contadores[i][j] + 1) % imageNames[numeroArray].imagenes.length;
+        actualizarImagen(i, j);
+    };
+
+    container.appendChild(button);
+    botones[i][j] = button;
+}
+
+function actualizarSolucion() {
+    for (let i = 0; i < gridSize; i++) {
+        for (let j = 0; j < gridSize; j++) {
+            const numeroArray = juegoTablero[i][j];
+            const imagenIndex = contadores[i][j];
+            solucion[i][j] = imageNames[numeroArray].imagenes[imagenIndex];
+        }
+    }
+}
+  
+function verificarSolucion() {
+  for (let i = 0; i < gridSize; i++) {
+      for (let j = 0; j < gridSize; j++) {
+          if (solucionReal[i][j] !== contadores[i][j]) {
+              // Si hay alguna discrepancia, la solución no es correcta
+              return false;
+          }
+      }
+  }
+
+  // Si no se encontraron discrepancias, la solución es correcta
+  return true;
+}
+function actualizarImagen(i, j) {
+    const numeroArray = juegoTablero[i][j];
+    const imagenIndex = contadores[i][j];
+    const nuevaImagen = imageNames[numeroArray].imagenes[imagenIndex];
+
+    // Actualiza la imagen en el botón
+    botones[i][j].querySelector('img').src = nuevaImagen;
+
+    // Actualiza la solución
+    actualizarSolucion();
+
+    // Verifica si todas las imágenes coinciden con la solución
+    if (verificarSolucion()) {
+        openPopup(); // Muestra el popup de felicitaciones
+    }
+}
+
+// function esSolucion() {
+//     for (let i = 0; i < gridSize; i++) {
+//         for (let j = 0; j < gridSize; j++) {
+//             if (solucion[i][j] !== botones[i][j].querySelector('img').src) {
+//                 return false;
+//             }
+//         }
+//     }
+//     return true;
+// }
+
+
+
+// Funciones para abrir y cerrar el Pop Up
 function openPopup() {
     console.log("Opening popup");
     document.getElementById('infoPopup').style.display = 'block';
@@ -8,238 +164,3 @@ function closePopup() {
     console.log("Closing popup");
     document.getElementById('infoPopup').style.display = 'none';
 }
-
-
-
-    const gridSize = 4;
-    const juegoTablero = [
-        [3, 2, 2, 3],
-        [3, 0, 0, 3],
-        [2, 1, 4, 1],
-        [3, 0, 0, 2],
-    ];
-
-    const imageNames = [
-        "img/cableRectoApagado.png", "img/cableTripleApagado.png", "img/cableDobleApagado.png",
-        "img/bombilla-apagada.png", "img/centroCompleto.png"
-    ];
-
-    const container = document.getElementById("container");
-    const timerElement = document.getElementById("timer");
-    const reintentarBtn = document.getElementById("reintentarBtn");
-
-    const botones = [];
-
-    const constantes = {
-        tiempoInicial: 60,
-        tamanoBoton: 100,
-    };
-
-    function inicializar() {
-        for (let i = 0; i < gridSize; i++) {
-            botones[i] = [];
-            for (let j = 0; j < gridSize; j++) {
-                crearBoton(i, j);
-            }
-        }
-    }
-
-    function crearBoton(i, j) {
-        const button = document.createElement("button");
-        button.classList.add("box");
-
-        const randomImage = imageNames[juegoTablero[i][j]];
-
-        const image = document.createElement("img");
-        image.src = randomImage;
-        image.style.width = `${constantes.tamanoBoton}px`;
-        image.style.height = `${constantes.tamanoBoton}px`;
-
-        const rotacionRandom = Math.floor(Math.random() * 4) * 90;
-        button.style.transform = `rotate(${rotacionRandom}deg)`;
-
-        button.appendChild(image);
-
-        button.onclick = function () {
-            contadores[i][j] = (contadores[i][j] + 1) % imageNames[numeroArray].imagenes.length;
-      const nuevoIndice = contadores[i][j];
-      const nuevaImagen = imageNames[numeroArray].imagenes[nuevoIndice];
-        };
-
-        container.appendChild(button);
-        botones[i][j] = button;
-    }
-
-    function rotarBoton(boton, i, j) {
-        const currentRotation = (parseFloat(boton.style.transform.replace("rotate(", "").replace("deg)", "")) || 0) + 90;
-        boton.style.transform = `rotate(${currentRotation}deg)`;
-    
-        // Debería de verificar si la imagen que toca es el centro. arreglarlo...
-        if (juegoTablero[i][j] !== 4) { // No es el centro
-            const bombillaIndex = 3;
-            const cableIndex = juegoTablero[i][j];
-    
-            if (cableIndex !== bombillaIndex) {
-                // iluminar caable clicado
-                boton.firstChild.src = imageNames[cableIndex].replace("Apagado.png", "Encendido.png");
-    
-                // iluminar las bombillas conectadas
-                iluminarBombillasConectadas(i, j, cableIndex);
-            }
-    
-            verificarJuegoCompleto();
-        }
-    }
-    function iluminarBombillasConectadas(i, j, cableIndex) {
-        const bombillaIndex = 3; 
-    
-        // Iterar sobre todas las filas y columnas
-        for (let rowIndex = 0; rowIndex < gridSize; rowIndex++) {
-            for (let colIndex = 0; colIndex < gridSize; colIndex++) {
-                if (juegoTablero[rowIndex][colIndex] === bombillaIndex) {
-                    const bombillaButton = botones[rowIndex][colIndex];
-                    if (bombillaButton) {
-                        // Verificar si la bombilla está conectada al cable clicado
-                        if (hayConexion(i, j, rowIndex, colIndex)) {
-                            bombillaButton.firstChild.src = imageNames[bombillaIndex].replace("apagada.png", "encendida.png");
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    
-    function hayConexion(i1, j1, i2, j2) {
-        // Lógica para verificar si hay conexión entre las casillas (i1, j1) e (i2, j2)
-        // Implementa la lógica específica para tu juego aquí
-        // Devuelve true si hay conexión, false en caso contrario
-        // Puedes basarte en la lógica de tu juego actual para determinar la conexión
-        // Aquí proporciono una implementación de ejemplo, pero deberías ajustarla según tus reglas de juego
-        return juegoTablero[i1][j1] === juegoTablero[i2][j2];
-    }
-    
-    
-
-    function crearCelda(i, j, tipo, estado) {
-        const celda = document.createElement("div");
-        celda.tabIndex = 1;
-        celda.classList.add("cell", "selectable", `pipe${tipo}`, `cell-${estado}`);
-        celda.style.position = "absolute";
-        celda.style.top = `${i * 25}px`;
-        celda.style.left = `${j * 25}px`;
-        celda.style.width = "25px";
-        celda.style.height = "25px";
-    
-        const contenido = document.createElement("div");
-        const span1 = document.createElement("span");
-        const span2 = document.createElement("span");
-        contenido.appendChild(span1);
-        contenido.appendChild(span2);
-        celda.appendChild(contenido);
-    
-        document.getElementById("container").appendChild(celda);
-    }
-    
-    
-    
-    
-    
-
-    function mostrarMensaje(mensaje) {
-        // Implementa lógica para mostrar mensajes en la interfaz del juego
-        console.log(mensaje);
-    }
-
-    function cambiarImagenCable(boton, i, j) {
-        const centro = 4; // Índice de la imagen del centro en imageNames
-        if (juegoTablero[i][j] === centro) {
-            const centroApagado = "img/centroApagado.png";
-            const centroEncendido = "img/centroEncendido.png";
-            
-            const imagenActual = boton.firstChild.src;
-    
-            if (imagenActual.includes("Apagado")) {
-                boton.firstChild.src = centroEncendido;
-            } else {
-                boton.firstChild.src = centroApagado;
-            }
-        }
-    }
-    
-
-    function verificarJuegoCompleto() {
-        let completo = true;
-
-        for (let i = 0; i < gridSize; i++) {
-            for (let j = 0; j < gridSize; j++) {
-                if (juegoTablero[i][j] === 0) {
-                    const rotacion = parseFloat(botones[i][j].style.transform.replace("rotate(", "").replace("deg)", ""));
-                    if (rotacion !== 0 && rotacion !== 180) {
-                        completo = false;
-                        break;
-                    }
-                } else if (juegoTablero[i][j] === 1) {
-                    const rotacion = parseFloat(botones[i][j].style.transform.replace("rotate(", "").replace("deg)", ""));
-                    if (rotacion !== 90 && rotacion !== 270) {
-                        completo = false;
-                        break;
-                    }
-                } else if (juegoTablero[i][j] === 3) {
-                    if (iluminarConexion(i, j)) {
-                        botones[i][j].classList.add("iluminado");
-                        botones[i - 1][j].classList.add("iluminado"); // Arriba
-                        botones[i + 1][j].classList.add("iluminado"); // Abajo
-                        botones[i][j - 1].classList.add("iluminado"); // Izquierda
-                        botones[i][j + 1].classList.add("iluminado"); // Derecha
-                    } else {
-                        completo = false;
-                        break;
-                    }
-                }
-            }
-            if (!completo) {
-                break;
-            }
-        }
-
-        if (completo) {
-            mostrarMensaje("¡Felicidades! Has completado el nivel.");
-        }
-    }
-
-    function actualizarTemporizador() {
-        if (constantes.tiempoRestante >= 0) {
-            const minutos = Math.floor(constantes.tiempoRestante / 60);
-            const segundos = constantes.tiempoRestante % 60;
-            timerElement.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
-            constantes.tiempoRestante--;
-
-            if (constantes.tiempoRestante < 0) {
-                mostrarMensaje("¡Tiempo agotado! Has perdido.");
-                reintentarBtn.style.display = "block";
-            }
-        }
-    }
-
-    
-    
-
-    function reiniciarJuego() {
-        clearInterval(constantes.intervaloTemporizador);
-        constantes.tiempoRestante = constantes.tiempoInicial;
-        timerElement.textContent = "1:00";
-        reintentarBtn.style.display = "none";
-
-        constantes.intervaloTemporizador = setInterval(actualizarTemporizador, 1000);
-    }
-
-    // Inicialización
-    inicializar();
-
-    // Temporizador
-    constantes.tiempoRestante = constantes.tiempoInicial;
-    constantes.intervaloTemporizador = setInterval(actualizarTemporizador, 1000);
-
-    // Botón de reinicio
-    reintentarBtn.addEventListener("click", reiniciarJuego);
