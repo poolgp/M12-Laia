@@ -119,6 +119,9 @@ function mostrarPregunta(indice) {
   let pregunta = preguntas[indice].pregunta;
   let respuestas = preguntas[indice].respuestas;
 
+  // Barajar las respuestas aleatoriamente
+  respuestas = respuestas.sort(() => Math.random() - 0.5);
+
   // Mostrar la pregunta
   document.querySelector(".containerPregunta").textContent = pregunta;
 
