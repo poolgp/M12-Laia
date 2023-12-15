@@ -41,6 +41,14 @@ const solucion = [
     ["img/bombilla4.png", "img/cableRecto1.png", "img/cableRecto1.png", "img/cableDoble3.png"]
 ]
 
+const imagenesSolucion = [
+    ["img/b1.png", "img/d1.png", "img/d2.png", "img/b2.png"],
+    ["img/b3.png", "img/r1.png", "img/r2.png", "img/b4.png"],
+    ["img/d3.png", "img/t1.png", "img/centro3.png", "img/t2.png"],
+    ["img/b5.png", "img/r3.png", "img/r4.png", "img/d4.png"]
+];
+
+
 const contadores = Array.from({ length: gridSize }, () => Array(gridSize).fill(0));
 const botones = Array.from({ length: gridSize }, () => Array(gridSize).fill(null)); // Inicializa la matriz de botones
 
@@ -79,7 +87,6 @@ function crearBoton(i, j) {
     const image = document.createElement("img");
     const numeroArray = juegoTablero[i][j];
     
-    // // Cambia la lógica para elegir imágenes aleatorias
     // const imagenIndex = Math.floor(Math.random() * imageNames[numeroArray].imagenes.length);
     
 
@@ -132,25 +139,21 @@ function actualizarImagen(i, j) {
     // Actualiza la imagen en el botón
     botones[i][j].querySelector('img').src = nuevaImagen;
 
-    // Actualiza la solución
-    actualizarSolucion();
-
-    // Verifica si todas las imágenes coinciden con la solución
+    // Verifica si la solución es correcta
     if (verificarSolucion()) {
-        openPopup(); // Muestra el popup de felicitaciones
+        mostrarSolucion(); // Muestra las imágenes iluminadas
     }
 }
 
-// function esSolucion() {
-//     for (let i = 0; i < gridSize; i++) {
-//         for (let j = 0; j < gridSize; j++) {
-//             if (solucion[i][j] !== botones[i][j].querySelector('img').src) {
-//                 return false;
-//             }
-//         }
-//     }
-//     return true;
-// }
+function mostrarSolucion() {
+    for (let i = 0; i < gridSize; i++) {
+        for (let j = 0; j < gridSize; j++) {
+            // Cambia las imágenes a las imágenes iluminadas
+            botones[i][j].querySelector('img').src = imagenesSolucion[i][j];
+        }
+    }
+}
+
 
 
 
