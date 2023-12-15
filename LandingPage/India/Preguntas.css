@@ -115,6 +115,7 @@ h1 {
 
 .scores{
     display: flex;
+    margin-left: 180px;
 }
 
 .contadorPreguntas span.titleContador {
@@ -152,6 +153,12 @@ h1 {
     left: 4px;
 }
 
+.contadorPreguntas {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
 .scoreContador {
     display: inline-block;
 }
@@ -162,13 +169,17 @@ h1 {
     /* Ajusta el margen según tus preferencias */
 }
 
+.titleContador, #questionCounter, .totalContador {
+    font-size: 40px;
+    color: #FFFF;
+    margin-right: 230px;
+    margin-left: -220px;
+}
+
 .totalContador {
     font-weight: normal;
 }
 
-.score{
-    margin-left: 100px;
-}
 
 .score span.title {
     font-size: 18px;
@@ -207,6 +218,7 @@ h1 {
 
 .score {
     display: inline-block;
+    margin-left: 100px;
 }
 
 .title {
