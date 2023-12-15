@@ -155,7 +155,7 @@ function mostrarPregunta(indice) {
   // Actualizar el contador de preguntas
   let numeroPreguntaActual = indice + 1;
   let totalPreguntas = preguntas.length;
-  document.getElementById("questionCounter").textContent = `Pregunta Nº ${numeroPreguntaActual}/${totalPreguntas}`;
+  document.getElementById("questionCounter").textContent = `${numeroPreguntaActual}/${totalPreguntas}`;
 }
 
 let clickBoto = function () {
