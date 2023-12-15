@@ -18,6 +18,32 @@ USE `laiadb`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `ranking`
+--
+
+DROP TABLE IF EXISTS `ranking`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ranking` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `id_Usuari` int NOT NULL,
+  `puntuacio` int NOT NULL,
+  `id_Pais` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ranking`
+--
+
+LOCK TABLES `ranking` WRITE;
+/*!40000 ALTER TABLE `ranking` DISABLE KEYS */;
+INSERT INTO `ranking` VALUES (1,1,50,4);
+/*!40000 ALTER TABLE `ranking` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -25,12 +51,13 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
+  `id_User` int NOT NULL AUTO_INCREMENT,
   `nomCompleto` varchar(100) DEFAULT NULL,
   `nomUser` varchar(100) NOT NULL,
   `contraseña` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`nomUser`),
-  UNIQUE KEY `nomUser` (`nomUser`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`id_User`),
+  UNIQUE KEY `id_User_UNIQUE` (`id_User`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,12 +66,9 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'1','','');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'laiadb'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -55,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-12 18:57:27
+-- Dump completed on 2023-12-15 20:22:28
