@@ -2,7 +2,7 @@ body {
     padding-top: 70px;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #CFEBFC;
+    background-color: #BFFCC1;
 }
 
 nav {
@@ -42,17 +42,18 @@ nav a:hover {
 }
 
 .card-header {
-    background-color: #3EAEF4;
+    background-color: #7DF48A;
 }
 
 h4 {
-    color: white;
+    color: black;
 }
 
 .card-body {
-    background-color: #9FD7F9;
+    background-color: #B7F9C9;
 }
 
 .btn-custom {
-    background-color: #3EAEF4;
+    color: black;
+    background-color: #7DF48A;
 }
