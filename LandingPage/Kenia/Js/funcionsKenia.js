@@ -47,6 +47,8 @@ function closePopup() {
 
 function compararResultados() {
 
+    document.getElementById('score').textContent = '100';
+    
     document.getElementById('compararPopup').style.display = 'block';
     // Utiliza location.reload() para recargar la página
     setTimeout(function () {
