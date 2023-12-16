@@ -5,20 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
-            "request": "launch",
             "name": "Launch Chrome",
-            "url": "http://localhost:8080/M12-Laia/LandingPage/LandingPage.html",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080/M12-Laia/LandingPage/LandingPage.php",
             "webRoot": "${workspaceFolder}"
         },
         {
-            "type": "node",
+            "name": "Listen for XDebug",
+            "type": "php",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${file}"
+            "port": 9000
+        },
+        {
+            "name": "Launch currently open script",
+            "type": "php",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${workspaceRoot}",
+            "port": 9000
         }
     ]
 }

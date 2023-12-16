@@ -1,3 +1,11 @@
+<?php
+
+require_once('../BD/php_librarys/bd.php');
+
+$estadisticasBrasil = selectRanking();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,34 +29,21 @@
                 <h4 class="mb-0">BRASIL</h4>
             </div>
             <div class="card-body">
-                <table class="table">
-                    <thead>
+                <table class="table table-striped">
+                    <tr>
+                        <th>id_Usuari</th>
+                        <th>puntuacio</th>
+                        <th>id_Pais</th>
+                    </tr>
+
+                    <?php foreach ($estadisticasBrasil as $statsBrasil){ ?>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <td><?php echo $statsIndia['id_Usuari']; ?></td>
+                            <td><?php echo $statsIndia['puntuacio']; ?></td>
+                            <td><?php echo $statsIndia['id_Pais']; ?></td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
+                    <?php } ?>
+
                 </table>
             </div>
         </div>
