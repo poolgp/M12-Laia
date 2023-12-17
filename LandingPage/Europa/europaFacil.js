@@ -1,51 +1,47 @@
-const gridSize = 4;
+const gridSize = 3;
 
 const imageNames = [
-  // CABLES RECTOS
-  { valor: 0, imagenes: ["img/recto1.png", "img/recto2.png"] },
+    // CABLES RECTOS
+    { valor: 0, imagenes: ["img/recto1.png", "img/recto2.png"] },
 
-  // BOMBILLAS
-  { valor: 1, imagenes: ["img/bombilla1.png", "img/bombilla2.png", "img/bombilla3.png", "img/bombilla4.png"] },
+    // BOMBILLAS
+    { valor: 1, imagenes: ["img/bombilla1.png", "img/bombilla2.png", "img/bombilla3.png", "img/bombilla4.png"] },
 
-  // CABLES DOBLES
-  { valor: 2, imagenes: ["img/doble1.png", "img/doble2.png", "img/doble3.png", "img/doble4.png"] },
+    // CABLES DOBLES
+    { valor: 2, imagenes: ["img/doble1.png", "img/doble2.png", "img/doble3.png", "img/doble4.png"] },
 
-  // CABLES TRIPLES
-  { valor: 3, imagenes: ["img/triple1.png", "img/triple2.png", "img/triple3.png", "img/triple4.png"] },
+    // CABLES TRIPLES
+    { valor: 3, imagenes: ["img/triple1.png", "img/triple2.png", "img/triple3.png", "img/triple4.png"] },
 
-  // CENTRO
-  { valor: 4, imagenes: ["img/centro1.png", "img/centro2.png", "img/centro3.png", "img/centro4.png"] }
+    // CENTRO
+    { valor: 4, imagenes: ["img/centro1.png", "img/centro2.png", "img/centro3.png", "img/centro4.png"] }
 ];
 
 const juegoTablero = [
-  [1, 2, 2, 1],
-  [1, 0, 0, 1],
-  [2, 3, 4, 3],
-  [1, 0, 0, 2],
+    [2, 0, 1],
+    [2, 4, 1],
+    [1, 3, 1]
 ];
 
 const solucionReal = [
-  [3, 1, 0, 1],
-  [0, 1, 1, 0],
-  [3, 2, 2, 1],
-  [3, 0, 0, 2],
+    [0, 0, 1],
+    [3, 0, 1],
+    [3, 2, 1]
 ];
 
 const constantes = {
-  tamanoBoton: 100,
+    tamanoBoton: 100,
 };
 const solucion = [
-    ["img/bombilla4.png", "img/cableDoble2.png", "img/cableDoble1.png", "img/bombilla2.png"],
-    ["img/bombilla1.png", "img/cableRecto2.png", "img/cableRecto2.png", "img/bombilla1.png"],
-    ["img/cableDoble4.png", "img/cableTriple3.png", "img/centro3.png", "img/cableTriple2.png"],
-    ["img/bombilla4.png", "img/cableRecto1.png", "img/cableRecto1.png", "img/cableDoble3.png"]
+    ["img/cableDoble1.png", "img/cableRecto1.png", "img/bombilla2.png"],
+    ["img/cableDoble4.png", "img/centro1.png", "img/bombilla2.png"],
+    ["img/bombilla4.png", "img/cableTriple3.png", "img/bombilla2.png"]
 ]
 
 const imagenesSolucion = [
-    ["img/b1.png", "img/d1.png", "img/d2.png", "img/b2.png"],
-    ["img/b3.png", "img/r1.png", "img/r2.png", "img/b4.png"],
-    ["img/d3.png", "img/t1.png", "img/centro3.png", "img/t2.png"],
-    ["img/b1.png", "img/r3.png", "img/r4.png", "img/d4.png"]
+    ["img/d2.png", "img/r3.png", "img/b2.png"],
+    ["img/d3.png", "img/centro1.png", "img/b2.png"],
+    ["img/b1.png", "img/t1.png", "img/b2.png"]
 ];
 
 
@@ -112,6 +108,8 @@ function reproducirSonido() {
     clickSound.play();
 }
 
+
+
 function actualizarSolucion() {
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
@@ -121,19 +119,19 @@ function actualizarSolucion() {
         }
     }
 }
-  
-function verificarSolucion() {
-  for (let i = 0; i < gridSize; i++) {
-      for (let j = 0; j < gridSize; j++) {
-          if (solucionReal[i][j] !== contadores[i][j]) {
-              // Si hay alguna discrepancia, la solución no es correcta
-              return false;
-          }
-      }
-  }
 
-  // Si no se encontraron discrepancias, la solución es correcta
-  return true;
+function verificarSolucion() {
+    for (let i = 0; i < gridSize; i++) {
+        for (let j = 0; j < gridSize; j++) {
+            if (solucionReal[i][j] !== contadores[i][j]) {
+                // Si hay alguna discrepancia, la solución no es correcta
+                return false;
+            }
+        }
+    }
+
+    // Si no se encontraron discrepancias, la solución es correcta
+    return true;
 }
 function actualizarImagen(i, j) {
     const numeroArray = juegoTablero[i][j];
@@ -157,13 +155,11 @@ function mostrarSolucion() {
         }
     }
 
-   document.getElementById('score').innerHTML = 100;
+    document.getElementById('score').innerHTML = 100;
     setTimeout(function () {
-        mostrarPopupSolucion(); 
+        mostrarPopupSolucion();
     }, 800);
 }
-
-
 
 
 // Funciones para abrir y cerrar el Pop Up
@@ -180,7 +176,7 @@ function closePopup() {
 function mostrarPopupSolucion() {
     document.getElementById('pupsolucion').style.display = 'block';
 }
-function cerrarPopup(){
+function cerrarPopup() {
     document.getElementById('pupsolucion').style.display = 'none';
 }
 
@@ -188,12 +184,12 @@ function paginaPrincipal() {
     window.location.href = '../LandingPage.html';
 }
 
-function siguienteNivel(){
-    window.location.href = "draftEuropa.html"
+function siguienteNivel() {
+    window.location.href = "europa.html"
 }
 
 function volverAJugar() {
-    
+
     cerrarPopup();
     location.reload();
 }

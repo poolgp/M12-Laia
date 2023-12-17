@@ -46,10 +46,10 @@ const solucion = [
 
 const imagenesSolucion = [
     ["img/b4.png", "img/b4.png", "img/b4.png", "img/d2.png", "img/b2.png"],
-    ["img/r1.png", "img/r1.png", "img/r2.png", "img/b4.png", ""],
-    ["img/r1.png", "img/t1.png", "img/centro3.png", "img/t2.png", ""],
-    ["img/b5.png", "img/r3.png", "img/r4.png", "img/d4.png", ""],
-    ["img/b5.png", "img/r3.png", "img/r4.png", "img/d4.png", ""]
+    ["img/r1.png", "img/t4.png", "img/d4.png", "img/t4.png", "img/b2.png"],
+    ["img/r1.png", "img/t4.png", "img/centro1.png", "img/t1.png", "img/d1.png"],
+    ["img/t4.png", "img/d4.png", "img/t4.png", "img/b2.png", "img/r1.png"],
+    ["img/b5.png", "img/b1.png", "img/d4.png", "img/b1.png", "img/d4.png"]
 ];
 
 
@@ -90,9 +90,6 @@ function crearBoton(i, j) {
 
     const image = document.createElement("img");
     const numeroArray = juegoTablero[i][j];
-    
-    // const imagenIndex = Math.floor(Math.random() * imageNames[numeroArray].imagenes.length);
-    
 
     const imagenIndex = contadores[i][j];
     const imagen = imageNames[numeroArray].imagenes[imagenIndex];
@@ -106,11 +103,19 @@ function crearBoton(i, j) {
     button.onclick = function () {
         contadores[i][j] = (contadores[i][j] + 1) % imageNames[numeroArray].imagenes.length;
         actualizarImagen(i, j);
+        reproducirSonido();
     };
 
     container.appendChild(button);
     botones[i][j] = button;
 }
+
+function reproducirSonido() {
+    const clickSound = document.getElementById('clickSound');
+    clickSound.currentTime = 0;
+    clickSound.play();
+}
+
 
 function actualizarSolucion() {
     for (let i = 0; i < gridSize; i++) {
@@ -179,6 +184,10 @@ function closePopup() {
 
 function mostrarPopupSolucion() {
     document.getElementById('pupsolucion').style.display = 'block';
+}
+
+function cerrarPopup(){
+    document.getElementById('pupsolucion').style.display = 'none';
 }
 
 function siguienteNivel() {

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle tuberías</title>
-    <link rel="stylesheet" href="./estilos/europa.css">
+    <link rel="stylesheet" href="./estilos/europaFacil.css">
     <audio id="clickSound" src="tecla.mp3"></audio>
+
 </head>
 
 <body style="background-image: url('img/europarosa.jpg');">
@@ -16,6 +17,7 @@
     </div> -->
 
     <h1>Light up Barcelona</h1>
+    <h2 class="h2t">Nivel fácil</h2>
 
     <div class="borde-madera">
         <div class="game-container">
@@ -62,7 +64,7 @@
     <div id="pupsolucion" class="popup-solucion">
         <div class="popup-content-solucion">
             <span class="close" onclick="cerrarPopup()">&times;</span> 
-            <p>Enhorabuena, ya has ganado dos de los tres niveles, pero aún queda el más difícil. Completalo y ayuda a la Laia</p>
+            <p>Felicidades, has completado el primer nivel. ¿Crees que podrás con los siguientes dos?</p>
             <button onclick="volverAJugar()">Volver a jugar</button>
             <button onclick="paginaPrincipal()">Página principal</button>
             <button onclick="siguienteNivel()">Siguiente nivel</button>
@@ -70,7 +72,7 @@
     </div>
     
 
-
+<script src="./europaFacil.js"></script>
 <script src="./europa.js"></script>
 <script src="./draftEuropa.js"></script>
 

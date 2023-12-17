@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle tuberías</title>
     <link rel="stylesheet" href="./estilos/draftEuropa.css">
+    <audio id="clickSound" src="tecla.mp3"></audio>
 </head>
 
 <body style="background-image: url('img/europarosa.jpg');">
@@ -29,8 +30,7 @@
             <div class="popup-text">
                 <h2>Cables de Barcelona</h2>
                 <h3>Ayuda a Laia a conectar los cables</h3>
-                <p>Hola amigos de YouTube, conecta los siguientes cables para hacer que Barcelona tenga luz de nuevo y
-                    puedas ver cositas que pasan en la oscuridad...</p>
+                <p>Conecta todos los cables con las bombillas para ayudar a la Laia a iluminar Barcelona</p>
             </div>
             <div class="popup-image">
                 <img src="../Personajes/Laia.png" alt="Imagen de Laia" style="width: 100px; height: auto;">
@@ -61,9 +61,10 @@
 
     <div id="pupsolucion" class="popup-solucion">
         <div class="popup-content-solucion">
-            <p>Felicidades, has completado el nivel.</p>
-            <button onclick="volverAJugar()">Volver a jugar </button>
-            <button onclick="siguienteNivel()">Siguiente nivel</button>
+            <span class="close" onclick="cerrarPopup()">&times;</span> 
+            <p>Felicidades, has completado el nivel más difícil, eres muy inteligente.</p>
+            <button onclick="volverAJugar()">Volver a jugar</button>
+            <button onclick="paginaPrincipal()">Página principal</button>
         </div>
     </div>
 
