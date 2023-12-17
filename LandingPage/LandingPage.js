@@ -26,15 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
   function mostrarImagen() {
     // Muestra la imagen actual estableciendo el estilo 'display' en "block"
     imagenes[index].style.display = "block";
-    
+
+    // Muestra la descripción del juego actual
+    document.querySelector('.descripcion-juego').style.display = "block";
+
     // Establece gradualmente la opacidad de la imagen a 1 después de un breve retraso
     setTimeout(() => {
-      imagenes[index].style.opacity = "1";
+        imagenes[index].style.opacity = "1";
     }, 50);
-  }
+}
 
   // Función para ocultar la imagen actual y mostrar la siguiente imagen
   function ocultarImagen() {
+    // Oculta la descripción del juego actual
+    document.querySelector('.descripcion-juego').style.display = "none";
     // Establece gradualmente la opacidad de la imagen actual a 0
     imagenes[index].style.opacity = "0";
     

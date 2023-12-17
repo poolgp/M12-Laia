@@ -103,8 +103,8 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img_carrusel/brasilCauan.jpg" class="d-block mx-auto w-50" style="width: 300px; height: 750px;"
-                    alt="...">
+                <img src="img_carrusel/brasilCauan.jpg" class="d-block mx-auto w-50"
+                    style="width: 300px; height: 750px;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <!-- <h5>Explora Brasil</h5>
                     <p>Lorem Ipsum.</p> -->
@@ -119,19 +119,21 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img_carrusel/indiaAlisha.jpg" class="d-block mx-auto w-50" style="width: 300px; height: 750px;"
-                    alt="...">
+                <img src="img_carrusel/indiaAlisha.jpg" class="d-block mx-auto w-50"
+                    style="width: 300px; height: 750px;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <!-- <h5>Viaje a la India</h5>
                     <p>Lorem Ipsum.</p> -->
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -143,29 +145,55 @@
         <div class="juego" data-tooltip="Descubre Europa">
             <a href="./Europa/europa.html">
                 <img src="./img_juegos/europarosa.png" alt="Juego Europa">
+
+                <span class="tooltip">Descubre España</span>
+                <div class="descripcion-juego">
+                    <p>En Barcelona hay una mujer llamada Laia con unos altos conocimientos de ingeniería industrial. En
+                        un barrio de la ciudad de Barcelona no se encienden las luces. Laia que es de este barrio
+                        decidirá ir a ayudar ya que tiene suficientes conocimientos de redes de energía para hacerlo.
+                    </p>
+                </div>
             </a>
-            <span class="tooltip">Descubre España</span>
         </div>
 
         <div class="juego" data-tooltip="Explora Brasil">
             <a href="./Brasil/cientifiksEnJocBrasil.html">
                 <img src="./img_juegos/brasilFondo1.png" alt="Juego Brasil">
+                <span class="tooltip">Explora Brasil</span>
+                <div class="descripcion-juego">
+                    <p>En el pueblo de Brasil hay mucha pobreza y los niños no tienen que comer. Laia sale desde
+                        Barcelona y va hasta Brasil, después de ver la situación del pueblo, un chico del pueblo que se
+                        llama Cauan le dice que le iría muy bien obtener algo que dar para comer a los niños. Laia
+                        decidirá ir a buscar algunas frutas típicas del país junto a Cauan para dar a los niños que no
+                        tienen para comer.</p>
+                </div>
             </a>
-            <span class="tooltip">Explora Brasil</span>
         </div>
 
         <div class="juego" data-tooltip="Aventura en Kenia">
             <a href="./Kenia/index.html">
                 <img src="./img_juegos/kenya.png" alt="Juego Kenia">
+                <span class="tooltip">Aventura en Kenia</span>
+                <div class="descripcion-juego">
+                    <p>En un pueblo de Kenia hay muchas personas que se entretienen pintando máscaras con diferentes
+                        colores y Laia conoce allí a un hombre que se dedica a venderlas para así poder sobrevivir.
+                        Malik es un hombre que trabaja mucho pintando máscaras cada día y Laia decidirá ayudarle para
+                        así conseguir más dinero ese día.</p>
+                </div>
             </a>
-            <span class="tooltip">Aventura en Kenia</span>
         </div>
 
         <div class="juego" data-tooltip="Viaje a la India">
             <a href="./India/Preguntas.html">
                 <img src="./img_juegos/FondoIndia.png" alt="Juego India">
+                <span class="tooltip">Viaje a la India</span>
+                <div class="descripcion-juego">
+                    <p>En un pueblo de la India hay una mujer llamada Alisha que enseña a los niños diferentes cosas de
+                        cultura general del país. Ella lo hace con mucha dedicación, pero los niños pierden interés
+                        puesto que les parece aburrido. Laia ve qué está haciendo y decidirá ayudarla. Se le ocurrirá
+                        hacerlo como en un estilo de preguntas para así generar un interés.</p>
+                </div>
             </a>
-            <span class="tooltip">Viaje a la India</span>
         </div>
     </div>
 
