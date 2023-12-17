@@ -4,14 +4,27 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
+    overflow-y: hidden;
 
 }
 
 .titolPrincipal {
-
+    color: #000;
+    margin-top: 100px;
+    position: absolute;
+    top: -155px;
+    left: 50%;
     font-family: Helvetica;
-    text-align: center;
-}
+    transform: translateX(-50%);
+    z-index: 4;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    animation: neon-glow 1.5s infinite alternate;
+  }
+  @keyframes neon-glow {
+    to {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    }
+  }
 
 
 .contenidorPrincipal {
@@ -28,7 +41,8 @@ body {
     width: 1000px;
     height: 600px;
     border: 2px solid;
-    margin: 0;
+    margin-top: 100px;
+    /* margin: 0; */
     box-sizing: border-box;
 
 }
