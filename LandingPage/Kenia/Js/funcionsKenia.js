@@ -1,19 +1,30 @@
+var colorEscollits = ['black', "black", "black"] ;
+
 function CambiarColor(obj, color) {
 
-    //window.alert(obj + " " + color);
+
 
     var frente = document.getElementById("mascara").getSVGDocument().getElementById(obj);
     frente.style.setProperty("fill", color, "");
 
-    //    var ulls1 = document.getElementById("mascara").getSVGDocument().getElementById("ulls1");
-    //  ulls1.style.setProperty("fill","red", "");
 
-    //    var ulls2 = document.getElementById("mascara").getSVGDocument().getElementById("ulls2");
-    //    ulls2.style.setProperty("fill","red", "");
+    if (obj == "front") colorEscollits[0] = color;
+    if (obj == "ulls1") colorEscollits[1] = color;
+    if (obj == "ulls2") colorEscollits[2] = color;
+
 }
 
+function compararResultados() {
 
+    if (colorEscollits[0] == "green" && colorEscollits[1] == "red" && colorEscollits[2] == "red"){
 
+        document.getElementById('score').textContent = '100';
+
+        document.getElementById('compararPopup').style.display = 'block';
+    }
+    else
+    window.alert("malamemt");
+}
 
 // Función para cerrar el popup
 function cerrarPopup(idPopup) {
@@ -45,13 +56,3 @@ function closePopup() {
 }
 
 
-function compararResultados() {
-
-    document.getElementById('score').textContent = '100';
-    
-    document.getElementById('compararPopup').style.display = 'block';
-    // Utiliza location.reload() para recargar la página
-    setTimeout(function () {
-        location.reload();
-      }, 5000);
-  }

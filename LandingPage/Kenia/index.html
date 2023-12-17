@@ -29,9 +29,8 @@
       </form>
 
       <embed id="mascara" src="img/mascara.svg" width="745" height="1053" />
-
-
     </div>
+    
       <div>
           <button class="botonComparar" type="button" onclick= "compararResultados()">Comparar</button>
       </div>
@@ -105,7 +104,7 @@
   </div>
 
   <form action="../BD/contoller.php" method="POST" id="formR">
-    <input type="text" name="id_User">
+    <input type="hidden" name="id_User">
     <input type="hidden" name="puntuacio">
     <input type="hidden" name="id_Pais">
 </form>
