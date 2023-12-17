@@ -143,7 +143,7 @@
     <div id="juegos">
         <h2 id="TituloJuegos">Juegos</h2>
         <div class="juego" data-tooltip="Descubre Europa">
-            <a href="./Europa/europa.html">
+            <a href="./Europa/europaFacil.html">
                 <img src="./img_juegos/europarosa.png" alt="Juego Europa">
 
                 <span class="tooltip">Descubre España</span>
