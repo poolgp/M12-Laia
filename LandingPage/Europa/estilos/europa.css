@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    color: #000; /* Color del texto principal */
+    color: #000;
     margin-top: 100px;
     position: absolute;
     top: -5px;
@@ -19,8 +19,20 @@ h1 {
     font-family: Helvetica;
     transform: translateX(-50%);
     z-index: 4;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1); /* Efecto de neón */
-    animation: neon-glow 1.5s infinite alternate; /* Animación del neón */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    animation: neon-glow 1.5s infinite alternate;
+}
+.h2t {
+    color: #000;
+    margin-top: 100px;
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    font-family: Helvetica;
+    transform: translateX(-50%);
+    z-index: 4;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    animation: neon-glow 1.5s infinite alternate;
 }
 
 @keyframes neon-glow {
@@ -36,11 +48,11 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px; /* Ajusta el padding según tus preferencias */
+    padding: 15px;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #D89DBB; /* Ajusta el color de fondo según tus preferencias */
+    background-color: #D89DBB;
 }
 
 .col {
@@ -49,7 +61,7 @@ h1 {
 
 .col.left {
     text-align: left;
-    margin-right: 10px; /* Ajusta el margen según tus preferencias */
+    margin-right: 10px;
 }
 
 .col.center {
@@ -58,14 +70,14 @@ h1 {
 
 .col.right {
     text-align: right;
-    margin-left: 10px; /* Ajusta el margen según tus preferencias */
+    margin-left: 10px;
 }
 
 .button {
     font-size: 36px;
     text-decoration: none;
-    padding: 16px 28px; /* Ajusta el padding según tus preferencias */
-    margin: 0 150px; /* Ajusta el margen según tus preferencias */
+    padding: 16px 28px;
+    margin: 0 150px;
     padding: 10 38px;
     border-radius: 4px;
     color: white; /* Ajusta el color del texto según tus preferencias */
