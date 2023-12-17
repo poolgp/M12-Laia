@@ -45,7 +45,7 @@ const imagenesSolucion = [
     ["img/b1.png", "img/d1.png", "img/d2.png", "img/b2.png"],
     ["img/b3.png", "img/r1.png", "img/r2.png", "img/b4.png"],
     ["img/d3.png", "img/t1.png", "img/centro3.png", "img/t2.png"],
-    ["img/b5.png", "img/r3.png", "img/r4.png", "img/d4.png"]
+    ["img/b1.png", "img/r3.png", "img/r4.png", "img/d4.png"]
 ];
 
 
