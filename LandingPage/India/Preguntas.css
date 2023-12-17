@@ -6,9 +6,22 @@ body {
 }
 
 h1 {
-    text-align: center;
+    color: #000;
+    margin-top: 100px;
+    position: absolute;
+    top: -85px;
+    left: 50%;
     font-family: Helvetica;
-}
+    transform: translateX(-50%);
+    z-index: 4;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    animation: neon-glow 1.5s infinite alternate;
+  }
+  @keyframes neon-glow {
+    to {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    }
+  }
 
 .container {
     height: 660px;
@@ -25,6 +38,7 @@ h1 {
     width: 960px;
     border: solid 2px #5A84CA;
     margin: 20px 20px 10px 20px;
+    margin-top: 55px !important;
     overflow: hidden;
     display: flex;
     justify-content: center;
