@@ -216,7 +216,7 @@ function startGame() {
   // Función para redirigir a la página de inicio
   function goHome() {
     // Redirige al usuario a la página de inicio (ajusta la URL según sea necesario).
-    window.location.href = "../../LandingPage/LandingPage.html#juegos";
+    window.location.href = "../../LandingPage/LandingPage.php#juegos";
   }
   
   // Event Listener para las teclas de movimiento.
@@ -237,7 +237,7 @@ function startGame() {
   const backButton = document.getElementById("backButton");
   backButton.addEventListener("click", function () {
     // Redirige al usuario a la página de inicio (ajusta la URL según sea necesario).
-    window.location.href = "../../LandingPage/LandingPage.html#juegos";
+    window.location.href = "../../LandingPage/LandingPage.php#juegos";
   });
 
   // Inicializa el juego.

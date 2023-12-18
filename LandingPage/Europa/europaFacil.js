@@ -181,7 +181,7 @@ function cerrarPopup() {
 }
 
 function paginaPrincipal() {
-    window.location.href = '../LandingPage.html';
+    window.location.href = '../LandingPage.php';
 }
 
 function siguienteNivel() {

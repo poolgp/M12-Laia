@@ -23,7 +23,7 @@ function compararResultados() {
         document.getElementById('compararPopup').style.display = 'block';
     }
     else
-    window.alert("malamemt");
+    window.alert("Malament");
 }
 
 // Función para cerrar el popup

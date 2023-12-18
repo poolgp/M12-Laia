@@ -186,6 +186,10 @@ function mostrarPopupSolucion() {
     document.getElementById('pupsolucion').style.display = 'block';
 }
 
+function paginaPrincipal() {
+    window.location.href = '../LandingPage.php';
+}
+
 function cerrarPopup(){
     document.getElementById('pupsolucion').style.display = 'none';
 }

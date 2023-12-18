@@ -269,7 +269,7 @@ function FinJuego() {
 }
 
 function goHome() {
-  window.location.href = "../LandingPage.html";
+  window.location.href = "../LandingPage.php";
 }
 
 function openPopup() {
